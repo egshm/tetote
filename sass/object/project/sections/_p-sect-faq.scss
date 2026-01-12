@@ -1,0 +1,61 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-faq
+----------------------------------------*/
+.p-sect-faq {
+  padding: 64px 0 70px;
+}
+
+.p-sect-faq__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc(var(--w_inner-max) * 1px);
+  margin: 0 auto;
+}
+
+.p-sect-faq__btn {
+  font-size: fwd.make-clamp(18, 20, 375, 768);
+}
+
+.p-sect-faq__accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  margin-top: 97px;
+}
+
+.p-sect-faq__body {
+  margin-top: 54px;
+}
+
+.p-sect-faq__body > .p-sect-faq__accordion:last-child {
+  border-bottom: 1px solid var(--c_accent);
+}
+
+.p-sect-faq__title {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+@media (min-width: 768px) {
+  .p-sect-faq__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-sect-faq {
+    padding: 145px 0 139px;
+  }
+
+  .p-sect-faq__btn-list {
+    --gap_col: 49px; /* 列方向のギャップ */
+  }
+
+  .p-sect-faq__body {
+    margin-top: 113px;
+  }
+}

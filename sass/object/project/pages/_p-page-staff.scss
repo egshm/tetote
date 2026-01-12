@@ -1,0 +1,35 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-staff
+----------------------------------------*/
+.p-page-staff__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc(var(--w_inner-max) * 1px);
+  margin: 0 auto;
+  padding: 65px 0 70px;
+}
+
+.p-page-staff__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 48px;
+}
+
+.p-page-staff__item {
+  padding-bottom: 10px; /* テキスト下部の見切れを防ぐための余白 */
+}
+
+@media (min-width: 768px) {
+  .p-page-staff__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+}
+
+@media (min-width: 992px) {
+  .p-page-staff__inner {
+    padding: 130px 0 139px;
+  }
+}

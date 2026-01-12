@@ -1,0 +1,80 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-philosophy
+----------------------------------------*/
+.p-sect-philosophy {
+  --c_bg: #FAF7F1;
+  padding: 66px 0 63px;
+}
+
+.p-sect-philosophy__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc(var(--w_inner-max) * 1px);
+  margin: 0 auto;
+}
+
+.p-sect-philosophy__title {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.p-sect-philosophy__list {
+  margin-top: 54px;
+}
+
+.p-sect-philosophy__item {
+  margin: 0 auto;
+  padding: 30px 0;
+  background: var(--c_bg);
+  border-radius: 10px;
+}
+
+.p-sect-philosophy__item + .p-sect-philosophy__item {
+  margin-top: 35px;
+}
+
+.p-sect-philosophy__item-content {
+  width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  margin: 0 auto;
+}
+
+.p-sect-philosophy__item-title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: fwd.make-clamp(18, 20, 375, 992);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-sect-philosophy__number {
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+  width: 2.7em;
+  aspect-ratio: 1 / 1;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.p-sect-philosophy__item-text {
+  margin-top: 21px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .p-sect-philosophy__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+}
+
+@media (min-width: 992px) {
+  .p-sect-philosophy__list {
+    margin-top: 86px;
+  }
+}

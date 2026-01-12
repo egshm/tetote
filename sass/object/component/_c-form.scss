@@ -1,0 +1,281 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-form
+----------------------------------------*/
+.c-form {
+  --c_bg: #FAF7F1; /* 入力エリアの背景色 */
+  --c_placeholder: #757575;
+
+  br {
+    /* 余計なbrが自動出力されるため全て除外 */
+    display: none;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+}
+
+.c-form__item + .c-form__item {
+  margin-top: 27px;
+}
+
+/* ラベル */
+.c-form__title {
+  display: block;
+  line-height: 1.5;
+}
+
+/* ラベル内の必須（※）マーク */
+.c-form__require {
+  color: var(--c_accent);
+}
+
+.c-form__body {
+  margin-top: 10px;
+}
+
+/* テキスト入力エリアおよびセレクトボックス */
+.c-form__input,
+.c-form__select,
+.c-form__textarea {
+  width: 100%;
+  padding: 1.25em;
+  background: var(--c_bg);
+  border: 1px solid var(--c_border);
+  border-radius: 10px;
+}
+
+/* 生年月日の入力エリア */
+.c-form__input[id="year"],
+.c-form__select[id="month"],
+.c-form__select[id="day"] {
+  width: 168px;
+}
+
+/* 自己PRのテキストエリア */
+.c-form__textarea {
+  min-height: 240px;
+}
+
+.c-form__input::placeholder,
+.c-form__textarea::placeholder {
+  color: var(--c_placeholder);
+}
+
+/* 生年月日 */
+.c-form__date > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.c-form__select-wrap .c-form__date {
+  margin-top: 15px;
+}
+
+
+/* ラジオボタン */
+.c-form__radio {
+
+  /* ボタン */
+  input[type="radio"] {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: var(--c_bg);
+    border: 1px solid var(--c_border);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  /* ボタン選択時 */
+  input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc((10 / 24) * 100%);
+    height: calc((10 / 24) * 100%);
+    background: currentColor;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* ボタンおよびラベルのラッパー */
+  .wpcf7-list-item {
+    display: block;
+    width: fit-content; /* クリッカブルな範囲をコンテンツ幅に限定 */
+  }
+
+  /* ラッパー間のマージン */
+  .wpcf7-list-item + .wpcf7-list-item {
+    margin-top: 15px;
+  }
+
+  /* ラッパー内のレイアウト調整 */
+  .wpcf7-list-item > label {
+    display: flex; /* 横並び */
+    align-items: center; /* 天地中央揃え */
+    gap: 12px; /* 間隔をあける */
+    cursor: pointer;
+  }
+}
+
+
+/* チェックボックス */
+.c-form__check {
+
+  /* ボックス */
+  input[type="checkbox"] {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: var(--c_bg);
+    border: 1px solid var(--c_border);
+    cursor: pointer;
+  }
+
+  /* ボックス選択時 */
+  input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc((10 / 24) * 100%);
+    height: calc((10 / 24) * 100%);
+    background: currentColor;
+    transform: translate(-50%, -50%);
+  }
+
+  /* ボックスおよびラベルのラッパー */
+  .wpcf7-list-item {
+    display: block;
+    width: fit-content; /* クリッカブルな範囲をコンテンツ幅に限定 */
+  }
+
+  /* ラッパー間のマージン */
+  .wpcf7-list-item + .wpcf7-list-item {
+    margin-top: 15px;
+  }
+
+  /* ラッパー内のレイアウト調整 */
+  .wpcf7-list-item > label {
+    display: flex; /* 横並び */
+    align-items: center; /* 天地中央揃え */
+    gap: 13px; /* 間隔をあける */
+    cursor: pointer;
+  }
+}
+
+
+/* 承諾チェックボックス */
+.c-form__accept-wrap {
+  margin-top: 98px;
+  text-align: center;
+
+  /* ボックス */
+  .c-form__accept {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: var(--c_bg);
+    border: 1px solid var(--c_border);
+    cursor: pointer;
+  }
+
+  /* チェックマーク */
+  .c-form__accept:checked::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.08em;
+    left: 0.28em;
+    width: 25%;
+    height: 50%;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(50deg);
+  }
+
+  /* ボックスおよびラベルのラッパー */
+  .wpcf7-list-item > label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+}
+
+
+/* 送信ボタン */
+.c-form__btn-wrap {
+  margin-top: 61px;
+  text-align: center; /* ボタンを中央揃え */
+
+  .c-form__btn {
+    width: 256px;
+    max-width: 100%;
+    padding: 1.25em;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* ホバー（フォーカス）時のアニメーション */
+  .c-form__btn:focus-visible,
+  .c-form__btn:hover {
+    background: var(--c_base);
+    color: var(--c_white);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .c-form__title {
+    margin-top: 21px;
+  }
+
+  .c-form__body {
+    width: calc((575 / 738) * 100%);
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  /* 生年月日のセレクトボックスを2カラム化 */
+  .c-form__date + .c-form__select-wrap {
+    display: flex;
+    gap: 25px;
+  }
+
+  /* fieldset要素の2カラムレイアウト */
+  .c-form__item--fieldset {
+    display: flow-root; /* 回り込み解除 */
+  
+    .c-form__title {
+      float: left; /* Flexbox・Gridレイアウトが効かないため、floatで対応 */
+      width: calc((138 / 738) * 100%);
+    }
+  }
+
+  /* fieldset要素以外の2カラムレイアウト */
+  .c-form__item {
+    display: flex; /* Flexboxによる2カラム化 */
+    flex-direction: row;
+
+    /* .c-form__item > p > .c-form__title という出力構成 */
+    /* よって、Flexアイテムは .c-form__item > p となる。    */
+    & > p {
+      width: calc((138 / 738) * 100%);
+    }
+  }
+}

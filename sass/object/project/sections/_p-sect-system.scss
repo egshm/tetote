@@ -1,0 +1,49 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-system
+----------------------------------------*/
+.p-sect-system {
+  padding: 73px 0 64px;
+}
+
+.p-sect-system__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc(var(--w_inner-max) * 1px);
+  margin: 0 auto;
+}
+
+.p-sect-system__title {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-sect-system__table {
+  margin-top: 54px;
+}
+
+
+@media (min-width: 768px) {
+  .p-sect-system__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+}
+
+
+@media (max-width: 991px) {
+  .p-sect-system__table {
+    --w_header: 32%; /* テーブルヘッダーの横幅比率 */
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-sect-system {
+    padding-top: 145px;
+  }
+
+  .p-sect-system__table {
+    margin-top: 113px;
+  }
+}

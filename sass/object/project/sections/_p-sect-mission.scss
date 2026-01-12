@@ -1,0 +1,146 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-mission
+----------------------------------------*/
+.p-sect-mission {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 48px 0;
+}
+
+.p-sect-mission__inner {
+  position: relative;
+  width: calc(var(--w_rate) * 100%);
+  margin: -75px auto 0;
+  text-align: center;
+  z-index: 1; /* スライダーよりも前面に配置 */
+}
+
+.p-sect-mission__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: fwd.make-clamp(24, 40, 375, 1440);
+  font-weight: 700;
+}
+
+.p-sect-mission__title-line {
+  width: fit-content;
+  padding: 0.3em 0.5em;
+  background: var(--c_white);
+}
+
+.p-sect-mission__title-line + .p-sect-mission__title-line {
+  margin-top: 8px;
+}
+
+.p-sect-mission__text-wrap {
+  position: relative;
+  margin-top: 48px;
+  font-size: fwd.make-clamp(18, 36, 375, 1440);
+  font-weight: 700;
+  line-height: 2.5;
+}
+
+/* 世界地図の背景 */
+.p-sect-mission__text-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc((320 / var(--w_inner-min)) * 100%);
+  aspect-ratio: 320 / 173;
+  background-image: url('../images/world-map.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+}
+
+.p-sect-mission__text + .p-sect-mission__text {
+  margin-top: 39px;
+}
+
+.p-sect-mission__btn {
+  margin-top: 39px;
+}
+
+.p-sect-mission__slider {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.p-sect-mission__slider-list {
+  display: flex;
+  align-items: flex-start;
+  animation: loop 40s infinite linear 1s both;
+}
+
+/* スライダーのループアニメーション */
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.p-sect-mission__slider-item {
+  width: 271px;
+  margin: 0 8px;
+  aspect-ratio: 271 / 210;
+}
+
+/* 偶数番目のスライドアイテムの位置を下げる */
+.p-sect-mission__slider-item:nth-child(even) {
+  margin-top: 27px;
+}
+
+.p-sect-mission__slider-img {
+  height: 100%;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-sect-mission__text-wrap {
+    line-height: 1.8;
+  }
+
+  .p-sect-mission__text-wrap::before {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-sect-mission {
+    padding: 100px 0 75px;
+  }
+
+  .p-sect-mission__inner {
+    max-width: calc(var(--w_inner) * 1px);
+    margin-top: -160px;
+  }
+
+  .p-sect-mission__text-wrap {
+    margin-top: 109px;
+  }
+
+  .p-sect-mission__text + .p-sect-mission__text {
+    margin-top: 52px;
+  }
+
+  .p-sect-mission__btn {
+    margin-top: 52px;
+  }
+
+  .p-sect-mission__slider-item {
+    width: 506px;
+    margin: 0 17px;
+  }
+
+  .p-sect-mission__slider-item:nth-child(even) {
+    margin-top: 36px;
+  }
+}

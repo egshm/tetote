@@ -1,0 +1,122 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-entry
+----------------------------------------*/
+.p-page-entry {
+  --c_bg: #FAF7F1;
+  --w_inner-entry: 880;
+  background: var(--c_bg);
+}
+
+/* 送信完了ページ */
+.p-page-entry--thanks {
+
+  .p-page-entry__content {
+    padding-bottom: 95px;
+  }
+
+  .p-page-entry__title-main,
+  .p-page-entry__text {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-page-entry__title-main {
+    text-align: left;
+  }
+}
+
+.p-page-entry__breadcrumb {
+  margin-top: 54px; /* ヘッダー高さに合わせる */
+}
+
+.p-page-entry__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc((var(--w_inner-entry) * 1px));
+  margin: 0 auto 70px;
+  padding: 33px 0 57px;
+}
+
+.p-page-entry__content {
+  padding-top: 58px;
+  padding-right: calc((71 / var(--w_inner-entry)) * 100%);
+  padding-bottom: 81px;
+  padding-left: calc((71 / var(--w_inner-entry)) * 100%);
+  background: var(--c_white);
+  border-radius: 10px;
+}
+
+.p-page-entry__title {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 29px;
+}
+
+.p-page-entry__title-main {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.p-page-entry__title-sub {
+  font-size: fwd.make-clamp(18, 24, 375, 768);
+  text-align: center;
+}
+
+.p-page-entry__title-accent {
+  display: block; /* 改行する */
+  color: var(--c_accent);
+}
+
+.p-page-entry__text {
+  max-width: 495px;
+  margin: 51px auto 0;
+  line-height: 1.5;
+}
+
+.p-page-entry__form {
+  margin-top: 48px;
+  padding-top: 49px;
+  border-top: 1px solid var(--c_border);
+}
+
+
+@media (min-width: 768px) {
+  .p-page-entry__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+
+  .p-page-entry__breadcrumb {
+    margin-top: 70px; /* ヘッダー高さに合わせる */
+  }
+
+  .p-page-entry__title-accent {
+    display: inline-block; /* 改行を解除 */
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-page-entry__inner {
+    margin-bottom: 139px;
+  }
+
+  .p-page-entry__breadcrumb {
+    margin-top: 74px; /* ヘッダー高さに合わせる */
+  }
+
+  .p-page-entry__form {
+    margin-top: 95px;
+    padding-top: 97px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .p-page-entry__breadcrumb {
+    margin-top: 113px; /* ヘッダー高さに合わせる */
+  }
+}

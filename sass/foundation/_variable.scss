@@ -1,0 +1,57 @@
+:root {
+  /* カラー */
+  --c_accent: #988C2C;
+  --c_base: #222222;
+  --c_bg: #222222;
+  --c_black: #000000;
+  --c_border: #AFA86F;
+  --c_btn: #222222;
+  --c_focus: #3498db;
+  --c_shadow: rgba(0, 0, 0, 0.25);
+  --c_white: #FFFFFF;
+
+  /* フォント */
+  --font_sans: "Noto Sans JP", sans-serif;
+  --font_viga: "Viga", sans-serif;
+  --font_popp: "Poppins", sans-serif;
+
+  /* フォントサイズ */
+  --fz_10: calc((10 / 16) * 1rem);
+  --fz_11: calc((11 / 16) * 1rem);
+  --fz_12: calc((12 / 16) * 1rem);
+  --fz_14: calc((14 / 16) * 1rem);
+  --fz_16: calc((16 / 16) * 1rem);
+  --fz_18: calc((18 / 16) * 1rem);
+  --fz_20: calc((20 / 16) * 1rem);
+  --fz_24: calc((24 / 16) * 1rem);
+  --fz_28: calc((28 / 16) * 1rem);
+  --fz_32: calc((32 / 16) * 1rem);
+  --fz_36: calc((36 / 16) * 1rem);
+  --fz_40: calc((40 / 16) * 1rem);
+  --fz_48: calc((48 / 16) * 1rem);
+  --fz_56: calc((56 / 16) * 1rem);
+  --fz_64: calc((64 / 16) * 1rem);
+  --fz_72: calc((72 / 16) * 1rem);
+  --fz_80: calc((80 / 16) * 1rem);
+  --fz_96: calc((96 / 16) * 1rem);
+
+  /* ビューポート基準値（px）*/
+  --vw_base-SP: 375;
+  --vw_base-PC: 1440;
+
+  /* インナー幅（px）*/
+  --w_inner-min: 341;
+  --w_inner-max: 980;
+  --w_inner: var(--w_inner-min);
+  --w_inner-tab: 820; /* タブレット用 */
+
+  /* インナー幅比率 */
+  --w_rate: calc(var(--w_inner-min) / var(--vw_base-SP));
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --w_inner: var(--w_inner-max);
+    --w_rate: calc(var(--w_inner-max) / var(--vw_base-PC));
+  }
+}

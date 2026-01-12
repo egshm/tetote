@@ -1,0 +1,135 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-benefits
+----------------------------------------*/
+.p-sect-benefits {
+  --w_card-max: 430;
+  padding: 48px 0 78px;
+}
+
+.p-sect-benefits__inner {
+  width: calc(var(--w_rate) * 100%);
+  margin: 0 auto;
+}
+
+.p-sect-benefits__text {
+  margin-top: 43px;
+  line-height: 1.5;
+}
+
+.p-sect-benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 51px;
+}
+
+.p-sect-benefits__item {
+  flex-grow: 1;
+  max-width: calc(var(--w_card-max) * 1px);
+}
+
+.p-sect-benefits__card {
+  display: flex;
+  flex-direction: column-reverse;
+  transition: transform 0.3s;
+}
+
+.p-sect-benefits__card:focus-visible,
+.p-sect-benefits__card:hover {
+  transform: scale(1.05);
+
+  .p-sect-benefits__btn {
+    transform: translateX(20px);
+  }
+}
+
+.p-sect-benefits__body {
+  margin-top: -23px;
+}
+
+.p-sect-benefits__card-title {
+  --c_bg: #AFA86F;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.3em;
+  background: var(--c_bg);
+  font-size: var(--fz_24);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-sect-benefits__card-text {
+  margin-top: 21px;
+  line-height: 1.5;
+}
+
+.p-sect-benefits__img-wrap {
+  position: relative;
+  width: calc((251 / var(--w_inner-min)) * 100%);
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.p-sect-benefits__btn {
+  position: absolute;
+  top: calc((170 / 251) * 100%);
+  right: calc((13 / 251) * 100%);
+  width: 42px;
+  background: var(--c_bg);
+  color: var(--c_white);
+}
+
+@media (min-width: 768px) {
+  .p-sect-benefits__list {
+    gap: calc((94 / var(--w_inner-max)) * 100%);
+  }
+
+  .p-sect-benefits__item {
+    width: calc((var(--w_card-max) / var(--w_inner-max)) * 100%);
+  }
+
+  .p-sect-benefits__img-wrap {
+    width: 100%;
+  }
+
+  .p-sect-benefits__btn {
+    top: calc((306 / 430) * 100%);
+    right: calc((20 / 430) * 100%);
+    width: 58px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-sect-benefits {
+    padding: 75px 0 107px;
+  }
+
+  .p-sect-benefits__inner {
+    max-width: calc(var(--w_inner) * 1px);
+  }
+
+  .p-sect-benefits__title {
+    margin: 0 auto;
+  }
+
+  .p-sect-benefits__text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .p-sect-benefits__body {
+    margin-top: -41px;
+  }
+
+  .p-sect-benefits__card-title {
+    font-size: var(--fz_32);
+  }
+
+  .p-sect-benefits__card-text {
+    margin-top: 36px;
+  }
+}

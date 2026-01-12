@@ -1,0 +1,80 @@
+///
+/// @mixin hover-opacity
+/// 
+/// ホバー可能な要素に、透過のホバーエフェクトを適用します。
+/// 
+/// @param {Number} $opacity - 不透明度（0~1）
+/// @param {Time} $transition-time - トランジション継続時間
+/// 
+@mixin hover-opacity($opacity: 0.7, $transition-time: 0.3s) {
+  transition: opacity $transition-time;
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+
+///
+/// @mixin entry-btn
+/// 
+/// エントリーボタン用のスタイルです。
+/// ホバーまたはフォーカス時は引数で指定された色に背景色を変えます。
+/// 
+/// @param {Color} $hover-bg-color - ホバー（フォーカス）時の背景色
+///
+@mixin entry-btn($hover-bg-color: var(--c_accent)) {
+  --c_bg: #AFA86F;
+  background: var(--c_bg);
+  font-family: var(--font_viga); //ボタンのテキストは"ENTRY"が想定されるのでVigaを指定
+  font-weight: 400; //Vigaフォントなので必ずRegular（400）
+  text-transform: uppercase; //大文字表記
+
+  &:hover,
+  &:focus-visible {
+    background: $hover-bg-color;
+  }
+}
+
+
+///
+/// @mixin text-underline-animation
+/// 
+/// 呼び出し元が hover / focus-visible 状態のときに、
+/// ターゲット要素に下線アニメーションを適用します。
+/// 
+/// Note:
+/// - 下線の色は呼び出し元の color を継承します。
+/// 
+/// @param {String} $target
+///   - ターゲット要素
+/// 
+/// @param {String} $combinator
+///   - 呼び出し元とターゲットの間の結合子（" ", ">", "+", "~"）
+/// 
+/// @param {Length} $line-width
+///   - 下線の太さ
+/// 
+/// @param {Time} $transition-time
+///   - 下線アニメーションのトランジション継続時間
+/// 
+@mixin text-underline-animation(
+  $target,
+  $combinator: " ",
+  $line-width: 1px,
+  $transition-time: 0.3s
+) {
+
+  &#{$combinator}#{$target} {
+    display: inline;
+    background-image: linear-gradient(90deg, currentColor, currentColor);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 0 $line-width;
+    transition: background-size $transition-time;
+  }
+
+  &:hover#{$combinator}#{$target},
+  &:focus-visible#{$combinator}#{$target} {
+    background-size: 100% $line-width;
+  }
+}

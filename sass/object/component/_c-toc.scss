@@ -1,0 +1,69 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-toc
+----------------------------------------*/
+.c-toc {
+  --c_title: #666666;
+  --c_text: #999999;
+  --c_focus: #222222;
+}
+
+.c-toc__title {
+  color: var(--c_title);
+  font-size: fwd.make-clamp(14, 18, 375, 768);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.c-toc__body {
+  margin-top: 13px;
+}
+
+.c-toc__item {
+  position: relative;
+  padding-left: 1.2em;
+  width: fit-content;
+  color: var(--c_text);
+}
+
+.c-toc__item::before {
+  content: '・';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c-toc__item.is-active {
+  color: var(--c_focus);
+}
+
+.c-toc__item + .c-toc__item {
+  margin-top: 16px;
+}
+
+.c-toc__item:has(> .c-toc__link:focus-visible) {
+  outline: 2px solid var(--c_focus);
+}
+
+.c-toc__link {
+  font-size: fwd.make-clamp(14, 18, 375, 768);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.c-toc__link:focus-visible {
+  outline: none;
+  border: none;
+}
+
+
+@media (min-width: 768px) {
+  .c-toc__title {
+    font-size: var(--fz_14);
+  }
+
+  .c-toc__link {
+    font-size: var(--fz_14);
+  }
+}

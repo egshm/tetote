@@ -1,0 +1,35 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-btn-rounded
+----------------------------------------*/
+.c-btn-rounded {
+  --c_bg: #FAF7F1;
+  display: inline-block;
+  position: relative;
+  width: 294px;
+  max-width: 100%;
+  padding: 0.9em 2.2em;
+  background: var(--c_bg);
+  border: 1px solid currentColor;
+  border-radius: 2em;
+  font-size: var(--fz_20);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.c-btn-rounded:focus-visible,
+.c-btn-rounded:hover {
+  background: var(--c_base);
+  color: var(--c_white);
+}
+
+.c-btn-rounded__icon {
+  position: absolute;
+  top: 50%;
+  width: 0.75em;
+  margin-left: 1em;
+  transform: translateY(-50%);
+}

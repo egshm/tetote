@@ -1,0 +1,66 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-post-staff
+----------------------------------------*/
+
+/* 幅の調整は、p-page-post-detail で実施 */
+.p-sect-post-staff {
+
+  h2 {
+    position: relative;
+    font-size: var(--fz_24);
+    font-weight: 700;
+  }
+
+  h2::before { /* 見出しの左側に伸びる横線 */
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 102%; /* +2%は横線と見出しの間を少しあけるため */
+    width: 100vw;
+    height: 1px;
+    background: currentColor;
+    transform: translateY(-50%);
+  }
+
+  h2:not(:first-of-type) {
+    margin-top: 80px;
+  }
+
+  h2 + * {
+    margin-top: 28px !important;
+  }
+
+  h3 {
+    margin-top: 32px;
+    font-size: var(--fz_18);
+    font-weight: 700;
+    line-height: 1.8;
+  }
+
+  h3 + * {
+    margin-top: 0 !important;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  ul {
+    margin-top: 24px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    line-height: 1.8;
+  }
+
+  li::before {
+    content: '・';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

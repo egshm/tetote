@@ -1,0 +1,38 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-company
+----------------------------------------*/
+.p-sect-company {
+  padding: 75px 0 139px;
+}
+
+.p-sect-company__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc(var(--w_inner-max) * 1px);
+  margin: 0 auto;
+}
+
+.p-sect-company__title {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-sect-company__table {
+  margin-top: 54px;
+}
+
+
+@media (min-width: 768px) {
+  .p-sect-company__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-sect-company__table {
+    margin-top: 113px;
+  }
+}

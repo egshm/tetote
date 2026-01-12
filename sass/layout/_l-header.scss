@@ -1,0 +1,161 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-header
+----------------------------------------*/
+.l-header {
+  /* インナー幅（px）*/
+  --w_inner-min: 351;
+  --w_inner-max: 1380;
+  /* インナー比率 */
+  --w_rate: calc(var(--w_inner-min) / var(--vw_base-SP));
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 8px 0;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 999;
+}
+
+/* ハンバーガメニューオープン */
+.l-header.is-menu-open .l-header__logo,
+.l-header.is-menu-open .l-header__hamburger {
+  color: var(--c_base);
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(var(--w_rate) * 100%);
+  margin: 0 auto;
+}
+
+.l-header__logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 154px;
+  z-index: 999;
+}
+
+.l-header__btn {
+  display: none;
+  position: relative;
+  width: 100px;
+  margin-top: 6px;
+  margin-left: auto;
+  padding: 1em;
+  background: var(--c_bg);
+  color: var(--c_white);
+  font-family: var(--font_viga);
+  font-size: var(--fz_12);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  z-index: 999;
+}
+
+.l-header__btn--default {
+  @include fwd.hover-opacity();
+}
+
+.l-header__btn--entry {
+  @include fwd.entry-btn();
+}
+
+.l-header__btn + .l-header__btn {
+  margin-left: 22px;
+}
+
+.l-header__btn + .l-header__hamburger {
+  margin-left: 40px;
+}
+
+.l-header__hamburger {
+  position: relative;
+  width: 32px;
+  z-index: 999;
+}
+
+.l-header__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 998;
+}
+
+.l-header__menu[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .l-header {
+    padding: 16px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .l-header__btn {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-header {
+    --w_rate: calc(var(--w_inner-max) / var(--vw_base-PC));
+    padding: 26px 0;
+  }
+
+  .l-header__inner {
+    max-width: calc(var(--w_inner-max) * 1px);
+  }
+
+  .l-header__logo {
+    width: 250px;
+  }
+
+  .l-header__btn {
+    margin-top: 12px;
+    width: 126px;
+    font-size: var(--fz_14);
+  }
+
+  .l-header__hamburger {
+    width: 52px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .l-header {
+    padding: 26px 0;
+  }
+
+  .l-header__logo {
+    width: 250px;
+  }
+
+  .l-header__btn {
+    margin-top: 12px;
+    width: 126px;
+    font-size: var(--fz_14);
+  }
+}
+
+
+/*----------------------------------------
+	l-header.is-sticky
+----------------------------------------*/
+.l-header.is-sticky {
+  background: var(--c_white);
+}
+
+.l-header.is-sticky .l-header__logo,
+.l-header.is-sticky .l-header__hamburger[aria-expanded="false"] {
+  color: var(--c_base);
+}

@@ -1,0 +1,76 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-details
+----------------------------------------*/
+.p-sect-details {
+  padding: 64px 0 70px;
+}
+
+.p-sect-details__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc(var(--w_inner-max) * 1px);
+  margin: 0 auto;
+}
+
+.p-sect-details__title {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-sect-details__text {
+  margin-top: 54px;
+  line-height: 1.8;
+}
+
+.p-sect-details__btn-list {
+  margin-top: 35px;
+}
+
+.p-sect-details__btn {
+  font-size: fwd.make-clamp(18, 20, 375, 768);
+}
+
+.p-sect-details__table-list {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  margin-top: 97px;
+}
+
+.p-sect-details__table {
+  margin-top: 54px;
+}
+
+.p-sect-details__table-title {
+  font-size: fwd.make-clamp(20, 32, 375, 768);
+  font-weight: 700;
+}
+
+
+@media (min-width: 768px) {
+  .p-sect-details__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-sect-details {
+    padding: 145px 0 139px;
+  }
+
+  .p-sect-details__text {
+    margin-top: 113px;
+  }
+
+  .p-sect-details__btn-list {
+    --gap_col: 49px; /* 列方向のギャップ */
+    margin-top: 70px;
+  }
+
+  .p-sect-details__table {
+    margin-top: 113px;
+  }
+}

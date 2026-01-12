@@ -1,0 +1,86 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-accordion
+----------------------------------------*/
+.c-accordion {
+  padding: 2.25em 0;
+  border-top: 1px solid var(--c_border);
+  cursor: pointer;
+}
+
+.c-accordion:has(> .c-accordion__summary:focus-visible) {
+  outline: 2px solid var(--c_focus);
+}
+
+.c-accordion__summary {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding-right: 2.25em;
+  list-style-type: none;
+}
+
+// Safariで表示されるデフォルト三角形アイコンをクリア
+.c-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+// 開閉ボタン
+.c-accordion__summary::before,
+.c-accordion__summary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1em;
+  height: 2px;
+  margin: auto 0;
+  background: var(--c_accent);
+}
+
+// 開閉ボタン（縦棒）
+.c-accordion__summary::after {
+  transform: rotate(90deg);
+}
+
+.c-accordion__summary > .c-accordion__text {
+  margin-left: 1.25em;
+}
+
+.c-accordion__text {
+  line-height: 1.5;
+}
+
+// Qアイコン
+.c-accordion__icon {
+  display: grid;
+  place-content: center;
+  color: var(--c_accent);
+  font-family: var(--font_viga);
+  font-size: 1.5em;
+}
+
+.c-accordion__content-wrap {
+  padding: 1.375em 1.375em 0 2.25em;
+}
+
+.c-accordion__content {
+  overflow: hidden;
+}
+
+.c-accordion__item {
+  position: relative;
+  padding-left: 1.2em;
+  line-height: 1.5;
+}
+
+.c-accordion__item::before {
+  content: '・';
+  position: absolute;
+  top: 0;
+  left: 0;
+}

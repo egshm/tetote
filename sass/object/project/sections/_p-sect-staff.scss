@@ -1,0 +1,107 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-staff
+----------------------------------------*/
+.p-sect-staff {
+  /* 社員スライダーの左パディング */
+  --pl_list: calc((1 - var(--w_rate)) * 100vw / 2);
+  padding: 48px 0;
+}
+
+.p-sect-staff__inner {
+  width: calc(var(--w_rate) * 100%);
+  margin: 0 auto;
+}
+
+.p-sect-staff__text {
+  margin-top: 43px;
+  line-height: 1.5;
+}
+
+.p-sect-staff__list {
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  margin-top: 50px;
+  margin-left: calc(50% - 50vw);
+  padding-left: var(--pl_list);
+}
+
+.p-sect-staff__item {
+  margin-right: 23px;
+  padding-bottom: 10px; /* テキスト下部の見切れを防ぐための余白 */
+}
+
+.p-sect-staff__item:nth-child(odd) {
+  margin-top: 25px;
+}
+
+/* VIEW MOREボタンとスライダー切り替えボタンのラッパー */
+.p-sect-staff__btn-wrap {
+  position: relative;
+  margin-top: 54px;
+  text-align: center;
+}
+
+/* スライダー切り替えボタン（SP時は非表示） */
+.p-sect-staff__arrow-btns {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-sect-staff__arrow-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  .p-sect-staff__arrow-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (min-width: 992px) {
+  .p-sect-staff__item {
+    margin-right: 43px;
+  }
+
+  .p-sect-staff__item:nth-child(odd) {
+    margin-top: 36px;
+  }
+
+  .p-sect-staff__btn-wrap {
+    margin-top: 70px;
+  }
+
+  .p-sect-staff__arrow-btns {
+    gap: 20px;
+  }
+
+  .p-sect-staff__arrow-btn {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-sect-staff {
+    padding: 75px 0;
+  }
+
+  .p-sect-staff__inner {
+    max-width: calc(var(--w_inner) * 1px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .p-sect-staff {
+    /* 社員スライダーの左パディング */
+    --pl_list: calc((100vw - (var(--w_inner) * 1px)) / 2);
+  }
+}

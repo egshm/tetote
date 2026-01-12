@@ -1,0 +1,59 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-blog-detail
+----------------------------------------*/
+.p-page-blog-detail {
+  --c_bg: #FAF7F1;
+  --w_inner-blog: 800;
+  background: var(--c_bg);
+}
+
+.p-page-blog-detail__breadcrumb {
+  padding-top: 54px; /* ヘッダー高さに合わせる */
+}
+
+.p-page-blog-detail__inner {
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc((var(--w_inner-blog) * 1px));
+  margin: 0 auto;
+  padding: 34px 0 70px;
+}
+
+.p-page-blog-detail__content {
+  padding-top: 41px;
+  padding-right: calc((40 / var(--w_inner-blog)) * 100%);
+  padding-bottom: 23px;
+  padding-left: calc((40 / var(--w_inner-blog)) * 100%);
+  background: var(--c_white);
+  border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .p-page-blog-detail__inner {
+    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+  }
+
+  .p-page-blog-detail__breadcrumb {
+    padding-top: 70px; /* ヘッダー高さに合わせる */
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-page-blog-detail__inner {
+    padding-bottom: 139px;
+  }
+
+  .p-page-blog-detail__breadcrumb {
+    padding-top: 74px; /* ヘッダー高さに合わせる */
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .p-page-blog-detail__breadcrumb {
+    padding-top: 113px; /* ヘッダー高さに合わせる */
+  }
+}

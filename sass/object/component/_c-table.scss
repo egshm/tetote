@@ -1,0 +1,73 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-table
+----------------------------------------*/
+.c-table {
+  --w_header: 50%; /* テーブルヘッダーの横幅比率 */
+}
+
+.c-table__inner {
+  width: 100%;
+}
+
+.c-table__row:first-of-type .c-table__header,
+.c-table__row:first-of-type .c-table__text {
+  padding-top: 0;
+}
+
+.c-table__header {
+  width: var(--w_header);
+  padding: 24px 24px 24px 0;
+  border-bottom: 1px dashed currentColor;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.c-table__text {
+  padding: 24px 0;
+  border-bottom: 1px dashed currentColor;
+  line-height: 1.5;
+}
+
+.c-table__item {
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.c-table__item::before {
+  content: '・';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+@media (min-width: 425px) {
+  .c-table {
+    --w_header: 40%;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .c-table {
+    --w_header: 33.33333%;
+  }
+
+  .c-table__header {
+    padding: 36px 36px 36px 0;
+  }
+
+  .c-table__text {
+    padding: 36px 0;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .c-table {
+    --w_header: calc((231 / 980) * 100%); /* デザインカンプ比率 */
+  }
+}

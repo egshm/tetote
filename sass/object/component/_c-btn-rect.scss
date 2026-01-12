@@ -1,0 +1,43 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-btn-rect
+----------------------------------------*/
+.c-btn-rect {
+  display: inline-block;
+  position: relative;
+  width: 277px;
+  max-width: 100%;
+  padding: 1.4em 3em;
+  background: var(--c_white);
+  border: 1px solid currentColor;
+  color: var(--c_base);
+  font-family: var(--font_viga);
+  font-size: var(--fz_16);
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.c-btn-rect:hover,
+.c-btn-rect:focus-visible {
+  background: var(--c_base);
+  color: var(--c_white);
+}
+
+.c-btn-rect__icon {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: 1em;
+  transform: translateY(-50%);
+}
+
+
+@media (min-width: 1200px) {
+  .c-btn-rect {
+    width: 355px;
+    padding: 1.5em 3em;
+    font-size: var(--fz_20);
+  }
+}

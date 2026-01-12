@@ -1,0 +1,94 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-card-staff
+----------------------------------------*/
+.c-card-staff {
+  --c_bg: #AFA86F;
+  --time_transition: 0.6s;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+}
+
+.c-card-staff__link {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 246px;
+}
+
+.c-card-staff__link:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.c-card-staff__body {
+  position: relative;
+  margin-top: -48px;
+  font-weight: 700;
+  z-index: 1; /* 画像より前面に配置 */
+}
+
+.c-card-staff__message {
+  width: fit-content;
+  padding: 0.4em;
+  background: var(--c_bg);
+}
+
+.c-card-staff__message + .c-card-staff__message {
+  margin-top: 6px;
+}
+
+.c-card-staff__profile {
+  margin-top: 13px;
+}
+
+.c-card-staff__img {
+  border-radius: 30px;
+  transition: transform var(--time_transition);
+}
+
+.c-card-staff__position,
+.c-card-staff__joined {
+  display: inline-block;
+  font-size: var(--fz_12);
+}
+
+.c-card-staff__joined {
+  margin-left: 10px;
+}
+
+.c-card-staff__name {
+  margin-top: 14px;
+  font-size: var(--fz_20);
+}
+
+@media (min-width: 992px) {
+  .c-card-staff {
+    /* 下線アニメーション */
+    @include fwd.text-underline-animation(
+      ".c-card-staff__message > span", " ", 2px, var(--time_transition)
+    );
+  }
+
+  .c-card-staff:hover .c-card-staff__img,
+  .c-card-staff:focus-visible .c-card-staff__img {
+    transform: scale(1.1);
+  }
+
+  .c-card-staff__link {
+    width: 300px;
+  }
+
+  .c-card-staff__message {
+    font-size: var(--fz_20);
+  }
+
+  .c-card-staff__position,
+  .c-card-staff__joined {
+    font-size: var(--fz_16);
+  }
+
+  .c-card-staff__name {
+    font-size: var(--fz_24);
+  }
+}
