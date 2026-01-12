@@ -1,2 +1,12 @@
-# tetote
-架空の採用特設サイト | 株式会社TETOTE
+# 概要
+架空のITコンサルティング企業「TETOTE」の採用特設サイトです。
+WordPress化まで行いました。
+
+## デザインツール
+Figma
+
+## 開発言語
+- HTML
+- CSS/Sass
+- JavaScript/jQuery
+- PHP
