@@ -102,8 +102,8 @@
                   ?>
                   <!-- メッセージ -->
                   <div class="c-card-staff__message-wrap">
-                    <p class="c-card-staff__message"><span><?php echo esc_html($meta['message']); ?></span></p>
-                    <p class="c-card-staff__message"><span><?php echo esc_html($meta['message2']); ?></span></p>
+                    <p class="c-card-staff__message"><?php echo esc_html($meta['message']); ?></p>
+                    <p class="c-card-staff__message"><?php echo esc_html($meta['message2']); ?></p>
                   </div>
                   <!-- プロフィール -->
                   <div class="c-card-staff__profile">

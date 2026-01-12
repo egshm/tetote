@@ -12,7 +12,7 @@
   /* 背景画像用のスペース確保 */
   padding-top: calc(var(--h_bg) * 1px);
   padding-bottom: 24px;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
 }
 
 /* 背景画像 */
@@ -96,7 +96,7 @@
 
 @media (min-width: 992px) {
   .l-footer {
-    background: var(--c_white);
+    background-color: var(--c_white);
   }
 
   .l-footer::before {
@@ -105,7 +105,7 @@
 
   .l-footer__inner {
     padding-bottom: 61px;
-    background: var(--c_bg);
+    background-color: var(--c_bg);
     border-radius: 0 0 20px 20px;
   }
 

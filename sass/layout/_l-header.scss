@@ -45,7 +45,7 @@
   margin-top: 6px;
   margin-left: auto;
   padding: 1em;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   color: var(--c_white);
   font-family: var(--font_viga);
   font-size: var(--fz_12);
@@ -86,6 +86,7 @@
   height: 100vh;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
   z-index: 998;
 }
 
@@ -152,7 +153,7 @@
 	l-header.is-sticky
 ----------------------------------------*/
 .l-header.is-sticky {
-  background: var(--c_white);
+  background-color: var(--c_white);
 }
 
 .l-header.is-sticky .l-header__logo,

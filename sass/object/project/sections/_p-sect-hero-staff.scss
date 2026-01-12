@@ -6,7 +6,7 @@
 .p-sect-hero-staff {
   --c_bg: #FAF7F1;
   padding: 43px 0;
-  background: var(--c_bg)
+  background-color: var(--c_bg)
 }
 
 .p-sect-hero-staff__inner {
@@ -21,7 +21,7 @@
 .p-sect-hero-staff__title-main {
   width: fit-content;
   padding: 0.08em 0.3em;
-  background: var(--c_white);
+  background-color: var(--c_white);
   font-size: fwd.make-clamp(28, 32, 375, 768);
   font-weight: 700;
   line-height: 1.2;
@@ -31,7 +31,7 @@
   width: fit-content;
   margin-top: 18px;
   padding: 0.1em 0.4em;
-  background: var(--c_white);
+  background-color: var(--c_white);
   font-size: fwd.make-clamp(20, 24, 375, 768);
   font-weight: 700;
   line-height: 1.2;

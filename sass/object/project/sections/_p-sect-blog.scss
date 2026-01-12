@@ -6,7 +6,7 @@
 .p-sect-blog {
   --c_bg: #FAF7F1;
   padding: 78px 0 45px;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
 }
 
 .p-sect-blog__inner {
@@ -37,6 +37,11 @@
   margin-top: 52px;
 }
 
+.p-sect-blog__btn {
+  // 下線アニメーション
+  @include fwd.text-underline-animation(".p-sect-blog__btn-text", "~");
+}
+
 .p-sect-blog__btn-text {
   font-family: var(--font_viga);
   text-transform: uppercase;
@@ -63,12 +68,6 @@
   }
 }
 
-@media (min-width: 992px) {
-  .p-sect-blog__btn {
-    /* 下線アニメーション */
-    @include fwd.text-underline-animation(".p-sect-blog__btn-text", "~");
-  }
-}
 
 @media (min-width: 1200px) {
   .p-sect-blog {
@@ -83,6 +82,7 @@
     margin-top: 73px;
   }
 }
+
 
 @media (min-width: 1440px) {
   .p-sect-blog__list {

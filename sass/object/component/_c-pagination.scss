@@ -7,7 +7,6 @@
 /* WordPress（the_posts_pagination関数）の出力クラスを使用 */
 .c-pagination {
 
-  --scale_rate: 1.1; /* ホバー（フォーカス）時のスケール倍率 */
   width: fit-content;
   margin: 98px auto 0;
 
@@ -24,24 +23,28 @@
     place-content: center;
     width: 58px;
     height: 58px;
-    background: var(--c_white);
+    background-color: var(--c_white);
     border: 1px solid currentColor;
     border-radius: 50%;
     font-size: var(--fz_14);
     transition: transform 0.3s;
   }
 
+  /* フォーカス時 */
+  .page-numbers:focus-visible {
+    border: 2px solid var(--c_focus);
+    transform: scale(1.1);
+  }
+
   .page-numbers.current {
-    background: var(--c_bg);
+    background-color: var(--c_bg);
     color: var(--c_white);
   }
 
-  .page-numbers:not(.current):hover {
-    transform: scale(var(--scale_rate));
-  }
-
-  .page-numbers:focus-visible {
-    border: 2px solid var(--c_focus);
-    transform: scale(var(--scale_rate));
+  /* ホバー時 */
+  @media (any-hover: hover) {
+    .page-numbers:not(.current):hover {
+      transform: scale(1.1);
+    }
   }
 }

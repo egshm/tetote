@@ -5,17 +5,17 @@
 ----------------------------------------*/
 .c-news-bar {
   display: flex;
+  // 下線アニメーション
+  @include fwd.text-underline-animation(".c-news-bar__text", 2px);
 }
 
-/* ホバー（フォーカス）で右シェブロンを少し右に動かす */
-.c-news-bar:focus-visible .c-news-bar__icon,
-.c-news-bar:hover .c-news-bar__icon {
-  transform: translateX(5px);
-}
-
-/* フォーカスリングを丸める */
+/* フォーカス時 */
 .c-news-bar:focus-visible {
-  border-radius: 50px;
+  border-radius: 50px; /* フォーカスリングを丸める */
+
+  .c-news-bar__icon {
+    transform: translateX(5px); /* 右シェブロンを少し右に動かす */
+  }
 }
 
 /* NEWSラベル */
@@ -23,7 +23,7 @@
   display: grid;
   place-content: center;
   width: calc((52 / 351) * 100%);
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   border-radius: 50px 0 0 50px;
   color: var(--c_white);
   font-family: var(--font_viga);
@@ -34,7 +34,7 @@
 .c-news-bar__body {
   width: calc((299 / 351) * 100%);
   padding: 0.8em;
-  background: var(--c_white);
+  background-color: var(--c_white);
   border-radius: 0 50px 50px 0;
   font-size: fwd.make-clamp(12, 16, 375, 992);
 }
@@ -59,6 +59,14 @@
 }
 
 
+/* ホバー時 */
+@media (any-hover: hover) {
+  .c-news-bar:hover .c-news-bar__icon {
+    transform: translateX(5px); /* 右シェブロンを少し右に動かす */
+  }
+}
+
+
 @media (min-width: 768px) {
   .c-news-bar__body {
     display: flex;
@@ -77,14 +85,6 @@
   }
 }
 
-@media (min-width: 992px) {
-  .c-news-bar {
-    /* 下線アニメーション */
-    @include fwd.text-underline-animation(
-      ".c-news-bar__text", " ", 2px
-    );
-  }
-}
 
 @media (min-width: 1440px) {
   .c-news-bar__body {

@@ -10,17 +10,26 @@
   aspect-ratio: 1 / 1;
   border: 1px solid currentColor;
   border-radius: 50%;
-  transition: 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
 }
 
-.c-btn-icon:focus-visible,
-.c-btn-icon:hover {
-  background: var(--c_btn);
+/* フォーカス時 */
+.c-btn-icon:focus-visible {
+  background-color: var(--c_btn);
+  border: 2px solid var(--c_focus);
   color: var(--c_white);
+  outline: none;
   transform: scale(calc(70 / 58));
 }
 
-.c-btn-icon:focus-visible {
-  border: 2px solid var(--c_focus);
-  outline: none;
+/* ホバー時 */
+@media (any-hover: hover) {
+  .c-btn-icon:hover {
+    background-color: var(--c_btn);
+    color: var(--c_white);
+    transform: scale(calc(70 / 58));
+  }
 }

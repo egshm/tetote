@@ -10,19 +10,22 @@
   width: 294px;
   max-width: 100%;
   padding: 0.9em 2.2em;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   border: 1px solid currentColor;
   border-radius: 2em;
   font-size: var(--fz_20);
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  transition: 
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s;
 }
 
-.c-btn-rounded:focus-visible,
-.c-btn-rounded:hover {
-  background: var(--c_base);
+/* フォーカス時 */
+.c-btn-rounded:focus-visible {
+  background-color: var(--c_base);
   color: var(--c_white);
 }
 
@@ -32,4 +35,12 @@
   width: 0.75em;
   margin-left: 1em;
   transform: translateY(-50%);
+}
+
+/* ホバー時 */
+@media (any-hover: hover) {
+  .c-btn-rounded:hover {
+    background-color: var(--c_base);
+    color: var(--c_white);
+  }
 }

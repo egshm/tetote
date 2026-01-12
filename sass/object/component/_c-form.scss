@@ -50,7 +50,7 @@
 .c-form__textarea {
   width: 100%;
   padding: 1.25em;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   border: 1px solid var(--c_border);
   border-radius: 10px;
 }
@@ -92,7 +92,7 @@
     position: relative;
     width: 24px;
     height: 24px;
-    background: var(--c_bg);
+    background-color: var(--c_bg);
     border: 1px solid var(--c_border);
     border-radius: 50%;
     cursor: pointer;
@@ -106,7 +106,7 @@
     left: 50%;
     width: calc((10 / 24) * 100%);
     height: calc((10 / 24) * 100%);
-    background: currentColor;
+    background-color: currentColor;
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }
@@ -140,7 +140,7 @@
     position: relative;
     width: 24px;
     height: 24px;
-    background: var(--c_bg);
+    background-color: var(--c_bg);
     border: 1px solid var(--c_border);
     cursor: pointer;
   }
@@ -153,7 +153,7 @@
     left: 50%;
     width: calc((10 / 24) * 100%);
     height: calc((10 / 24) * 100%);
-    background: currentColor;
+    background-color: currentColor;
     transform: translate(-50%, -50%);
   }
 
@@ -188,7 +188,7 @@
     position: relative;
     width: 16px;
     height: 16px;
-    background: var(--c_bg);
+    background-color: var(--c_bg);
     border: 1px solid var(--c_border);
     cursor: pointer;
   }
@@ -231,11 +231,18 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
-  /* ホバー（フォーカス）時のアニメーション */
-  .c-form__btn:focus-visible,
-  .c-form__btn:hover {
-    background: var(--c_base);
+  /* フォーカス時 */
+  .c-form__btn:focus-visible {
+    background-color: var(--c_base);
     color: var(--c_white);
+  }
+
+  /* ホバー時 */
+  @media (any-hover: hover) {
+    .c-form__btn:hover {
+      background-color: var(--c_base);
+      color: var(--c_white);
+    }
   }
 }
 

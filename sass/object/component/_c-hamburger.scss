@@ -21,7 +21,7 @@
 }
 
 .c-hamburger[aria-expanded="true"] .c-hamburger__line {
-  background: transparent;
+  background-color: transparent;
 }
 
 .c-hamburger[aria-expanded="true"] .c-hamburger__line::after {
@@ -37,7 +37,7 @@
   position: relative;
   width: 100%;
   height: 2px;
-  background: currentColor;
+  background-color: currentColor;
   transition: background-color 0.3s;
 }
 
@@ -48,7 +48,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: currentColor;
+  background-color: currentColor;
   border-radius: 1em;
   transition: transform 0.3s;
 }

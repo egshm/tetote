@@ -5,8 +5,7 @@
 ----------------------------------------*/
 .p-part-menu {
   --c_bg: #FAF7F1;
-  background: var(--c_bg);
-  transition: 0.3s;
+  background-color: var(--c_bg);
 }
 
 .p-part-menu__inner {
@@ -60,7 +59,7 @@
   display: inline-block;
   width: 248px;
   padding: 1em;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   color: var(--c_white);
   font-family: var(--font_viga);
   font-size: var(--fz_14);

@@ -5,9 +5,19 @@
 ----------------------------------------*/
 .c-card-staff {
   --c_bg: #AFA86F;
-  --time_transition: 0.6s;
   border-radius: 30px 30px 0 0;
+  /* ホバー時に画像をscaleで拡大するので、*/
+  /* あふれた部分をカットする意図で設定。  */
   overflow: hidden;
+  // 社員名に下線アニメーションを適用
+  @include fwd.text-underline-animation(
+    ".c-card-staff__name", 2px, 0.6s
+  );
+}
+
+/* フォーカス時 */
+.c-card-staff:focus-visible .c-card-staff__img {
+  transform: scale(1.1);
 }
 
 .c-card-staff__link {
@@ -21,6 +31,11 @@
   outline: none;
 }
 
+.c-card-staff__img {
+  border-radius: 30px;
+  transition: transform 0.6s;
+}
+
 .c-card-staff__body {
   position: relative;
   margin-top: -48px;
@@ -29,9 +44,9 @@
 }
 
 .c-card-staff__message {
-  width: fit-content;
+  display: inline-block;
   padding: 0.4em;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
 }
 
 .c-card-staff__message + .c-card-staff__message {
@@ -39,41 +54,42 @@
 }
 
 .c-card-staff__profile {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 0.875em;
+  width: fit-content;
   margin-top: 13px;
 }
 
-.c-card-staff__img {
-  border-radius: 30px;
-  transition: transform var(--time_transition);
-}
-
-.c-card-staff__position,
-.c-card-staff__joined {
-  display: inline-block;
+.c-card-staff__position {
+  grid-column: 1; /* 1列目に配置 */
+  grid-row: 1;    /* 1行目に配置 */
   font-size: var(--fz_12);
 }
 
 .c-card-staff__joined {
-  margin-left: 10px;
+  grid-column: 2; /* 2列目に配置 */
+  grid-row: 1;    /* 1行目に配置 */
+  font-size: var(--fz_12);
 }
 
 .c-card-staff__name {
-  margin-top: 14px;
+  grid-column: 1 / -1; /* 2列分扱う */
+  grid-row: 2; /* 2行目に配置 */
+  width: fit-content;
   font-size: var(--fz_20);
+  line-height: 1.4; /* 下線アニメーションでのテキストと線の間隔を調整 */
+}
+
+/* ホバー時 */
+@media (any-hover: hover) {
+  .c-card-staff:hover .c-card-staff__img {
+    transform: scale(1.1);
+  }
 }
 
 @media (min-width: 992px) {
-  .c-card-staff {
-    /* 下線アニメーション */
-    @include fwd.text-underline-animation(
-      ".c-card-staff__message > span", " ", 2px, var(--time_transition)
-    );
-  }
-
-  .c-card-staff:hover .c-card-staff__img,
-  .c-card-staff:focus-visible .c-card-staff__img {
-    transform: scale(1.1);
-  }
 
   .c-card-staff__link {
     width: 300px;

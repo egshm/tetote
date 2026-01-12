@@ -4,7 +4,8 @@
 	c-logo
 ----------------------------------------*/
 .c-logo {
-  color: var(--c_white); //SVGパスの色
+  color: var(--c_white); /* SVGパスの色 */
+  transition: color 0.3s;
 }
 
 .c-logo__link {
@@ -14,5 +15,4 @@
 
 .c-logo__img {
   aspect-ratio: 250 / 61;
-  transition: 0.3s;
 }

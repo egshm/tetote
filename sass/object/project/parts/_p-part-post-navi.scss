@@ -7,7 +7,7 @@
   --c_bg: #F0F0F0;
   --c_btn: #4B4B4B;
   --w_inner-post-navi: 924;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
 }
 
 .p-part-post-navi__inner {
@@ -27,7 +27,7 @@
   left: 50%;
   width: 1px;
   height: calc((56 / 96) * 100%);
-  background: currentColor;
+  background-color: currentColor;
   transform: translate(-50%, -50%);
 }
 
@@ -57,6 +57,16 @@
   max-width: 92%;
   height: 100%;
   font-size: fwd.make-clamp(14, 16, 375, 768);
+  // 下線アニメーション
+  @include fwd.text-underline-animation(".p-part-post-navi__title");
+}
+
+/* フォーカス時 */
+.p-part-post-navi__link:focus-visible .p-part-post-navi__btn {
+  background-color: var(--c_btn);
+  border-color: var(--c_btn);
+  color: var(--c_white);
+  transform: scale(calc(32 / 24));
 }
 
 .p-part-post-navi__body {
@@ -83,16 +93,9 @@
   color: var(--c_btn);
 }
 
-@media (min-width: 992px) {
-  .p-part-post-navi__link {
-    /* 下線アニメーション */
-    @include fwd.text-underline-animation(".p-part-post-navi__title");
-  }
-
-  /* ボタンアニメーション */
-  .p-part-post-navi__link:focus-visible .p-part-post-navi__btn,
+@media (any-hover: hover) {
   .p-part-post-navi__link:hover .p-part-post-navi__btn {
-    background: var(--c_btn);
+    background-color: var(--c_btn);
     border-color: var(--c_btn);
     color: var(--c_white);
     transform: scale(calc(32 / 24));

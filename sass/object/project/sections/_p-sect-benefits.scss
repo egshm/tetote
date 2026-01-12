@@ -37,8 +37,8 @@
   transition: transform 0.3s;
 }
 
-.p-sect-benefits__card:focus-visible,
-.p-sect-benefits__card:hover {
+/* フォーカス時 */
+.p-sect-benefits__card:focus-visible {
   transform: scale(1.05);
 
   .p-sect-benefits__btn {
@@ -55,7 +55,7 @@
   width: fit-content;
   margin: 0 auto;
   padding: 0.3em;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   font-size: var(--fz_24);
   font-weight: 700;
   line-height: 1.2;
@@ -78,9 +78,22 @@
   top: calc((170 / 251) * 100%);
   right: calc((13 / 251) * 100%);
   width: 42px;
-  background: var(--c_bg);
+  background-color: var(--c_bg);
   color: var(--c_white);
 }
+
+
+/* ホバー時 */
+@media (any-hover: hover) {
+  .p-sect-benefits__card:hover {
+    transform: scale(1.05);
+  
+    .p-sect-benefits__btn {
+      transform: translateX(20px);
+    }
+  }
+}
+
 
 @media (min-width: 768px) {
   .p-sect-benefits__list {
@@ -102,6 +115,7 @@
   }
 }
 
+
 @media (min-width: 1200px) {
   .p-sect-benefits {
     padding: 75px 0 107px;
@@ -119,6 +133,7 @@
     text-align: center;
   }
 }
+
 
 @media (min-width: 1440px) {
   .p-sect-benefits__body {

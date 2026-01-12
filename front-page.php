@@ -157,12 +157,12 @@
                   ?>
                   <!-- メッセージ -->
                   <div class="c-card-staff__message-wrap">
-                    <p class="c-card-staff__message"><span><?php echo esc_html($meta['message']); ?></span></p>
-                    <p class="c-card-staff__message"><span><?php echo esc_html($meta['message2']); ?></span></p>
+                    <p class="c-card-staff__message"><?php echo esc_html($meta['message']); ?></p>
+                    <p class="c-card-staff__message"><?php echo esc_html($meta['message2']); ?></p>
                   </div>
                   <!-- プロフィール -->
                   <div class="c-card-staff__profile">
-                    <p class="c-card-staff__position"><?php echo esc_html($meta['position']); ?></span></p>
+                    <p class="c-card-staff__position"><?php echo esc_html($meta['position']); ?></p>
                     <p class="c-card-staff__joined"><?php echo esc_html($meta['joined']); ?></p>
                     <p class="c-card-staff__name"><?php echo esc_html($meta['name']); ?></p>
                   </div>
