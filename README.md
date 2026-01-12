@@ -1,5 +1,5 @@
 # 概要
-架空のITコンサルティング企業「TETOTE」の採用特設サイトです。
+架空のITコンサルティング企業「TETOTE」の採用特設サイトです。  
 WordPress化まで行いました。
 
 ## デザインツール
@@ -10,3 +10,6 @@ Figma
 - CSS/Sass
 - JavaScript/jQuery
 - PHP
+
+## CSS設計
+BEM + FLOCSS
