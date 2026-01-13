@@ -2,22 +2,22 @@
 
 <!-- .p-page-top -->
 <main class="p-page-top">
-  <!-- .p-part-fv -->
-  <div class="p-part-fv p-page-top__fv" id="js-firstView">
-    <ul class="p-part-fv__img-list" aria-hidden="true" id="js-fvSlider">
-      <li class="p-part-fv__img-item">
-        <img class="p-part-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv.jpg")); ?>" alt="スーツ姿の若者が緑豊かな並木道を歩く様子。就職活動や新社会人を連想させる爽やかなシーン" width="375" height="667">
+  <!-- .p-fv -->
+  <div class="p-fv p-page-top__fv" id="js-firstView">
+    <ul class="p-fv__img-list" aria-hidden="true" id="js-fvSlider">
+      <li class="p-fv__img-item">
+        <img class="p-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv.jpg")); ?>" alt="スーツ姿の若者が緑豊かな並木道を歩く様子。就職活動や新社会人を連想させる爽やかなシーン" width="375" height="667">
       </li>
-      <li class="p-part-fv__img-item">
-        <img class="p-part-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv-02.jpg")); ?>" alt="窓際の明るいオフィスで、女性社員2名と男性社員1名がミーティングをする様子" width="375" height="667">
+      <li class="p-fv__img-item">
+        <img class="p-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv-02.jpg")); ?>" alt="窓際の明るいオフィスで、女性社員2名と男性社員1名がミーティングをする様子" width="375" height="667">
       </li>
     </ul>
-    <div class="p-part-fv__inner">
-      <div class="p-part-fv__content js-inview u-fade-in-up">
-        <h1 class="p-part-fv__title" aria-label="Become a challenger.">
+    <div class="p-fv__inner">
+      <div class="p-fv__content js-inview u-fade-in-up">
+        <h1 class="p-fv__title" aria-label="Become a challenger.">
           Become a<br>challenger.
         </h1>
-        <img class="p-part-fv__title-sub" alt="君の挑戦が、意思が、未来を変える" src="<?php echo esc_url(get_theme_file_uri("images/fv-text.svg")); ?>" width="228" height="30">
+        <img class="p-fv__title-sub" alt="君の挑戦が、意思が、未来を変える" src="<?php echo esc_url(get_theme_file_uri("images/fv-text.svg")); ?>" width="228" height="30">
         <?php // 採用ブログの最新記事を取得
         $latest_post = get_posts([
           'post_type' => 'post',
@@ -32,7 +32,7 @@
         }
         ?>
         <!-- .c-news-bar -->
-        <a href="<?php echo esc_url($latest_url); ?>" class="c-news-bar p-part-fv__news-bar">
+        <a href="<?php echo esc_url($latest_url); ?>" class="c-news-bar p-fv__news-bar">
           <span class="c-news-bar__label">News</span>
           <div class="c-news-bar__body">
             <p class="c-news-bar__title"><?php echo esc_html($latest_title); ?></p>
@@ -48,7 +48,7 @@
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv -->
+  <!-- /.p-fv -->
 
   <!-- .p-sect-mission -->
   <section class="p-sect-mission p-page-top__mission">
@@ -294,16 +294,16 @@
         <ul class="p-sect-blog__list">
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <li class="p-sect-blog__item">
-              <!-- .p-part-media -->
-              <a href="<?php esc_url(the_permalink()); ?>" class="p-part-media p-sect-blog__media">
-                <div class="p-part-media__body">
+              <!-- .p-media -->
+              <a href="<?php esc_url(the_permalink()); ?>" class="p-media p-sect-blog__media">
+                <div class="p-media__body">
                   <?php // カテゴリー一覧
                   $categories = get_the_category();
                   if (!empty($categories)) {
                     $limit = 5;
                     $count = 0;
   
-                    echo '<ul class="c-categories p-part-media__categories">';
+                    echo '<ul class="c-categories p-media__categories">';
                     foreach ($categories as $category) {
                       if ($count >= $limit) {
                         break;
@@ -316,26 +316,26 @@
                     echo '</ul>';
                   }
                   ?>
-                  <div class="p-part-media__title-wrap">
+                  <div class="p-media__title-wrap">
                     <!-- タイトル -->
-                    <h3 class="p-part-media__title"><?php esc_html(the_title()); ?></h3>
+                    <h3 class="p-media__title"><?php esc_html(the_title()); ?></h3>
                   </div>
                   <!-- 公開日 -->
-                  <time class="p-part-media__date" datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>">
+                  <time class="p-media__date" datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>">
                     <?php echo esc_html(get_the_date('Y.m.d')); ?>
                   </time>
                 </div>
-                <figure class="p-part-media__img-wrap">
+                <figure class="p-media__img-wrap">
                   <?php if (has_post_thumbnail()) : ?>
                     <!-- アイキャッチ画像 -->
-                    <?php the_post_thumbnail('full', ['class' => 'p-part-media__img']); ?>
+                    <?php the_post_thumbnail('full', ['class' => 'p-media__img']); ?>
                   <?php else : ?>
                     <!-- NoImage画像 -->
-                    <img class="p-part-media__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png")); ?>" alt="NoImage画像" width="121" height="121">
+                    <img class="p-media__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png")); ?>" alt="NoImage画像" width="121" height="121">
                   <?php endif ; ?>
                 </figure>
               </a>
-              <!-- /.p-part-media -->
+              <!-- /.p-media -->
             </li>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>

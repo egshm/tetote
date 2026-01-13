@@ -2,19 +2,19 @@
 
 <!-- .p-page-benefits -->
 <main class="p-page-benefits">
-  <!-- .p-part-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-benefits.jpg")); ?>')" class="p-part-fv-sub p-page-benefits__fv">
-    <div class="p-part-fv-sub__inner">
-      <div class="p-part-fv-sub__content">
-        <hgroup class="p-part-fv-sub__title">
-          <h1 class="p-part-fv-sub__title-main">Benefits</h1>
-          <p class="p-part-fv-sub__title-sub">福利厚生について</p>
+  <!-- .p-fv-sub -->
+  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-benefits.jpg")); ?>')" class="p-fv-sub p-page-benefits__fv">
+    <div class="p-fv-sub__inner">
+      <div class="p-fv-sub__content">
+        <hgroup class="p-fv-sub__title">
+          <h1 class="p-fv-sub__title-main">Benefits</h1>
+          <p class="p-fv-sub__title-sub">福利厚生について</p>
         </hgroup>
-        <p class="p-part-fv-sub__text">充実した福利厚生制度を設けています。</p>
+        <p class="p-fv-sub__text">充実した福利厚生制度を設けています。</p>
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv-sub -->
+  <!-- /.p-fv-sub -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>

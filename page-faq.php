@@ -2,19 +2,19 @@
 
 <!-- .p-page-faq -->
 <main class="p-page-faq">
-  <!-- .p-part-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-faq.jpg")); ?>')" class="p-part-fv-sub p-page-faq__fv">
-    <div class="p-part-fv-sub__inner">
-      <div class="p-part-fv-sub__content">
-        <hgroup class="p-part-fv-sub__title">
-          <h1 class="p-part-fv-sub__title-main">FAQ</h1>
-          <p class="p-part-fv-sub__title-sub">よくある質問</p>
+  <!-- .p-fv-sub -->
+  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-faq.jpg")); ?>')" class="p-fv-sub p-page-faq__fv">
+    <div class="p-fv-sub__inner">
+      <div class="p-fv-sub__content">
+        <hgroup class="p-fv-sub__title">
+          <h1 class="p-fv-sub__title-main">FAQ</h1>
+          <p class="p-fv-sub__title-sub">よくある質問</p>
         </hgroup>
-        <p class="p-part-fv-sub__text">皆様からよく頂くご質問にお答えします。</p>
+        <p class="p-fv-sub__text">皆様からよく頂くご質問にお答えします。</p>
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv-sub -->
+  <!-- /.p-fv-sub -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
@@ -30,11 +30,11 @@
   <div class="p-sect-faq p-page-faq__faq">
     <div class="p-sect-faq__inner">
 
-      <!-- .p-part-btn-list -->
-      <ul class="p-part-btn-list p-sect-faq__btn-list">
-        <li class="p-part-btn-list__item">
+      <!-- .p-btn-list -->
+      <ul class="p-btn-list p-sect-faq__btn-list">
+        <li class="p-btn-list__item">
           <!-- .c-btn-rounded -->
-          <a href="#application" class="c-btn-rounded p-part-btn-list__btn">
+          <a href="#application" class="c-btn-rounded p-btn-list__btn">
             <span class="c-btn-rounded__text">応募・選考について</span>
             <svg class="c-btn-rounded__icon" aria-hidden="true" width="15" height="21" viewBox="0 0 15 21" fill="none">
               <path d="M6.65715 20.7071C7.04768 21.0976 7.68084 21.0976 8.07136 20.7071L14.4353 14.3431C14.8259 13.9526 14.8259 13.3195 14.4353 12.9289C14.0448 12.5384 13.4116 12.5384 13.0211 12.9289L7.36426 18.5858L1.7074 12.9289C1.31688 12.5384 0.683714 12.5384 0.29319 12.9289C-0.0973344 13.3195 -0.0973344 13.9526 0.29319 14.3431L6.65715 20.7071ZM6.36426 0L6.36426 20H8.36426L8.36426 0L6.36426 0Z" fill="currentColor"/>
@@ -42,9 +42,9 @@
           </a>
           <!-- /.c-btn-rounded -->
         </li>
-        <li class="p-part-btn-list__item">
+        <li class="p-btn-list__item">
           <!-- .c-btn-rounded -->
-          <a href="#career" class="c-btn-rounded p-part-btn-list__btn">
+          <a href="#career" class="c-btn-rounded p-btn-list__btn">
             <span class="c-btn-rounded__text">キャリアについて</span>
             <svg class="c-btn-rounded__icon" aria-hidden="true" width="15" height="21" viewBox="0 0 15 21" fill="none">
               <path d="M6.65715 20.7071C7.04768 21.0976 7.68084 21.0976 8.07136 20.7071L14.4353 14.3431C14.8259 13.9526 14.8259 13.3195 14.4353 12.9289C14.0448 12.5384 13.4116 12.5384 13.0211 12.9289L7.36426 18.5858L1.7074 12.9289C1.31688 12.5384 0.683714 12.5384 0.29319 12.9289C-0.0973344 13.3195 -0.0973344 13.9526 0.29319 14.3431L6.65715 20.7071ZM6.36426 0L6.36426 20H8.36426L8.36426 0L6.36426 0Z" fill="currentColor"/>
@@ -52,9 +52,9 @@
           </a>
           <!-- /.c-btn-rounded -->
         </li>
-        <li class="p-part-btn-list__item">
+        <li class="p-btn-list__item">
           <!-- .c-btn-rounded -->
-          <a href="#benefits" class="c-btn-rounded p-part-btn-list__btn">
+          <a href="#benefits" class="c-btn-rounded p-btn-list__btn">
             <span class="c-btn-rounded__text">福利厚生について</span>
             <svg class="c-btn-rounded__icon" aria-hidden="true" width="15" height="21" viewBox="0 0 15 21" fill="none">
               <path d="M6.65715 20.7071C7.04768 21.0976 7.68084 21.0976 8.07136 20.7071L14.4353 14.3431C14.8259 13.9526 14.8259 13.3195 14.4353 12.9289C14.0448 12.5384 13.4116 12.5384 13.0211 12.9289L7.36426 18.5858L1.7074 12.9289C1.31688 12.5384 0.683714 12.5384 0.29319 12.9289C-0.0973344 13.3195 -0.0973344 13.9526 0.29319 14.3431L6.65715 20.7071ZM6.36426 0L6.36426 20H8.36426L8.36426 0L6.36426 0Z" fill="currentColor"/>
@@ -63,7 +63,7 @@
           <!-- /.c-btn-rounded -->
         </li>
       </ul>
-      <!-- /.p-part-btn-list -->
+      <!-- /.p-btn-list -->
 
       <ul class="p-sect-faq__accordion-list">
         <li class="p-sect-faq__accordion-item">

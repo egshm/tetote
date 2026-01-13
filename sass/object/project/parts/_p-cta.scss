@@ -1,0 +1,31 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-cta
+----------------------------------------*/
+.p-cta {
+  padding: 24px 0 29px;
+  background-color: var(--c_white);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.p-cta__text {
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  font-weight: 700;
+  line-height: 2.5;
+}
+
+.p-cta__btn {
+  width: calc((200 / 343) * 100%);
+  margin-top: 24px;
+  border: none;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  @include fwd.entry-btn(var(--c_base));
+}
+
+@media (min-width: 1200px) {
+  .p-cta {
+    padding: 50px 0;
+  }
+}

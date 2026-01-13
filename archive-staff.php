@@ -2,19 +2,19 @@
 
 <!-- .p-page-staff -->
 <main class="p-page-staff">
-  <!-- .p-part-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>')" class="p-part-fv-sub p-page-staff__fv">
-    <div class="p-part-fv-sub__inner">
-      <div class="p-part-fv-sub__content">
-        <hgroup class="p-part-fv-sub__title">
-          <h2 class="p-part-fv-sub__title-main">Staff</h2>
-          <p class="p-part-fv-sub__title-sub">社員について</p>
+  <!-- .p-fv-sub -->
+  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>')" class="p-fv-sub p-page-staff__fv">
+    <div class="p-fv-sub__inner">
+      <div class="p-fv-sub__content">
+        <hgroup class="p-fv-sub__title">
+          <h2 class="p-fv-sub__title-main">Staff</h2>
+          <p class="p-fv-sub__title-sub">社員について</p>
         </hgroup>
-        <p class="p-part-fv-sub__text">弊社社員のリアルな声を紹介しています。</p>
+        <p class="p-fv-sub__text">弊社社員のリアルな声を紹介しています。</p>
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv-sub -->
+  <!-- /.p-fv-sub -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>

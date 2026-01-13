@@ -2,19 +2,19 @@
 
 <!-- .p-page-blog -->
 <main class="p-page-blog">
-  <!-- .p-part-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-blog.jpg")); ?>')" class="p-part-fv-sub p-page-blog__fv">
-    <div class="p-part-fv-sub__inner">
-      <div class="p-part-fv-sub__content">
-        <hgroup class="p-part-fv-sub__title">
-          <h1 class="p-part-fv-sub__title-main">Blog</h1>
-          <p class="p-part-fv-sub__title-sub">採用ブログ</p>
+  <!-- .p-fv-sub -->
+  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-blog.jpg")); ?>')" class="p-fv-sub p-page-blog__fv">
+    <div class="p-fv-sub__inner">
+      <div class="p-fv-sub__content">
+        <hgroup class="p-fv-sub__title">
+          <h1 class="p-fv-sub__title-main">Blog</h1>
+          <p class="p-fv-sub__title-sub">採用ブログ</p>
         </hgroup>
-        <p class="p-part-fv-sub__text">採用情報やイベント情報などをご紹介します。</p>
+        <p class="p-fv-sub__text">採用情報やイベント情報などをご紹介します。</p>
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv-sub -->
+  <!-- /.p-fv-sub -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
@@ -31,16 +31,16 @@
       <ul class="p-page-blog__list">
         <?php while (have_posts()) : the_post(); ?>
           <li class="p-page-blog__item">
-            <!-- .p-part-media -->
-            <a href="<?php the_permalink(); ?>" class="p-part-media p-part-media--floral-white p-page-blog__media">
-              <div class="p-part-media__body">
+            <!-- .p-media -->
+            <a href="<?php the_permalink(); ?>" class="p-media p-media--floral-white p-page-blog__media">
+              <div class="p-media__body">
                 <?php // カテゴリー一覧
                 $categories = get_the_category();
                 if (!empty($categories)) {
                   $limit = 5;
                   $count = 0;
 
-                  echo '<ul class="c-categories p-part-media__categories">';
+                  echo '<ul class="c-categories p-media__categories">';
                   foreach ($categories as $category) {
                     if ($count >= $limit) {
                       break;
@@ -53,24 +53,24 @@
                   echo '</ul>';
                 }
                 ?>
-                <div class="p-part-media__title-wrap">
+                <div class="p-media__title-wrap">
                   <!-- タイトル -->
-                  <h2 class="p-part-media__title"><?php the_title(); ?></h2>
+                  <h2 class="p-media__title"><?php the_title(); ?></h2>
                 </div>
                 <!-- 公開日 -->
-                <time class="p-part-media__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                <time class="p-media__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
               </div>
-              <figure class="p-part-media__img-wrap">
+              <figure class="p-media__img-wrap">
                 <?php if (has_post_thumbnail()) : ?>
                   <!-- アイキャッチ画像 -->
-                  <?php the_post_thumbnail('full', ['class' => 'p-part-media__img']); ?>
+                  <?php the_post_thumbnail('full', ['class' => 'p-media__img']); ?>
                 <?php else : ?>
                   <!-- NoImage画像 -->
-                  <img class="p-part-media__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png")); ?>" alt="NoImage画像" width="121" height="121">
+                  <img class="p-media__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png")); ?>" alt="NoImage画像" width="121" height="121">
                 <?php endif ; ?>
               </figure>
             </a>
-            <!-- /.p-part-media -->
+            <!-- /.p-media -->
           </li>
         <?php endwhile; ?>
       </ul>

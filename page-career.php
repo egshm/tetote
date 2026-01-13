@@ -2,19 +2,19 @@
 
 <!-- .p-page-career -->
 <main class="p-page-career">
-  <!-- .p-part-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-career.jpg")); ?>')" class="p-part-fv-sub p-page-career__fv">
-    <div class="p-part-fv-sub__inner">
-      <div class="p-part-fv-sub__content">
-        <hgroup class="p-part-fv-sub__title">
-          <h1 class="p-part-fv-sub__title-main">Career</h1>
-          <p class="p-part-fv-sub__title-sub">研修制度とキャリアパス</p>
+  <!-- .p-fv-sub -->
+  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-career.jpg")); ?>')" class="p-fv-sub p-page-career__fv">
+    <div class="p-fv-sub__inner">
+      <div class="p-fv-sub__content">
+        <hgroup class="p-fv-sub__title">
+          <h1 class="p-fv-sub__title-main">Career</h1>
+          <p class="p-fv-sub__title-sub">研修制度とキャリアパス</p>
         </hgroup>
-        <p class="p-part-fv-sub__text">キャリアパスを支える充実した、研修制度</p>
+        <p class="p-fv-sub__text">キャリアパスを支える充実した、研修制度</p>
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv-sub -->
+  <!-- /.p-fv-sub -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>

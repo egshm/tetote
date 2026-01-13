@@ -1,0 +1,103 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-post-navi
+----------------------------------------*/
+.p-post-navi {
+  --c_bg: #F0F0F0;
+  --c_btn: #4B4B4B;
+  --w_inner-post-navi: 924;
+  background-color: var(--c_bg);
+}
+
+.p-post-navi__inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: calc(var(--w_rate) * 100%);
+  max-width: calc((var(--w_inner-post-navi) * 1px));
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.p-post-navi__inner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: calc((56 / 96) * 100%);
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.p-post-navi__prev,
+.p-post-navi__next {
+  width: 50%;
+}
+
+.p-post-navi__prev {
+  margin-right: auto;
+}
+
+.p-post-navi__prev .p-post-navi__link {
+  flex-direction: row-reverse;
+  margin-right: auto;
+}
+
+.p-post-navi__next,
+.p-post-navi__next .p-post-navi__link {
+  margin-left: auto;
+}
+
+.p-post-navi__link {
+  display: flex;
+  gap: 1.3em;
+  width: fit-content;
+  max-width: 92%;
+  height: 100%;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".p-post-navi__title");
+}
+
+/* フォーカス時 */
+.p-post-navi__link:focus-visible .p-post-navi__btn {
+  background-color: var(--c_btn);
+  border-color: var(--c_btn);
+  color: var(--c_white);
+  transform: scale(calc(32 / 24));
+}
+
+.p-post-navi__body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.p-post-navi__title {
+  line-height: 1.5;
+}
+
+.p-post-navi__date {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: var(--fz_12);
+}
+
+.p-post-navi__btn {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin: auto 0;
+  border-width: 2px;
+  color: var(--c_btn);
+}
+
+@media (any-hover: hover) {
+  .p-post-navi__link:hover .p-post-navi__btn {
+    background-color: var(--c_btn);
+    border-color: var(--c_btn);
+    color: var(--c_white);
+    transform: scale(calc(32 / 24));
+  }
+}

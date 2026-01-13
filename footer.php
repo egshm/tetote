@@ -1,13 +1,13 @@
 <!-- .l-footer -->
 <footer class="l-footer">
   <div class="l-footer__inner">
-    <!-- .p-part-cta -->
-    <div class="p-part-cta l-footer__cta">
-      <p class="p-part-cta__text">
+    <!-- .p-cta -->
+    <div class="p-cta l-footer__cta">
+      <p class="p-cta__text">
         わたしたちと一緒に働く仲間を募集中です。<br>少数精鋭のチームで、<br>あなたも会社も一緒に成長していきましょう。
       </p>
       <!-- .c-btn-rect -->
-      <a href="<?php echo esc_url(home_url("/entry")) ?>" class="c-btn-rect p-part-cta__btn">
+      <a href="<?php echo esc_url(home_url("/entry")) ?>" class="c-btn-rect p-cta__btn">
         <span class="c-btn-rect__text">Entry</span>
         <svg class="c-btn-rect__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M6.40298 0L3.59705 2.80555L10.7913 9.99984L3.59705 17.1945L6.40298 20L16.403 9.99984L6.40298 0Z" fill="currentColor"/>
@@ -15,7 +15,7 @@
       </a>
       <!-- /.c-btn-rect -->
     </div>
-    <!-- /.p-part-cta -->
+    <!-- /.p-cta -->
     <div class="l-footer__body">
       <ul class="l-footer__menu-list">
         <li class="l-footer__menu-item">

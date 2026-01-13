@@ -2,19 +2,19 @@
 
 <!-- .p-page-about -->
 <main class="p-page-about">
-  <!-- .p-part-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-about.jpg")); ?>')" class="p-part-fv-sub p-page-about__fv">
-    <div class="p-part-fv-sub__inner">
-      <div class="p-part-fv-sub__content">
-        <hgroup class="p-part-fv-sub__title">
-          <h1 class="p-part-fv-sub__title-main">About Us</h1>
-          <p class="p-part-fv-sub__title-sub"><span class="u-text-upper">Tetote</span>について</p>
+  <!-- .p-fv-sub -->
+  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-about.jpg")); ?>')" class="p-fv-sub p-page-about__fv">
+    <div class="p-fv-sub__inner">
+      <div class="p-fv-sub__content">
+        <hgroup class="p-fv-sub__title">
+          <h1 class="p-fv-sub__title-main">About Us</h1>
+          <p class="p-fv-sub__title-sub"><span class="u-text-upper">Tetote</span>について</p>
         </hgroup>
-        <p class="p-part-fv-sub__text">私たちの理念を紹介します。</p>
+        <p class="p-fv-sub__text">私たちの理念を紹介します。</p>
       </div>
     </div>
   </div>
-  <!-- /.p-part-fv-sub -->
+  <!-- /.p-fv-sub -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>

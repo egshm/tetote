@@ -1,0 +1,14 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-btn-list
+----------------------------------------*/
+.p-btn-list {
+  --gap_col: 25px; /* ギャップ（列方向）*/
+  --gap_row: 25px; /* ギャップ（行方向）*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--gap_col);
+  row-gap: var(--gap_row);
+}
