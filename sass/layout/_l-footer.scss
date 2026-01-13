@@ -5,7 +5,7 @@
 ----------------------------------------*/
 .l-footer {
   --c_bg: #FAF7F1;
-  --w_inner-max: 1312; /* 最大インナー幅（px）*/
+  --maw_inner: 1312; /* 最大インナー幅（px）*/
   --w_cta: 956; /* CTA幅（px）*/
   --h_bg: 250; /* 背景画像高さ（px）*/
   position: relative;
@@ -30,7 +30,7 @@
 }
 
 .l-footer__inner {
-  width: calc(var(--w_rate) * 100%);
+  width: var(--rate_inner);
   margin: 0 auto;
   text-align: center;
 }
@@ -78,7 +78,7 @@
   display: inline-block;
   margin-top: 49px;
   color: var(--c_text);
-  font-family: var(--font_viga);
+  font-family: var(--ff_viga);
   font-size: var(--fz_12);
   font-weight: 400;
 }
@@ -110,7 +110,7 @@
   }
 
   .l-footer__cta {
-    width: calc((var(--w_cta) / var(--w_inner-max)) * 100%);
+    width: calc((var(--w_cta) / var(--maw_inner)) * 100%);
   }
 
   .l-footer__body {
@@ -120,7 +120,7 @@
       "copyright sns";
     column-gap: 109px;
     row-gap: 61px;
-    width: calc((var(--w_cta) / var(--w_inner-max)) * 100%);
+    width: calc((var(--w_cta) / var(--maw_inner)) * 100%);
     margin: 62px auto 0;
   }
 
@@ -161,10 +161,10 @@
 
 @media (min-width: 1200px) {
   .l-footer {
-    --w_rate: calc(var(--w_inner-max) / var(--vw_base-PC));
+    --rate_inner: calc(var(--maw_inner) / var(--vw_pc));
   }
 
   .l-footer__inner {
-    max-width: calc(var(--w_inner-max) * 1px);
+    max-width: calc(var(--maw_inner) * 1px);
   }
 }

@@ -4,7 +4,7 @@
 	p-sect-benefits
 ----------------------------------------*/
 .p-sect-benefits {
-  --width_card-max: 430; /* カード最大幅 */
+  --maw_card: 430; /* カード最大幅 */
 }
 
 .p-sect-benefits__text {
@@ -22,7 +22,7 @@
 
 .p-sect-benefits__item {
   flex-grow: 1;
-  max-width: calc(var(--width_card-max) * 1px);
+  max-width: calc(var(--maw_card) * 1px);
 }
 
 .p-sect-benefits__card {
@@ -62,7 +62,7 @@
 
 .p-sect-benefits__img-wrap {
   position: relative;
-  width: calc((251 / var(--w_inner-min)) * 100%);
+  width: calc((251 / var(--miw_inner)) * 100%);
   margin: 0 auto;
   z-index: -1;
 }
@@ -91,11 +91,11 @@
 
 @media (min-width: 768px) {
   .p-sect-benefits__list {
-    gap: calc((94 / var(--w_inner-max)) * 100%);
+    gap: calc((94 / var(--maw_inner)) * 100%);
   }
 
   .p-sect-benefits__item {
-    width: calc((var(--width_card-max) / var(--w_inner-max)) * 100%);
+    width: calc((var(--maw_card) / var(--maw_inner)) * 100%);
   }
 
   .p-sect-benefits__img-wrap {

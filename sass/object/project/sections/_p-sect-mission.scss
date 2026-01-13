@@ -46,7 +46,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: calc((320 / var(--w_inner-min)) * 100%);
+  width: calc((320 / var(--miw_inner)) * 100%);
   aspect-ratio: 320 / 173;
   background-image: url('../images/world-map.png');
   background-size: cover;
@@ -62,12 +62,12 @@
   margin-top: 39px;
 }
 
-.p-sect-mission__slider {
+.p-sect-mission__slider-wrap {
   display: flex;
   overflow-x: hidden;
 }
 
-.p-sect-mission__slider-list {
+.p-sect-mission__slider {
   display: flex;
   align-items: flex-start;
   animation: loop 40s infinite linear 1s both;
@@ -83,18 +83,18 @@
   }
 }
 
-.p-sect-mission__slider-item {
+.p-sect-mission__slide {
   width: 271px;
   margin: 0 8px;
   aspect-ratio: 271 / 210;
 }
 
 /* 偶数番目のスライドアイテムの位置を下げる */
-.p-sect-mission__slider-item:nth-child(even) {
+.p-sect-mission__slide:nth-child(even) {
   margin-top: 27px;
 }
 
-.p-sect-mission__slider-img {
+.p-sect-mission__img {
   height: 100%;
   border-radius: 60px;
   object-fit: cover;
@@ -127,12 +127,12 @@
     margin-top: 52px;
   }
 
-  .p-sect-mission__slider-item {
+  .p-sect-mission__slide {
     width: 506px;
     margin: 0 17px;
   }
 
-  .p-sect-mission__slider-item:nth-child(even) {
+  .p-sect-mission__slide:nth-child(even) {
     margin-top: 36px;
   }
 }

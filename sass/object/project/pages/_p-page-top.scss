@@ -12,10 +12,10 @@
 	First View
 ----------------------------------------*/
 .p-page-top__fv {
-  --height_fv: 667px; /* ファーストビュー高さ */
-  --max-width: 1440px; /* インナー要素の最大幅 */
+  --h_fv: 667px; /* ファーストビュー高さ */
+  --maw_inner: 1440px; /* インナー最大幅 */
   position: relative;
-  height: min(var(--height_fv), 100svh);
+  height: min(var(--h_fv), 100svh);
   padding-bottom: 10px;
 }
 
@@ -27,7 +27,7 @@
 
 @media (min-width: 1200px) {
   .p-page-top__fv {
-    --height_fv: 823px; /* ファーストビュー高さ */
+    --h_fv: 823px; /* ファーストビュー高さ */
   }
 }
 

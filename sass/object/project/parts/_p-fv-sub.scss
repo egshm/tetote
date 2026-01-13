@@ -12,7 +12,7 @@
 
 .p-fv-sub__inner {
   position: relative;
-  width: calc(var(--w_rate) * 100%);
+  width: var(--rate_inner);
   height: 100%;
   margin: 0 auto;
 }
@@ -28,7 +28,7 @@
   width: fit-content;
   padding: 0.05em 0.2em;
   background-color: var(--c_white);
-  font-family: var(--font_viga);
+  font-family: var(--ff_viga);
   font-size: fwd.make-clamp(48, 64, 375, 1200);
   text-transform: uppercase;
 }
@@ -69,6 +69,6 @@
   }
 
   .p-fv-sub__inner {
-    max-width: calc(var(--w_inner-max) * 1px);
+    max-width: calc(var(--maw_inner) * 1px);
   }
 }

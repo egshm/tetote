@@ -4,8 +4,8 @@
 	p-sect-faq
 ----------------------------------------*/
 .p-sect-faq__inner {
-  width: calc(var(--w_rate) * 100%);
-  max-width: calc(var(--w_inner-max) * 1px);
+  width: var(--rate_inner);
+  max-width: calc(var(--maw_inner) * 1px);
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@
 
 @media (min-width: 768px) {
   .p-sect-faq__inner {
-    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+    width: var(--rate_inner-tab);
   }
 }
 

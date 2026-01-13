@@ -30,7 +30,7 @@
 @mixin entry-btn($hover-bgc: var(--c_accent)) {
   --c_bg: #AFA86F;
   background-color: var(--c_bg);
-  font-family: var(--font_viga); //ボタンテキストは半角文字"ENTRY"が想定されるので、Vigaを指定
+  font-family: var(--ff_viga); //ボタンテキストは半角文字"ENTRY"が想定されるので、Vigaを指定
   font-weight: 400; //Vigaフォントなので必ずRegular（400）
   text-transform: uppercase; //大文字表記
 

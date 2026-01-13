@@ -4,7 +4,7 @@
 	c-table
 ----------------------------------------*/
 .c-table {
-  --w_header: 50%; /* テーブルヘッダーの横幅比率 */
+  --w_th: 50%; /* テーブルヘッダーの横幅比率 */
 }
 
 .c-table__inner {
@@ -17,7 +17,7 @@
 }
 
 .c-table__header {
-  width: var(--w_header);
+  width: var(--w_th);
   padding: 24px 24px 24px 0;
   border-bottom: 1px dashed currentColor;
   font-weight: 700;
@@ -46,14 +46,14 @@
 
 @media (min-width: 425px) {
   .c-table {
-    --w_header: 40%;
+    --w_th: 40%;
   }
 }
 
 
 @media (min-width: 768px) {
   .c-table {
-    --w_header: 33.33333%;
+    --w_th: 33.33333%;
   }
 
   .c-table__header {
@@ -68,6 +68,6 @@
 
 @media (min-width: 992px) {
   .c-table {
-    --w_header: calc((231 / 980) * 100%); /* デザインカンプ比率 */
+    --w_th: calc((231 / 980) * 100%); /* デザインカンプ比率 */
   }
 }

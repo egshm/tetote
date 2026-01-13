@@ -4,7 +4,7 @@
 body {
   -webkit-text-size-adjust: 100%;
   color: var(--c_base);
-  font-family: var(--font_sans);
+  font-family: var(--ff_sans);
   overflow-x: hidden;
   overflow-y: auto;
   text-size-adjust: 100%;
@@ -47,7 +47,7 @@ input {
   border-radius: 0;
   box-shadow: none;
   color: var(--c_base);
-  font-family: var(--font_sans);
+  font-family: var(--ff_sans);
   font-size: var(--fz_16);
   outline: none;
 }
@@ -81,7 +81,7 @@ select {
   appearance: none;
   outline: none;
   color: var(--c_base);
-  font-family: var(--font_sans);
+  font-family: var(--ff_sans);
   font-size: var(--fz_16);
 }
 
@@ -92,7 +92,7 @@ select:focus {
 textarea {
   border-radius: 0;
   color: var(--c_base);
-  font-family: var(--font_sans);
+  font-family: var(--ff_sans);
   font-size: var(--fz_16);
   outline: none;
   resize: vertical;

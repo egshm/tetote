@@ -4,8 +4,8 @@
 	p-page-blog
 ----------------------------------------*/
 .p-page-blog__inner {
-  width: calc(var(--w_rate) * 100%);
-  max-width: calc(var(--w_inner-max) * 1px);
+  width: var(--rate_inner);
+  max-width: calc(var(--maw_inner) * 1px);
   margin: 0 auto;
   padding: 65px 0 70px;
 }
@@ -23,7 +23,7 @@
 
 @media (min-width: 768px) {
   .p-page-blog__inner {
-    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+    width: var(--rate_inner-tab);
   }
 
   .p-page-blog__list {
@@ -39,7 +39,7 @@
   }
 
   .p-page-blog__list {
-    column-gap: calc(52 / var(--w_inner-max) * 100%);
+    column-gap: calc(52 / var(--maw_inner) * 100%);
   }
 
   .p-page-blog__media {

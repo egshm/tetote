@@ -6,7 +6,7 @@
 .p-post-navi {
   --c_bg: #F0F0F0;
   --c_btn: #4B4B4B;
-  --w_inner-post-navi: 924;
+  --maw_inner: 924;
   background-color: var(--c_bg);
 }
 
@@ -14,8 +14,8 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: calc(var(--w_rate) * 100%);
-  max-width: calc((var(--w_inner-post-navi) * 1px));
+  width: var(--rate_inner);
+  max-width: calc((var(--maw_inner) * 1px));
   margin: 0 auto;
   padding: 30px 0;
 }

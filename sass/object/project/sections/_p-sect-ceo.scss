@@ -4,8 +4,8 @@
 	p-sect-ceo
 ----------------------------------------*/
 .p-sect-ceo__inner {
-  width: calc(var(--w_rate) * 100%);
-  max-width: calc(var(--w_inner-max) * 1px);
+  width: var(--rate_inner);
+  max-width: calc(var(--maw_inner) * 1px);
   margin: 0 auto;
 }
 
@@ -54,14 +54,14 @@
 
 @media (min-width: 768px) {
   .p-sect-ceo__inner {
-    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+    width: var(--rate_inner-tab);
   }
 }
 
 @media (min-width: 992px) {
   .p-sect-ceo__content {
     flex-direction: row-reverse;
-    gap: calc((17 / var(--w_inner-max)) * 100%);
+    gap: calc((17 / var(--maw_inner)) * 100%);
     margin-top: 109px;
   }
 
@@ -85,7 +85,7 @@
   }
 
   .p-sect-ceo__img-wrap {
-    flex: 0 0 calc((484 / var(--w_inner-max)) * 100%);
+    flex: 0 0 calc((484 / var(--maw_inner)) * 100%);
   }
 
   .p-sect-ceo__body {

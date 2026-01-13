@@ -26,7 +26,7 @@
   background-color: var(--c_bg);
   border-radius: 50px 0 0 50px;
   color: var(--c_white);
-  font-family: var(--font_viga);
+  font-family: var(--ff_viga);
   font-size: fwd.make-clamp(10, 24, 375, 1440);
   text-transform: uppercase;
 }
@@ -46,7 +46,7 @@
 /* VIEW MOREと右シェブロンのラッパー */
 .c-news-bar__text-wrap {
   display: none;
-  font-family: var(--font_viga);
+  font-family: var(--ff_viga);
   font-size: fwd.make-clamp(12, 14, 768, 992);
   text-transform: uppercase;
 }

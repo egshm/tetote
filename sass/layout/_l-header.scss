@@ -5,14 +5,15 @@
 ----------------------------------------*/
 .l-header {
   /* インナー幅（px）*/
-  --w_inner-min: 351;
-  --w_inner-max: 1380;
-  /* インナー比率 */
-  --w_rate: calc(var(--w_inner-min) / var(--vw_base-SP));
+  --miw_inner: 351;
+  --maw_inner: 1380;
+  /* インナー幅比率 */
+  --rate_inner: calc((var(--miw_inner) / var(--vw_sp)) * 100%);
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 8px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
   transition: background-color 0.3s, color 0.3s;
   z-index: 999;
 }
@@ -27,8 +28,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(var(--w_rate) * 100%);
-  margin: 0 auto;
+  width: var(--rate_inner);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .l-header__logo {
@@ -47,7 +49,7 @@
   padding: 1em;
   background-color: var(--c_bg);
   color: var(--c_white);
-  font-family: var(--font_viga);
+  font-family: var(--ff_viga);
   font-size: var(--fz_12);
   font-weight: 700;
   text-align: center;
@@ -97,7 +99,8 @@
 
 @media (min-width: 768px) {
   .l-header {
-    padding: 16px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -109,12 +112,13 @@
 
 @media (min-width: 1200px) {
   .l-header {
-    --w_rate: calc(var(--w_inner-max) / var(--vw_base-PC));
-    padding: 26px 0;
+    --rate_inner: calc((var(--maw_inner) / var(--vw_pc)) * 100%);
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 
   .l-header__inner {
-    max-width: calc(var(--w_inner-max) * 1px);
+    max-width: calc(var(--maw_inner) * 1px);
   }
 
   .l-header__logo {
@@ -129,22 +133,6 @@
 
   .l-header__hamburger {
     width: 52px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .l-header {
-    padding: 26px 0;
-  }
-
-  .l-header__logo {
-    width: 250px;
-  }
-
-  .l-header__btn {
-    margin-top: 12px;
-    width: 126px;
-    font-size: var(--fz_14);
   }
 }
 

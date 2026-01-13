@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 54px;
-  width: calc(var(--w_rate) * 100%);
-  max-width: calc(var(--w_inner-max) * 1px);
+  width: var(--rate_inner);
+  max-width: calc(var(--maw_inner) * 1px);
   margin: 0 auto;
 }
 
@@ -81,12 +81,12 @@
 @media (min-width: 768px) {
   .p-sect-hero-staff__inner {
     flex-direction: row;
-    gap: calc((85 / var(--w_inner-max)) * 100%);
-    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+    gap: calc((85 / var(--maw_inner)) * 100%);
+    width: var(--rate_inner-tab);
   }
 
   .p-sect-hero-staff__body {
-    flex: 0 0 calc((605 / var(--w_inner-max)) * 100%);
+    flex: 0 0 calc((605 / var(--maw_inner)) * 100%);
   }
 
   .p-sect-hero-staff__profile {

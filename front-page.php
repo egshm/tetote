@@ -75,46 +75,46 @@
       </a>
       <!-- /.c-btn-rect -->
     </div>
-    <div class="p-sect-mission__slider" aria-hidden="true">
-      <ul class="p-sect-mission__slider-list">
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
+    <div class="p-sect-mission__slider-wrap" aria-hidden="true">
+      <ul class="p-sect-mission__slider">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
         </li>
       </ul>
       <!-- 無限ループ用にスライダーを複製 -->
-      <ul class="p-sect-mission__slider-list">
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
+      <ul class="p-sect-mission__slider">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide.jpg")); ?>" alt="電話対応しながらパソコンを操作するスーツ姿の男性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-02.jpg")); ?>" alt="カフェでノートパソコンを操作するビジネスウェアの女性" width="271" height="210">
         </li>
-        <li class="p-sect-mission__slider-item">
-          <img class="p-sect-mission__slider-img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
+        <li class="p-sect-mission__slide">
+          <img class="p-sect-mission__img" src="<?php echo esc_url(get_theme_file_uri("images/slide-03.jpg")); ?>" alt="イスに座って面談をするスーツ姿の女性二人。" width="271" height="210">
         </li>
       </ul>
     </div>

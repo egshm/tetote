@@ -1,3 +1,12 @@
+/*----------------------------------------
+	変数名はEmmet記法に極力準拠しています。
+   - c  : color
+   - ff : font-family
+   - fz : font-size
+   - maw: max-width
+   - miw: min-width   など
+----------------------------------------*/
+
 :root {
   /* カラー */
   --c_accent: #988C2C;
@@ -10,10 +19,10 @@
   --c_shadow: rgba(0, 0, 0, 0.25);
   --c_white: #FFFFFF;
 
-  /* フォント */
-  --font_sans: "Noto Sans JP", sans-serif;
-  --font_viga: "Viga", sans-serif;
-  --font_popp: "Poppins", sans-serif;
+  /* フォントファミリー */
+  --ff_sans: "Noto Sans JP", sans-serif;
+  --ff_viga: "Viga", sans-serif;
+  --ff_popp: "Poppins", sans-serif;
 
   /* フォントサイズ */
   --fz_10: calc((10 / 16) * 1rem);
@@ -36,22 +45,22 @@
   --fz_96: calc((96 / 16) * 1rem);
 
   /* ビューポート基準値（px）*/
-  --vw_base-SP: 375;
-  --vw_base-PC: 1440;
+  --vw_sp: 375;
+  --vw_pc: 1440;
 
   /* インナー幅（px）*/
-  --w_inner-min: 341;
-  --w_inner-max: 980;
-  --w_inner: var(--w_inner-min);
-  --w_inner-tab: 820; /* タブレット用 */
+  --miw_inner: 341; /* 最小 */
+  --maw_inner: 980; /* 最大 */
+  --w_inner: 341;
 
   /* インナー幅比率 */
-  --w_rate: calc(var(--w_inner-min) / var(--vw_base-SP));
+  --rate_inner: calc((341 / 375) * 100%);
+  --rate_inner-tab: calc((820 / 980) * 100%); /* タブレット用 */
 }
 
 @media (min-width: 1200px) {
   :root {
-    --w_inner: var(--w_inner-max);
-    --w_rate: calc(var(--w_inner-max) / var(--vw_base-PC));
+    --w_inner: 980;
+    --rate_inner: calc((980 / 1440) * 100%);
   }
 }

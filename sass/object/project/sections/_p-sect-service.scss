@@ -4,8 +4,8 @@
 	p-sect-service
 ----------------------------------------*/
 .p-sect-service__inner {
-  width: calc(var(--w_rate) * 100%);
-  max-width: calc(var(--w_inner-max) * 1px);
+  width: var(--rate_inner);
+  max-width: calc(var(--maw_inner) * 1px);
   margin: 0 auto;
 }
 
@@ -74,7 +74,7 @@
 
 @media (min-width: 768px) {
   .p-sect-service__inner {
-    width: calc((var(--w_inner-tab) / var(--w_inner-max)) * 100%);
+    width: var(--rate_inner-tab);
   }
 }
 
@@ -82,11 +82,11 @@
 @media (min-width: 992px) {
   .p-sect-service__media-item {
     flex-direction: row-reverse;
-    gap: calc((47 / var(--w_inner-max)) * 100%);
+    gap: calc((47 / var(--maw_inner)) * 100%);
   }
 
   .p-sect-service__img-wrap {
-    flex: 0 0 calc((457 / var(--w_inner-max)) * 100%);
+    flex: 0 0 calc((457 / var(--maw_inner)) * 100%);
   }
 
   .p-sect-service__media-list {
