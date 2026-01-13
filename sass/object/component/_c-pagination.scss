@@ -30,8 +30,7 @@
     transition: transform 0.3s;
   }
 
-  /* フォーカス時 */
-  .page-numbers:focus-visible {
+  .page-numbers:focus-visible { /* フォーカス時 */
     border: 2px solid var(--c_focus);
     transform: scale(1.1);
   }
@@ -41,9 +40,8 @@
     color: var(--c_white);
   }
 
-  /* ホバー時 */
   @media (any-hover: hover) {
-    .page-numbers:not(.current):hover {
+    .page-numbers:not(.current):hover { /* ホバー時 */
       transform: scale(1.1);
     }
   }

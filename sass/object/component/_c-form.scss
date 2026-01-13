@@ -83,12 +83,9 @@
   margin-top: 15px;
 }
 
-
-/* ラジオボタン */
 .c-form__radio {
 
-  /* ボタン */
-  input[type="radio"] {
+  input[type="radio"] { /* ラジオボタン */
     position: relative;
     width: 24px;
     height: 24px;
@@ -98,8 +95,7 @@
     cursor: pointer;
   }
 
-  /* ボタン選択時 */
-  input[type="radio"]:checked::after {
+  input[type="radio"]:checked::after { /* ラジオボタン選択時 */
     content: '';
     position: absolute;
     top: 50%;
@@ -111,19 +107,16 @@
     transform: translate(-50%, -50%);
   }
 
-  /* ボタンおよびラベルのラッパー */
-  .wpcf7-list-item {
+  .wpcf7-list-item { /* ボタンおよびラベルのラッパー */
     display: block;
     width: fit-content; /* クリッカブルな範囲をコンテンツ幅に限定 */
   }
 
-  /* ラッパー間のマージン */
-  .wpcf7-list-item + .wpcf7-list-item {
+  .wpcf7-list-item + .wpcf7-list-item { /* ラッパー間のマージン */
     margin-top: 15px;
   }
 
-  /* ラッパー内のレイアウト調整 */
-  .wpcf7-list-item > label {
+  .wpcf7-list-item > label { /* ラッパー内のレイアウト調整 */
     display: flex; /* 横並び */
     align-items: center; /* 天地中央揃え */
     gap: 12px; /* 間隔をあける */
@@ -132,11 +125,9 @@
 }
 
 
-/* チェックボックス */
 .c-form__check {
 
-  /* ボックス */
-  input[type="checkbox"] {
+  input[type="checkbox"] { /* チェックボックス */
     position: relative;
     width: 24px;
     height: 24px;
@@ -145,8 +136,7 @@
     cursor: pointer;
   }
 
-  /* ボックス選択時 */
-  input[type="checkbox"]:checked::after {
+  input[type="checkbox"]:checked::after { /* チェックボックス選択時 */
     content: '';
     position: absolute;
     top: 50%;
@@ -157,19 +147,16 @@
     transform: translate(-50%, -50%);
   }
 
-  /* ボックスおよびラベルのラッパー */
-  .wpcf7-list-item {
+  .wpcf7-list-item { /* ボックスおよびラベルのラッパー */
     display: block;
     width: fit-content; /* クリッカブルな範囲をコンテンツ幅に限定 */
   }
 
-  /* ラッパー間のマージン */
-  .wpcf7-list-item + .wpcf7-list-item {
+  .wpcf7-list-item + .wpcf7-list-item { /* ラッパー間のマージン */
     margin-top: 15px;
   }
 
-  /* ラッパー内のレイアウト調整 */
-  .wpcf7-list-item > label {
+  .wpcf7-list-item > label { /* ラッパー内のレイアウト調整 */
     display: flex; /* 横並び */
     align-items: center; /* 天地中央揃え */
     gap: 13px; /* 間隔をあける */
@@ -178,13 +165,11 @@
 }
 
 
-/* 承諾チェックボックス */
 .c-form__accept-wrap {
   margin-top: 98px;
   text-align: center;
 
-  /* ボックス */
-  .c-form__accept {
+  .c-form__accept { /* 承諾チェックボックス */
     position: relative;
     width: 16px;
     height: 16px;
@@ -193,8 +178,7 @@
     cursor: pointer;
   }
 
-  /* チェックマーク */
-  .c-form__accept:checked::after {
+  .c-form__accept:checked::after { /* チェックマーク */
     content: '';
     display: block;
     position: absolute;
@@ -207,8 +191,7 @@
     transform: rotate(50deg);
   }
 
-  /* ボックスおよびラベルのラッパー */
-  .wpcf7-list-item > label {
+  .wpcf7-list-item > label { /* ボックスおよびラベルのラッパー */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -217,12 +200,11 @@
 }
 
 
-/* 送信ボタン */
 .c-form__btn-wrap {
   margin-top: 61px;
   text-align: center; /* ボタンを中央揃え */
 
-  .c-form__btn {
+  .c-form__btn { /* 送信ボタン */
     width: 256px;
     max-width: 100%;
     padding: 1.25em;
@@ -231,15 +213,13 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
-  /* フォーカス時 */
-  .c-form__btn:focus-visible {
+  .c-form__btn:focus-visible { /* フォーカス時 */
     background-color: var(--c_base);
     color: var(--c_white);
   }
 
-  /* ホバー時 */
   @media (any-hover: hover) {
-    .c-form__btn:hover {
+    .c-form__btn:hover { /* ホバー時 */
       background-color: var(--c_base);
       color: var(--c_white);
     }
@@ -279,8 +259,7 @@
     display: flex; /* Flexboxによる2カラム化 */
     flex-direction: row;
 
-    /* .c-form__item > p > .c-form__title という出力構成 */
-    /* よって、Flexアイテムは .c-form__item > p となる。    */
+    /* .c-form__item直下にp要素が出力されるので、Flexアイテムはp要素となる。*/
     & > p {
       width: calc((138 / 738) * 100%);
     }
