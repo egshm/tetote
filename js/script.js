@@ -4,7 +4,7 @@
 // ヘッダー
 const header = document.getElementById('js-header');
 // ファーストビュー
-const firstView = document.getElementById('js-firstView');
+const firstView = document.getElementById('js-fv');
 
 if (firstView) {
   // スクロールされた時

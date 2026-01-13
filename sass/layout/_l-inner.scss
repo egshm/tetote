@@ -1,0 +1,16 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-inner-top（トップページ用）
+----------------------------------------*/
+.l-inner-top {
+  width: calc((341 / 375) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+  .l-inner-top {
+    max-width: 980px;
+  }
+}

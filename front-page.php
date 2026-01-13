@@ -3,7 +3,7 @@
 <!-- .p-page-top -->
 <main class="p-page-top">
   <!-- .p-fv -->
-  <div class="p-fv p-page-top__fv" id="js-firstView">
+  <div class="p-fv p-page-top__fv" id="js-fv">
     <ul class="p-fv__img-list" aria-hidden="true" id="js-fvSlider">
       <li class="p-fv__img-item">
         <img class="p-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv.jpg")); ?>" alt="スーツ姿の若者が緑豊かな並木道を歩く様子。就職活動や新社会人を連想させる爽やかなシーン" width="375" height="667">
@@ -12,9 +12,9 @@
         <img class="p-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv-02.jpg")); ?>" alt="窓際の明るいオフィスで、女性社員2名と男性社員1名がミーティングをする様子" width="375" height="667">
       </li>
     </ul>
-    <div class="p-fv__inner">
+    <div class="p-fv__inner p-page-top__fv-inner">
       <div class="p-fv__content js-inview u-fade-in-up">
-        <h1 class="p-fv__title" aria-label="Become a challenger.">
+        <h1 class="p-fv__title">
           Become a<br>challenger.
         </h1>
         <img class="p-fv__title-sub" alt="君の挑戦が、意思が、未来を変える" src="<?php echo esc_url(get_theme_file_uri("images/fv-text.svg")); ?>" width="228" height="30">
@@ -52,7 +52,8 @@
 
   <!-- .p-sect-mission -->
   <section class="p-sect-mission p-page-top__mission">
-    <div class="p-sect-mission__inner js-inview u-fade-in-up">
+    <!-- .l-inner-top -->
+    <div class="p-sect-mission__inner l-inner-top js-inview u-fade-in-up">
       <h2 class="p-sect-mission__title">
         <span class="p-sect-mission__title-line">後悔しないキャリアを作る、</span>
         <span class="p-sect-mission__title-line">それこそが、我々の使命だ</span>
@@ -117,12 +118,14 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-top -->
   </section>
   <!-- /.p-sect-mission -->
 
   <!-- .p-sect-staff -->
   <section class="p-sect-staff p-page-top__staff">
-    <div class="p-sect-staff__inner js-inview u-fade-in-up">
+    <!-- .l-inner-top -->
+    <div class="p-sect-staff__inner l-inner-top js-inview u-fade-in-up">
       <!-- .c-heading-lv2 -->
       <hgroup class="c-heading-lv2">
         <h2 class="c-heading-lv2__main"><span class="c-heading-lv2__underline">人</span>を知る</h2>
@@ -211,12 +214,14 @@
         </div>
       </div>
     </div>
+    <!-- /.l-inner-top -->
   </section>
   <!-- /.p-sect-staff -->
 
   <!-- .p-sect-benefits -->
   <section class="p-sect-benefits p-page-top__benefits">
-    <div class="p-sect-benefits__inner js-inview u-fade-in-up">
+    <!-- .l-inner-top -->
+    <div class="p-sect-benefits__inner l-inner-top js-inview u-fade-in-up">
       <!-- .c-heading-lv2 -->
       <hgroup class="c-heading-lv2 p-sect-benefits__title">
         <h2 class="c-heading-lv2__main"><span class="c-heading-lv2__underline">制度・環境</span>を知る</h2>
@@ -269,12 +274,14 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-top -->
   </section>
   <!-- /.p-sect-benefits -->
 
   <!-- .p-sect-blog -->
   <section class="p-sect-blog p-page-top__blog">
-    <div class="p-sect-blog__inner js-inview u-fade-in-up">
+    <!-- .l-inner-top -->
+    <div class="p-sect-blog__inner l-inner-top js-inview u-fade-in-up">
       <!-- .c-heading-lv2 -->
       <hgroup class="c-heading-lv2">
         <h2 class="c-heading-lv2__main">採用ブログ</h2>
@@ -354,12 +361,14 @@
         <p class="p-sect-blog__btn-text">View More</p>
       </div>
     </div>
+    <!-- /.l-inner-top -->
   </section>
   <!-- /.p-sect-blog -->
 
   <!-- .p-sect-recruit -->
   <section class="p-sect-recruit p-page-top__recruit">
-    <div class="p-sect-recruit__inner js-inview u-fade-in-up">
+    <!-- .l-inner-top -->
+    <div class="p-sect-recruit__inner l-inner-top js-inview u-fade-in-up">
       <!-- .c-heading-lv2 -->
       <hgroup class="c-heading-lv2 p-sect-recruit__title">
         <h2 class="c-heading-lv2__main">採用情報</h2>
@@ -378,6 +387,7 @@
           </svg>
         </a>
         <!-- /.c-btn-rect -->
+
         <!-- .c-btn-rect -->
         <a href="<?php echo esc_url(home_url("/faq")) ?>" class="c-btn-rect p-sect-recruit__btn">
           <span class="c-btn-rect__text">よくある質問</span>
@@ -386,6 +396,7 @@
           </svg>
         </a>
         <!-- /.c-btn-rect -->
+
         <!-- .c-btn-rect -->
         <a href="<?php echo esc_url(home_url("/about-us#company")) ?>" class="c-btn-rect p-sect-recruit__btn">
           <span class="c-btn-rect__text">会社概要</span>
@@ -396,6 +407,7 @@
         <!-- /.c-btn-rect -->
       </div>
     </div>
+    <!-- /.l-inner-top -->
   </section>
   <!-- /.p-sect-recruit -->
 </main>

@@ -9,9 +9,7 @@
 }
 
 .p-sect-mission__inner {
-  position: relative;
-  width: calc(var(--w_rate) * 100%);
-  margin: -75px auto 0;
+  margin-top: -75px; /* 上にずらしてスライダーと重ねる */
   text-align: center;
   z-index: 1; /* スライダーよりも前面に配置 */
 }
@@ -114,8 +112,7 @@
 
 @media (min-width: 1200px) {
   .p-sect-mission__inner {
-    max-width: calc(var(--w_inner) * 1px);
-    margin-top: -160px;
+    margin-top: -160px; /* 上にずらしてスライダーと重ねる */
   }
 
   .p-sect-mission__text-wrap {

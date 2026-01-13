@@ -3,16 +3,6 @@
 /*----------------------------------------
 	p-sect-staff
 ----------------------------------------*/
-.p-sect-staff {
-  /* 社員スライダーの左パディング */
-  --pl_list: calc((1 - var(--w_rate)) * 100vw / 2);
-}
-
-.p-sect-staff__inner {
-  width: calc(var(--w_rate) * 100%);
-  margin: 0 auto;
-}
-
 .p-sect-staff__text {
   margin-top: 43px;
   line-height: 1.5;
@@ -21,10 +11,8 @@
 .p-sect-staff__list {
   display: flex;
   align-items: flex-start;
-  width: 100vw;
   margin-top: 50px;
-  margin-left: calc(50% - 50vw);
-  padding-left: var(--pl_list);
+  margin-right: calc(50% - 50vw); /* 右側をビューポートいっぱいに広げる */
 }
 
 .p-sect-staff__item {
@@ -61,7 +49,6 @@
 
   .p-sect-staff__arrow-btn {
     width: 42px;
-    height: 42px;
   }
 }
 
@@ -84,19 +71,5 @@
 
   .p-sect-staff__arrow-btn {
     width: 58px;
-    height: 58px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .p-sect-staff__inner {
-    max-width: calc(var(--w_inner) * 1px);
-  }
-}
-
-@media (min-width: 1440px) {
-  .p-sect-staff {
-    /* 社員スライダーの左パディング */
-    --pl_list: calc((100vw - (var(--w_inner) * 1px)) / 2);
   }
 }

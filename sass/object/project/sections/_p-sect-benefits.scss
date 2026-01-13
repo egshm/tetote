@@ -4,12 +4,7 @@
 	p-sect-benefits
 ----------------------------------------*/
 .p-sect-benefits {
-  --w_card-max: 430; /* カード最大幅 */
-}
-
-.p-sect-benefits__inner {
-  width: calc(var(--w_rate) * 100%);
-  margin: 0 auto;
+  --width_card-max: 430; /* カード最大幅 */
 }
 
 .p-sect-benefits__text {
@@ -27,7 +22,7 @@
 
 .p-sect-benefits__item {
   flex-grow: 1;
-  max-width: calc(var(--w_card-max) * 1px);
+  max-width: calc(var(--width_card-max) * 1px);
 }
 
 .p-sect-benefits__card {
@@ -100,7 +95,7 @@
   }
 
   .p-sect-benefits__item {
-    width: calc((var(--w_card-max) / var(--w_inner-max)) * 100%);
+    width: calc((var(--width_card-max) / var(--w_inner-max)) * 100%);
   }
 
   .p-sect-benefits__img-wrap {
@@ -116,10 +111,6 @@
 
 
 @media (min-width: 1200px) {
-  .p-sect-benefits__inner {
-    max-width: calc(var(--w_inner) * 1px);
-  }
-
   .p-sect-benefits__title {
     margin: 0 auto;
   }

@@ -8,11 +8,6 @@
   background-color: var(--c_bg);
 }
 
-.p-sect-recruit__inner {
-  width: calc(var(--w_rate) * 100%);
-  margin: 0 auto;
-}
-
 .p-sect-recruit__text {
   margin-top: 43px;
   line-height: 1.5;
@@ -63,10 +58,6 @@
 }
 
 @media (min-width: 1200px) {
-  .p-sect-recruit__inner {
-    max-width: calc(var(--w_inner) * 1px);
-  }
-
   .p-sect-recruit__title {
     margin: 0 auto;
   }
