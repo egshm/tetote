@@ -17,11 +17,18 @@ Figmaのデザインカンプからコーディングし、WordPress化まで行
 - BEM + FLOCSS
 
 ### 独自運用ルール
-Projectレイヤーが増えて煩雑化したので、Projectを更に以下の3つに分類しました。
+Projectレイヤーが増えて煩雑化したので、更に以下の3つに分類しました。
 
-1. ページBlock (`p-page-*`)  
+1. ページ (`p-page-*`)  
    例：`p-page-about`
-2. セクションBlock (`p-sect-*`)  
+2. セクション (`p-sect-*`)  
    例：`p-sect-service`
-3. 上記以外のパーツBlock (`p-*`)  
+3. 上記以外のパーツ (`p-*`)  
    例：`p-media`
+
+### Component/Projectの違い
+以下のいずれかを満たす場合はProjectとしています。
+そのため、どちらも満たさないものがComponentです。
+
+- 他のComponentまたはProjectを1個以上含んでいる。
+- セクションまたはページ単位のページ固有のものである。
