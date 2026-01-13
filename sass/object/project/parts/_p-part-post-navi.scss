@@ -57,8 +57,8 @@
   max-width: 92%;
   height: 100%;
   font-size: fwd.make-clamp(14, 16, 375, 768);
-  // 下線アニメーション
-  @include fwd.text-underline-animation(".p-part-post-navi__title");
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".p-part-post-navi__title");
 }
 
 /* フォーカス時 */

@@ -5,8 +5,8 @@
 ----------------------------------------*/
 .c-news-bar {
   display: flex;
-  // 下線アニメーション
-  @include fwd.text-underline-animation(".c-news-bar__text", 2px);
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".c-news-bar__text", 2px);
 }
 
 /* フォーカス時 */

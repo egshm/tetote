@@ -9,10 +9,8 @@
   /* ホバー時に画像をscaleで拡大するので、*/
   /* あふれた部分をカットする意図で設定。  */
   overflow: hidden;
-  // 社員名に下線アニメーションを適用
-  @include fwd.text-underline-animation(
-    ".c-card-staff__name", 2px, 0.6s
-  );
+  // 社員名にアンダーラインアニメーションを適用
+  @include fwd.underline-anim(".c-card-staff__name", 2px, 0.6s);
 }
 
 /* フォーカス時 */

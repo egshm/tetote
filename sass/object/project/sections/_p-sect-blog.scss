@@ -38,8 +38,8 @@
 }
 
 .p-sect-blog__btn {
-  // 下線アニメーション
-  @include fwd.text-underline-animation(".p-sect-blog__btn-text", "~");
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".p-sect-blog__btn-text", "~");
 }
 
 .p-sect-blog__btn-text {

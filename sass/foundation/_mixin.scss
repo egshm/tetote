@@ -49,27 +49,27 @@
 
 
 ///
-/// @mixin text-underline-animation
+/// @mixin underline-anim
 /// 
 /// 呼び出し元がホバーまたはフォーカス状態のときに、
-/// ターゲット要素に下線アニメーションを適用します。
+/// ターゲット要素にアンダーラインアニメーションを適用します。
 /// 
 /// Note:
-/// - 下線の色は呼び出し元の color を継承します。
+/// - アンダーラインの色は呼び出し元の color を継承します。
 /// 
 /// @param {String} $target
 ///   - ターゲット要素
 /// 
 /// @param {Length} $line-width
-///   - 下線の太さ
+///   - アンダーラインの太さ
 /// 
 /// @param {Time} $transition-time
-///   - 下線アニメーションのトランジション時間
+///   - トランジション時間
 ///
 /// @param {String} $combinator
 ///   - 呼び出し元とターゲットの間の結合子（" ", ">", "+", "~"）
 ///
-@mixin text-underline-animation(
+@mixin underline-anim(
   $target,
   $line-width: 1px,
   $transition-time: 0.3s,

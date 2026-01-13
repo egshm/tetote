@@ -9,8 +9,8 @@
   height: 100%;
   background-color: var(--c_white);
   border-radius: 10px;
-  // 下線アニメーション
-  @include fwd.text-underline-animation(".p-part-media__title");
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".p-part-media__title");
 }
 
 .p-part-media--floral-white {
