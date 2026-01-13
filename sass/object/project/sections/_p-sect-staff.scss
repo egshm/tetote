@@ -6,7 +6,6 @@
 .p-sect-staff {
   /* 社員スライダーの左パディング */
   --pl_list: calc((1 - var(--w_rate)) * 100vw / 2);
-  padding: 48px 0;
 }
 
 .p-sect-staff__inner {
@@ -90,10 +89,6 @@
 }
 
 @media (min-width: 1200px) {
-  .p-sect-staff {
-    padding: 75px 0;
-  }
-
   .p-sect-staff__inner {
     max-width: calc(var(--w_inner) * 1px);
   }

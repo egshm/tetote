@@ -5,7 +5,6 @@
 ----------------------------------------*/
 .p-sect-recruit {
   --c_bg: #FAF7F1;
-  padding: 45px 0 88px;
   background-color: var(--c_bg);
 }
 
@@ -64,10 +63,6 @@
 }
 
 @media (min-width: 1200px) {
-  .p-sect-recruit {
-    padding: 84px 0 139px;
-  }
-
   .p-sect-recruit__inner {
     max-width: calc(var(--w_inner) * 1px);
   }

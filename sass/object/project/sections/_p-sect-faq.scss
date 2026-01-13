@@ -3,10 +3,6 @@
 /*----------------------------------------
 	p-sect-faq
 ----------------------------------------*/
-.p-sect-faq {
-  padding: 64px 0 70px;
-}
-
 .p-sect-faq__inner {
   width: calc(var(--w_rate) * 100%);
   max-width: calc(var(--w_inner-max) * 1px);
@@ -47,10 +43,6 @@
 
 
 @media (min-width: 992px) {
-  .p-sect-faq {
-    padding: 145px 0 139px;
-  }
-
   .p-sect-faq__btn-list {
     --gap_col: 49px; /* 列方向のギャップ */
   }

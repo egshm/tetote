@@ -4,8 +4,7 @@
 	p-sect-benefits
 ----------------------------------------*/
 .p-sect-benefits {
-  --w_card-max: 430;
-  padding: 48px 0 78px;
+  --w_card-max: 430; /* カード最大幅 */
 }
 
 .p-sect-benefits__inner {
@@ -117,10 +116,6 @@
 
 
 @media (min-width: 1200px) {
-  .p-sect-benefits {
-    padding: 75px 0 107px;
-  }
-
   .p-sect-benefits__inner {
     max-width: calc(var(--w_inner) * 1px);
   }

@@ -3,10 +3,6 @@
 /*----------------------------------------
 	p-sect-voice
 ----------------------------------------*/
-.p-sect-voice {
-  padding: 64px 0 70px;
-}
-
 .p-sect-voice__inner {
   width: calc(var(--w_rate) * 100%);
   max-width: calc(var(--w_inner-max) * 1px);
@@ -58,11 +54,5 @@
 
   .p-sect-voice__item {
     width: calc((467 / 980) * 100%);
-  }
-}
-
-@media (min-width: 992px) {
-  .p-sect-voice {
-    padding-bottom: 139px;
   }
 }

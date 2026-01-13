@@ -1,8 +1,22 @@
 @use "../../../foundation/forward" as fwd;
 
 /*----------------------------------------
-	p-page-faq
+	First View
 ----------------------------------------*/
 .p-page-faq__fv {
   background-position: left bottom;
+}
+
+
+/*----------------------------------------
+	FAQ
+----------------------------------------*/
+.p-page-faq__faq {
+  padding: 64px 0 70px;
+}
+
+@media (min-width: 992px) {
+  .p-page-faq__faq {
+    padding: 145px 0 139px;
+  }
 }

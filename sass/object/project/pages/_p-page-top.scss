@@ -1,8 +1,78 @@
 @use "../../../foundation/forward" as fwd;
 
 /*----------------------------------------
-	p-page-top
+	Top
 ----------------------------------------*/
 .p-page-top {
   overflow: hidden;
+}
+
+
+/*----------------------------------------
+	Mission
+----------------------------------------*/
+.p-page-top__mission {
+  padding: 48px 0;
+}
+
+@media (min-width: 1200px) {
+  .p-page-top__mission {
+    padding: 100px 0 75px;
+  }
+}
+
+
+/*----------------------------------------
+	Staff
+----------------------------------------*/
+.p-page-top__staff {
+  padding: 48px 0;
+}
+
+@media (min-width: 1200px) {
+  .p-page-top__staff {
+    padding: 75px 0;
+  }
+}
+
+
+/*----------------------------------------
+	Benefits
+----------------------------------------*/
+.p-page-top__benefits {
+  padding: 48px 0 78px;
+}
+
+@media (min-width: 1200px) {
+  .p-page-top__benefits {
+    padding: 75px 0 107px;
+  }
+}
+
+
+/*----------------------------------------
+	Blog
+----------------------------------------*/
+.p-page-top__blog {
+  padding: 78px 0 45px;
+}
+
+@media (min-width: 1200px) {
+  .p-page-top__blog {
+    padding: 87px 0 84px;
+  }
+}
+
+
+/*----------------------------------------
+	Recruit
+----------------------------------------*/
+.p-page-top__recruit {
+  padding: 45px 0 88px;
+}
+
+@media (min-width: 1200px) {
+  .p-page-top__recruit {
+    padding: 84px 0 139px;
+  }
 }

@@ -1,5 +1,14 @@
 @use "../../../foundation/forward" as fwd;
 
 /*----------------------------------------
-	p-page-details
+	Details
 ----------------------------------------*/
+.p-page-details__details {
+  padding: 64px 0 70px;
+}
+
+@media (min-width: 992px) {
+  .p-page-details__details {
+    padding: 145px 0 139px;
+  }
+}

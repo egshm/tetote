@@ -1,5 +1,14 @@
 @use "../../../foundation/forward" as fwd;
 
 /*----------------------------------------
-	p-page-career
+	Career
 ----------------------------------------*/
+.p-page-career__career {
+  padding: 64px 0 88px;
+}
+
+@media (min-width: 992px) {
+  .p-page-career__career {
+    padding: 145px 0 176px;
+  }
+}

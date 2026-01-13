@@ -358,7 +358,7 @@
   <!-- /.p-sect-blog -->
 
   <!-- .p-sect-recruit -->
-  <section class="p-sect-recruit p-page-top__recruitment">
+  <section class="p-sect-recruit p-page-top__recruit">
     <div class="p-sect-recruit__inner js-inview u-fade-in-up">
       <!-- .c-heading-lv2 -->
       <hgroup class="c-heading-lv2 p-sect-recruit__title">

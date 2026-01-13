@@ -5,7 +5,6 @@
 ----------------------------------------*/
 .p-sect-blog {
   --c_bg: #FAF7F1;
-  padding: 78px 0 45px;
   background-color: var(--c_bg);
 }
 
@@ -70,10 +69,6 @@
 
 
 @media (min-width: 1200px) {
-  .p-sect-blog {
-    padding: 87px 0 84px;
-  }
-
   .p-sect-blog__inner {
     max-width: calc(var(--w_inner) * 1px);
   }

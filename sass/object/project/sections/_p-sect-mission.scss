@@ -6,7 +6,6 @@
 .p-sect-mission {
   display: flex;
   flex-direction: column-reverse;
-  padding: 48px 0;
 }
 
 .p-sect-mission__inner {
@@ -114,10 +113,6 @@
 }
 
 @media (min-width: 1200px) {
-  .p-sect-mission {
-    padding: 100px 0 75px;
-  }
-
   .p-sect-mission__inner {
     max-width: calc(var(--w_inner) * 1px);
     margin-top: -160px;
