@@ -4,15 +4,15 @@
 <main class="p-page-top">
   <!-- .p-fv -->
   <div class="p-fv p-page-top__fv" id="js-fv">
-    <ul class="p-fv__img-list" aria-hidden="true" id="js-fvSlider">
-      <li class="p-fv__img-item">
+    <ul class="p-fv__slider" aria-hidden="true" id="js-fvSlider">
+      <li class="p-fv__slide">
         <img class="p-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv.jpg")); ?>" alt="スーツ姿の若者が緑豊かな並木道を歩く様子。就職活動や新社会人を連想させる爽やかなシーン" width="375" height="667">
       </li>
-      <li class="p-fv__img-item">
+      <li class="p-fv__slide">
         <img class="p-fv__img" src="<?php echo esc_url(get_theme_file_uri("images/fv-02.jpg")); ?>" alt="窓際の明るいオフィスで、女性社員2名と男性社員1名がミーティングをする様子" width="375" height="667">
       </li>
     </ul>
-    <div class="p-fv__inner p-page-top__fv-inner">
+    <div class="p-fv__inner">
       <div class="p-fv__content js-inview u-fade-in-up">
         <h1 class="p-fv__title">
           Become a<br>challenger.

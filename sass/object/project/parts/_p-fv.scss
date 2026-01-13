@@ -3,6 +3,38 @@
 /*----------------------------------------
 	p-fv
 ----------------------------------------*/
+.p-fv {
+  /* スライダーの基準位置 */
+  position: relative;
+}
+
+.p-fv__inner {
+  display: flex;
+  /* Flexアイテムを下に寄せる */
+  align-items: flex-end;
+  /* 最大幅はp-page-top要素から取得 */
+  max-width: var(--max-width);
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-fv__slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.p-fv__slide {
+  /* 高さはp-page-top要素から取得 */
+  height: min(var(--height_fv), 100svh);
+}
+
+.p-fv__img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .p-fv__content {
   width: 100%;
 }
@@ -26,22 +58,6 @@
   width: calc((351 / var(--vw_base-SP)) * 100%);
   max-width: calc((1263 / var(--vw_base-PC)) * 100%);
   margin: 31px auto 0;
-}
-
-.p-fv__img-list {
-  position: relative;
-}
-
-.p-fv__img-item {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: min(var(--height_fv), 100svh); /* 高さはページ側（p-page-top要素）から取得 */
-}
-
-.p-fv__img {
-  height: 100%;
-  object-fit: cover;
 }
 
 

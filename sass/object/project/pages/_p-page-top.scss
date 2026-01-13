@@ -13,25 +13,14 @@
 ----------------------------------------*/
 .p-page-top__fv {
   --height_fv: 667px; /* ファーストビュー高さ */
+  --max-width: 1440px; /* インナー要素の最大幅 */
   position: relative;
   height: min(var(--height_fv), 100svh);
-}
-
-.p-page-top__fv-inner {
-  display: flex;
-  align-items: flex-end; /* Flexアイテムを下に寄せる */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  max-width: 1440px;
-  transform: translateX(-50%);
   padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-  .p-page-top__fv-inner {
+  .p-page-top__fv {
     padding-bottom: 38px;
   }
 }
