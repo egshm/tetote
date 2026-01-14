@@ -1,6 +1,13 @@
 @use "../../../foundation/forward" as fwd;
 
 /*----------------------------------------
+	First View
+----------------------------------------*/
+.p-page-details__fv {
+  --pos_img: top; /* img要素のobject-position */
+}
+
+/*----------------------------------------
 	Details
 ----------------------------------------*/
 .p-page-details__details {

@@ -13,9 +13,9 @@
 ----------------------------------------*/
 .p-page-top__fv {
   --h_fv: 667px; /* ファーストビュー高さ */
-  --maw_inner: 1440px; /* インナー最大幅 */
+  --maw_inner: calc(var(--vw_pc) * 1px); /* インナー最大幅 */
   position: relative;
-  height: min(var(--h_fv), 100svh);
+  height: var(--h_fv);
   padding-bottom: 10px;
 }
 

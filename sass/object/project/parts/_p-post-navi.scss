@@ -89,8 +89,9 @@
 .p-post-navi__btn {
   flex-shrink: 0;
   width: 24px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 24px;
+  margin-top: auto;
+  margin-bottom: auto;
   border-width: 2px;
   color: var(--c_btn);
 }

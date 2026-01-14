@@ -27,7 +27,7 @@
 
 .p-fv__slide {
   /* 高さはp-page-top要素から取得 */
-  height: min(var(--h_fv), 100svh);
+  height: var(--h_fv);
 }
 
 .p-fv__img {

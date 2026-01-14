@@ -3,7 +3,7 @@
 <!-- .p-page-staff -->
 <main class="p-page-staff">
   <!-- .p-fv-sub -->
-  <div style="background-image: url('<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>')" class="p-fv-sub p-page-staff__fv">
+  <div class="p-fv-sub p-page-staff__fv">
     <div class="p-fv-sub__inner">
       <div class="p-fv-sub__content">
         <hgroup class="p-fv-sub__title">
@@ -12,6 +12,18 @@
         </hgroup>
         <p class="p-fv-sub__text">弊社社員のリアルな声を紹介しています。</p>
       </div>
+    </div>
+    <div class="p-fv-sub__img-wrap" aria-hidden="true">
+      <img
+        src="<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>"
+        alt=""
+        class="p-fv-sub__img"
+        width="1440"
+        height="339"
+        fetchpriority="high"
+        decoding="async"
+        loading="eager"
+      >
     </div>
   </div>
   <!-- /.p-fv-sub -->

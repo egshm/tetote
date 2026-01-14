@@ -4,7 +4,7 @@
 	First View
 ----------------------------------------*/
 .p-page-faq__fv {
-  background-position: left bottom;
+  --pos_img: bottom; /* img要素のobject-position */
 }
 
 
