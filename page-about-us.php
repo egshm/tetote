@@ -8,7 +8,7 @@
       <div class="p-fv-sub__content">
         <hgroup class="p-fv-sub__title">
           <h1 class="p-fv-sub__title-main">About Us</h1>
-          <p class="p-fv-sub__title-sub"><span class="u-text-upper">Tetote</span>について</p>
+          <p class="p-fv-sub__title-sub">TETOTEについて</p>
         </hgroup>
         <p class="p-fv-sub__text">私たちの理念を紹介します。</p>
       </div>
@@ -116,10 +116,10 @@
       <div class="p-sect-ceo__content">
         <div class="p-sect-ceo__body">
           <p class="p-sect-ceo__text-main">
-            あなたがやりたいこと<br>それを全力でサポートできる、<br>それが<span class="u-text-upper">Tetote</span>の強みです。
+            あなたがやりたいこと<br>それを全力でサポートできる、<br>それがTETOTEの強みです。
           </p>
           <p class="p-sect-ceo__text">
-            <span class="u-text-upper">Tetote</span>は、ITコンサルティングとコンサル導入企業への営業を専門とする会社です。
+            TETOTEは、ITコンサルティングとコンサル導入企業への営業を専門とする会社です。
             設立以来、私たちは「お客様の課題解決に真摯に取り組み、共に成長する」という理念を掲げ、お客様とパートナーと共に歩んできました。
           </p>
           <p class="p-sect-ceo__text">
@@ -127,7 +127,7 @@
             その結果、お客様との深い信頼関係を築き、共に成長することができています。
           </p>
           <p class="p-sect-ceo__text">
-            <span class="u-text-upper">Tetote</span>は、個々の能力や個性を尊重し、多様な人材が活躍できる環境づくりに力を入れています。
+            TETOTEは、個々の能力や個性を尊重し、多様な人材が活躍できる環境づくりに力を入れています。
             年齢、性別、国籍、経験などに関係なく、意欲と向上心のある人材を歓迎します。
           </p>
           <p class="p-sect-ceo__text">
@@ -150,7 +150,7 @@
     <div class="p-sect-service__inner l-inner-sub">
       <h2 class="p-sect-service__title">事業紹介</h2>
       <p class="p-sect-service__text">
-        Tetoteの主力事業である「コンサルティング」以外に、新規に取り組んでいる事業をいくつか紹介させていただきます。
+        TETOTEの主力事業である「コンサルティング」以外に、新規に取り組んでいる事業をいくつか紹介させていただきます。
       </p>
       <ul class="p-sect-service__media-list">
         <li class="p-sect-service__media-item">
@@ -207,7 +207,7 @@
           <tbody class="c-table__body">
             <tr class="c-table__row">
               <th class="c-table__header">会社名</th>
-              <td class="c-table__text u-text-upper">Tetote株式会社</td>
+              <td class="c-table__text">TETOTE株式会社</td>
             </tr>
             <tr class="c-table__row">
               <th class="c-table__header">所在地</th>

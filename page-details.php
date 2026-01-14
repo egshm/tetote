@@ -10,7 +10,7 @@
           <h1 class="p-fv-sub__title-main">Details</h1>
           <p class="p-fv-sub__title-sub">募集要項</p>
         </hgroup>
-        <p class="p-fv-sub__text"><span class="u-text-upper">Tetote</span>は幅広く仲間を募集しています。</p>
+        <p class="p-fv-sub__text">TETOTEは幅広く仲間を募集しています。</p>
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
@@ -46,7 +46,7 @@
     <div class="p-sect-details__inner l-inner-sub">
       <h2 class="p-sect-details__title">あなたが輝ける場所が、ここにはある</h2>
       <p class="p-sect-details__text">
-        <span class="u-text-upper">Tetote</span>では、コンサルタントを中心に、様々な職種を募集しています。
+        TETOTEでは、コンサルタントを中心に、様々な職種を募集しています。
       </p>
 
       <!-- .p-btn-list -->

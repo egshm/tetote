@@ -38,7 +38,7 @@
             <p class="c-news-bar__title"><?php echo esc_html($latest_title); ?></p>
             <div class="c-news-bar__text-wrap">
               <p class="c-news-bar__text">View more</p>
-              <svg class="c-news-bar__icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <svg class="c-news-bar__icon" aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" fill="none">
                 <path d="M3.20149 0L1.79852 1.40277L5.39567 4.99992L1.79852 8.59723L3.20149 10L8.20149 4.99992L3.20149 0Z" fill="currentColor"/>
               </svg>
             </div>
@@ -133,7 +133,7 @@
       </hgroup>
       <!-- /.c-heading-lv2 -->
       <p class="p-sect-staff__text">
-        <span class="u-text-upper">Tetote</span>の社員がどういった信念を持って働いているのか、<br>一日のスケジュールや仕事内容などを紹介します。
+        TETOTEの社員がどういった信念を持って働いているのか、<br>一日のスケジュールや仕事内容などを紹介します。
       </p>
       <?php
       $the_query = new WP_Query([
@@ -198,7 +198,7 @@
         <div class="p-sect-staff__arrow-btns">
           <!-- .c-btn-icon -->
           <button class="c-btn-icon p-sect-staff__arrow-btn" id="js-prevBtn" type="button" aria-label="前のスライドへ">
-            <svg width="17" height="15" viewBox="0 0 17 15" fill="none">
+            <svg aria-hidden="true" width="17" height="15" viewBox="0 0 17 15" fill="none">
               <path d="M0.292892 6.65691C-0.0976315 7.04743 -0.0976315 7.6806 0.292892 8.07112L6.65685 14.4351C7.04738 14.8256 7.68054 14.8256 8.07107 14.4351C8.46159 14.0446 8.46159 13.4114 8.07107 13.0209L2.41421 7.36401L8.07107 1.70716C8.46159 1.31664 8.46159 0.68347 8.07107 0.292946C7.68054 -0.0975785 7.04738 -0.0975785 6.65685 0.292946L0.292892 6.65691ZM17 6.36401L1 6.36401L1 8.36401L17 8.36401L17 6.36401Z" fill="currentColor"/>
             </svg>
           </button>
@@ -206,7 +206,7 @@
 
           <!-- .c-btn-icon -->
           <button class="c-btn-icon p-sect-staff__arrow-btn" id="js-nextBtn" type="button" aria-label="次のスライドへ">
-            <svg class="c-btn-icon__icon" width="17" height="15" viewBox="0 0 17 15" fill="none">
+            <svg aria-hidden="true" class="c-btn-icon__icon" width="17" height="15" viewBox="0 0 17 15" fill="none">
               <path d="M16.7071 8.07112C17.0976 7.6806 17.0976 7.04743 16.7071 6.65691L10.3431 0.292946C9.95262 -0.0975785 9.31946 -0.0975785 8.92893 0.292946C8.53841 0.68347 8.53841 1.31664 8.92893 1.70716L14.5858 7.36401L8.92893 13.0209C8.53841 13.4114 8.53841 14.0446 8.92893 14.4351C9.31946 14.8256 9.95262 14.8256 10.3431 14.4351L16.7071 8.07112ZM0 8.36401H16V6.36401H0V8.36401Z" fill="currentColor"/>
             </svg>
           </button>
@@ -244,7 +244,7 @@
               <img src="<?php echo esc_url(get_theme_file_uri("images/benefits.png")); ?>" alt="" class="p-sect-benefits__img" width="251" height="251">
               <!-- .c-btn-icon -->
               <span class="c-btn-icon p-sect-benefits__btn">
-                <svg class="c-btn-icon__icon" width="17" height="15" viewBox="0 0 17 15" fill="none">
+                <svg class="c-btn-icon__icon" aria-hidden="true" width="17" height="15" viewBox="0 0 17 15" fill="none">
                   <path d="M16.7071 8.07112C17.0976 7.6806 17.0976 7.04743 16.7071 6.65691L10.3431 0.292946C9.95262 -0.0975785 9.31946 -0.0975785 8.92893 0.292946C8.53841 0.68347 8.53841 1.31664 8.92893 1.70716L14.5858 7.36401L8.92893 13.0209C8.53841 13.4114 8.53841 14.0446 8.92893 14.4351C9.31946 14.8256 9.95262 14.8256 10.3431 14.4351L16.7071 8.07112ZM0 8.36401H16V6.36401H0V8.36401Z" fill="currentColor"/>
                 </svg>
               </span>
@@ -257,14 +257,14 @@
             <div class="p-sect-benefits__body">
               <h3 class="p-sect-benefits__card-title">福利厚生</h3>
               <p class="p-sect-benefits__card-text">
-                <span class="u-text-upper">Tetote</span>の福利厚生制度は、従業員の健康と幸福を重視し、働きやすい環境を提供することを目的としています。
+                TETOTEの福利厚生制度は、従業員の健康と幸福を重視し、働きやすい環境を提供することを目的としています。
               </p>
             </div>
             <figure class="p-sect-benefits__img-wrap">
               <img src="<?php echo esc_url(get_theme_file_uri("images/benefits-02.png")); ?>" alt="" class="p-sect-benefits__img" width="251" height="251">
               <!-- .c-btn-icon -->
               <span class="c-btn-icon p-sect-benefits__btn">
-                <svg class="c-btn-icon__icon" width="17" height="15" viewBox="0 0 17 15" fill="none">
+                <svg class="c-btn-icon__icon" aria-hidden="true" width="17" height="15" viewBox="0 0 17 15" fill="none">
                   <path d="M16.7071 8.07112C17.0976 7.6806 17.0976 7.04743 16.7071 6.65691L10.3431 0.292946C9.95262 -0.0975785 9.31946 -0.0975785 8.92893 0.292946C8.53841 0.68347 8.53841 1.31664 8.92893 1.70716L14.5858 7.36401L8.92893 13.0209C8.53841 13.4114 8.53841 14.0446 8.92893 14.4351C9.31946 14.8256 9.95262 14.8256 10.3431 14.4351L16.7071 8.07112ZM0 8.36401H16V6.36401H0V8.36401Z" fill="currentColor"/>
                 </svg>
               </span>
@@ -353,7 +353,7 @@
       <div class="p-sect-blog__btn-wrap">
         <!-- .c-btn-icon -->
         <a href="<?php echo esc_url(home_url("/blog")) ?>" class="c-btn-icon p-sect-blog__btn" aria-label="採用ブログ一覧ページに移動する">
-          <svg class="c-btn-icon__icon" width="17" height="15" viewBox="0 0 17 15" fill="none">
+          <svg class="c-btn-icon__icon" aria-hidden="true" width="17" height="15" viewBox="0 0 17 15" fill="none">
             <path d="M16.7071 8.07112C17.0976 7.6806 17.0976 7.04743 16.7071 6.65691L10.3431 0.292946C9.95262 -0.0975785 9.31946 -0.0975785 8.92893 0.292946C8.53841 0.68347 8.53841 1.31664 8.92893 1.70716L14.5858 7.36401L8.92893 13.0209C8.53841 13.4114 8.53841 14.0446 8.92893 14.4351C9.31946 14.8256 9.95262 14.8256 10.3431 14.4351L16.7071 8.07112ZM0 8.36401H16V6.36401H0V8.36401Z" fill="currentColor"/>
           </svg>
         </a>

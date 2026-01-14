@@ -52,6 +52,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateX(-50%);
+  z-index: -1;
 }
 
 .p-sect-mission__text + .p-sect-mission__text {
