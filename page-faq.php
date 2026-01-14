@@ -19,16 +19,19 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-faq__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
   <!-- .p-sect-faq -->
   <div class="p-sect-faq p-page-faq__faq">
-    <div class="p-sect-faq__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-faq__inner l-inner-sub">
 
       <!-- .p-btn-list -->
       <ul class="p-btn-list p-sect-faq__btn-list">
@@ -381,6 +384,7 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-sub -->
   </div>
   <!-- /.p-sect-faq -->
 </main>

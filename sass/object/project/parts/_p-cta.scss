@@ -4,7 +4,8 @@
 	p-cta
 ----------------------------------------*/
 .p-cta {
-  padding: 24px 0 29px;
+  padding-top: 24px;
+  padding-bottom: 29px;
   background-color: var(--c_white);
   border-radius: 20px;
   text-align: center;
@@ -26,6 +27,7 @@
 
 @media (min-width: 1200px) {
   .p-cta {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }

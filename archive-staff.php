@@ -19,14 +19,17 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-staff__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
-  <div class="p-page-staff__inner">
+  <!-- .l-inner-sub -->
+  <div class="p-page-staff__inner l-inner-sub">
     <?php
     $the_query = new WP_Query([
       "post_type" => "staff",
@@ -79,6 +82,7 @@
         <p>記事が投稿されていません。</p>
     <?php endif; ?>
   </div>
+  <!-- /.l-inner-sub -->
 </main>
 <!-- /.p-page-staff -->
 

@@ -26,7 +26,8 @@
 }
 
 .c-table__text {
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px dashed currentColor;
   line-height: 1.5;
 }
@@ -61,7 +62,8 @@
   }
 
   .c-table__text {
-    padding: 36px 0;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 }
 

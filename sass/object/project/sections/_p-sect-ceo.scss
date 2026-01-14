@@ -3,12 +3,6 @@
 /*----------------------------------------
 	p-sect-ceo
 ----------------------------------------*/
-.p-sect-ceo__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-}
-
 .p-sect-ceo__title {
   font-size: fwd.make-clamp(24, 32, 375, 768);
   font-weight: 700;
@@ -49,14 +43,10 @@
 
 .p-sect-ceo__img-wrap {
   max-width: 484px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .p-sect-ceo__inner {
-    width: var(--rate_inner-tab);
-  }
-}
 
 @media (min-width: 992px) {
   .p-sect-ceo__content {

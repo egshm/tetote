@@ -7,12 +7,6 @@
   --c_bg: #AFA86F;
 }
 
-.p-sect-career__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-}
-
 .p-sect-career__title {
   font-size: fwd.make-clamp(24, 32, 375, 768);
   font-weight: 700;
@@ -53,14 +47,6 @@
 .p-sect-career__item-title + .p-sect-career__text {
   margin-top: 25px;
 }
-
-
-@media (min-width: 768px) {
-  .p-sect-career__inner {
-    width: var(--rate_inner-tab);
-  }
-}
-
 
 @media (min-width: 992px) {
   .p-sect-career__title + .p-sect-career__text {

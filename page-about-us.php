@@ -19,16 +19,19 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-about__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
   <!-- .p-sect-philosophy -->
   <section class="p-sect-philosophy p-page-about__philosophy">
-    <div class="p-sect-philosophy__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-philosophy__inner l-inner-sub">
       <h2 class="p-sect-philosophy__title">私達が大切にしていること</h2>
       <ul class="p-sect-philosophy__list">
         <li class="p-sect-philosophy__item">
@@ -89,12 +92,14 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-philosophy -->
 
   <!-- .p-sect-ceo -->
   <section class="p-sect-ceo p-page-about__ceo">
-    <div class="p-sect-ceo__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-ceo__inner l-inner-sub">
       <h2 class="p-sect-ceo__title">代表メッセージ</h2>
       <div class="p-sect-ceo__content">
         <div class="p-sect-ceo__body">
@@ -123,12 +128,14 @@
         </figure>
       </div>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-ceo -->
 
   <!-- .p-sect-service -->
   <section class="p-sect-service p-page-about__service">
-    <div class="p-sect-service__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-service__inner l-inner-sub">
       <h2 class="p-sect-service__title">事業紹介</h2>
       <p class="p-sect-service__text">
         Tetoteの主力事業である「コンサルティング」以外に、新規に取り組んでいる事業をいくつか紹介させていただきます。
@@ -173,12 +180,14 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-service -->
 
   <!-- .p-sect-company -->
   <section class="p-sect-company p-page-about__company">
-    <div class="p-sect-company__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-company__inner l-inner-sub">
       <h2 id="company" class="p-sect-company__title">会社概要</h2>
       <!-- .c-table -->
       <div class="c-table p-sect-company__table">
@@ -226,6 +235,7 @@
       </div>
       <!-- .c-table -->
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-company -->
 </main>

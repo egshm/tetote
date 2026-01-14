@@ -19,14 +19,17 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-blog__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
-  <div class="p-page-blog__inner">
+  <!-- .l-inner-sub -->
+  <div class="p-page-blog__inner l-inner-sub">
     <?php if (have_posts()) : ?>
       <ul class="p-page-blog__list">
         <?php while (have_posts()) : the_post(); ?>
@@ -86,6 +89,7 @@
     ]);
     ?>
   </div>
+  <!-- /.l-inner-sub -->
 </main>
 <!-- /.p-page-blog -->
 

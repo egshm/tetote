@@ -19,16 +19,19 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-benefits__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
   <!-- .p-sect-system -->
   <section class="p-sect-system p-page-benefits__system">
-    <div class="p-sect-system__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-system__inner l-inner-sub">
       <h2 id="system-title" class="p-sect-system__title">各種制度</h2>
       <!-- .c-table -->
       <div class="c-table p-sect-system__table">
@@ -81,12 +84,14 @@
       </div>
       <!-- .c-table -->
     </div>
+    <!-- .l-inner-sub -->
   </section>
   <!-- /.p-sect-system -->
 
   <!-- .p-sect-voice -->
   <section class="p-sect-voice p-page-benefits__voice">
-    <div class="p-sect-voice__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-voice__inner l-inner-sub">
       <h2 class="p-sect-voice__title">制度利用者の声</h2>
       <ul class="p-sect-voice__list">
         <li class="p-sect-voice__item">
@@ -112,6 +117,7 @@
         <img src="<?php echo esc_url(get_theme_file_uri("images/voice.jpg")); ?>" alt="左：堀内 優（2013年入社） 右：神凪 理沙（2015年入社）" class="p-sect-voice__img" width="980" height="560">
       </figure>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-voice -->
 </main>

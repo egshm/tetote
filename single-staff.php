@@ -4,7 +4,8 @@
 <main class="p-page-staff-detail">
   <!-- .p-sect-hero-staff -->
   <section class="p-sect-hero-staff p-page-staff-detail__hero">
-    <div class="p-sect-hero-staff__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-hero-staff__inner l-inner-sub">
       <div class="p-sect-hero-staff__body">
         <?php
           // 社員情報のカスタムフィールドを取得
@@ -41,20 +42,24 @@
         <?php endif ; ?>
       </figure>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- .p-sect-hero-staff -->
 
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-staff-detail__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
-  <div class="p-page-staff-detail__inner">
+  <!-- .l-inner-sub -->
+  <div class="p-page-staff-detail__inner l-inner-sub">
     <div class="p-page-staff-detail__layout">
       <!-- .p-sect-post-staff -->
       <section id="js-tocContent" class="p-sect-post-staff p-page-staff-detail__post">
@@ -130,6 +135,7 @@
       <?php endif; ?>
     </section>
   </div>
+  <!-- /.l-inner-sub -->
 </main>
 <!-- /.p-page-staff-detail -->
 

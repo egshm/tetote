@@ -4,13 +4,30 @@
 	l-inner-top（トップページ用）
 ----------------------------------------*/
 .l-inner-top {
-  width: calc((341 / 375) * 100%);
+  width: var(--rate_inner);
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 1200px) {
   .l-inner-top {
-    max-width: 980px;
+    max-width: calc(var(--maw_inner) * 1px);
+  }
+}
+
+
+/*----------------------------------------
+	l-inner-sub（下層ページ用）
+----------------------------------------*/
+.l-inner-sub {
+  width: var(--rate_inner);
+  max-width: calc(var(--maw_inner) * 1px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .l-inner-sub {
+    width: var(--rate_inner-tab);
   }
 }

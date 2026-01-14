@@ -5,14 +5,17 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-entry__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
-  <div class="p-page-entry__inner">
+  <!-- .l-inner-sub -->
+  <div class="p-page-entry__inner l-inner-sub">
     <section class="p-page-entry__content">
       <hgroup class="p-page-entry__title">
         <h2 class="p-page-entry__title-main"><span class="p-page-entry__title-accent">新卒・中途採用</span>エントリーフォーム</h2>
@@ -27,6 +30,7 @@
       <!-- /.c-form -->
     </section>
   </div>
+  <!-- /.l-inner-sub -->
 </main>
 <!-- /.p-page-entry -->
 

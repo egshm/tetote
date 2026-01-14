@@ -5,7 +5,8 @@
 ----------------------------------------*/
 .p-sect-hero-staff {
   --c_bg: #FAF7F1;
-  padding: 43px 0;
+  padding-top: 43px;
+  padding-bottom: 43px;
   background-color: var(--c_bg)
 }
 
@@ -13,9 +14,6 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 54px;
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
 }
 
 .p-sect-hero-staff__title-main {
@@ -82,7 +80,6 @@
   .p-sect-hero-staff__inner {
     flex-direction: row;
     gap: calc((85 / var(--maw_inner)) * 100%);
-    width: var(--rate_inner-tab);
   }
 
   .p-sect-hero-staff__body {

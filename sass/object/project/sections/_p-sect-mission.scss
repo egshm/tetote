@@ -85,7 +85,8 @@
 
 .p-sect-mission__slide {
   width: 271px;
-  margin: 0 8px;
+  margin-right: 8px;
+  margin-left: 8px;
   aspect-ratio: 271 / 210;
 }
 
@@ -129,7 +130,8 @@
 
   .p-sect-mission__slide {
     width: 506px;
-    margin: 0 17px;
+    margin-right: 17px;
+    margin-left: 17px;
   }
 
   .p-sect-mission__slide:nth-child(even) {

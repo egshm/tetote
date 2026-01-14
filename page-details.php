@@ -19,16 +19,19 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-details__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
   <!-- .p-sect-details -->
   <section class="p-sect-details p-page-details__details">
-    <div class="p-sect-details__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-details__inner l-inner-sub">
       <h2 class="p-sect-details__title">あなたが輝ける場所が、ここにはある</h2>
       <p class="p-sect-details__text">
         <span class="u-text-upper">Tetote</span>では、コンサルタントを中心に、様々な職種を募集しています。
@@ -227,6 +230,7 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-details -->
 </main>

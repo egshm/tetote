@@ -14,10 +14,9 @@
 }
 
 .p-page-blog-detail__inner {
-  width: var(--rate_inner);
-  max-width: calc((var(--w_inner) * 1px));
-  margin: 0 auto;
-  padding: 34px 0 70px;
+  max-width: calc(var(--w_inner) * 1px) !important;
+  padding-top: 34px;
+  padding-bottom: 70px;
 }
 
 .p-page-blog-detail__content {
@@ -31,10 +30,6 @@
 
 
 @media (min-width: 768px) {
-  .p-page-blog-detail__inner {
-    width: var(--rate_inner-tab);
-  }
-
   .p-page-blog-detail__breadcrumb {
     padding-top: 70px; /* ヘッダー高さに合わせる */
   }

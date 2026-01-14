@@ -3,12 +3,6 @@
 /*----------------------------------------
 	p-sect-service
 ----------------------------------------*/
-.p-sect-service__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-}
-
 .p-sect-service__title {
   font-size: fwd.make-clamp(24, 32, 375, 768);
   font-weight: 700;
@@ -29,7 +23,8 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 47px;
-  padding: 49px 0;
+  padding-top: 49px;
+  padding-bottom: 49px;
 }
 
 .p-sect-service__media-item + .p-sect-service__media-item {
@@ -69,13 +64,6 @@
 
 .p-sect-service__media-text {
   line-height: 1.5;
-}
-
-
-@media (min-width: 768px) {
-  .p-sect-service__inner {
-    width: var(--rate_inner-tab);
-  }
 }
 
 

@@ -33,10 +33,11 @@
 }
 
 .p-page-entry__inner {
-  width: var(--rate_inner);
-  max-width: calc((var(--w_inner) * 1px));
-  margin: 0 auto 70px;
-  padding: 33px 0 57px;
+  /* l-inner-subのmax-widthより優先度高 */
+  max-width: calc(var(--w_inner) * 1px) !important;
+  margin-bottom: 70px;
+  padding-top: 33px;
+  padding-bottom: 57px;
 }
 
 .p-page-entry__content {
@@ -73,7 +74,9 @@
 
 .p-page-entry__text {
   max-width: 495px;
-  margin: 51px auto 0;
+  margin-top: 51px;
+  margin-right: auto;
+  margin-left: auto;
   line-height: 1.5;
 }
 
@@ -85,10 +88,6 @@
 
 
 @media (min-width: 768px) {
-  .p-page-entry__inner {
-    width: var(--rate_inner-tab);
-  }
-
   .p-page-entry__breadcrumb {
     margin-top: 70px; /* ヘッダー高さに合わせる */
   }

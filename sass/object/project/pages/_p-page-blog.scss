@@ -4,10 +4,8 @@
 	p-page-blog
 ----------------------------------------*/
 .p-page-blog__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-  padding: 65px 0 70px;
+  padding-top: 65px;
+  padding-bottom: 70px;
 }
 
 .p-page-blog__list {
@@ -22,10 +20,6 @@
 }
 
 @media (min-width: 768px) {
-  .p-page-blog__inner {
-    width: var(--rate_inner-tab);
-  }
-
   .p-page-blog__list {
     display: grid;
     align-items: stretch;
@@ -35,7 +29,8 @@
 
 @media (min-width: 992px) {
   .p-page-blog__inner {
-    padding: 130px 0 139px;
+    padding-top: 130px;
+    padding-bottom: 139px;
   }
 
   .p-page-blog__list {

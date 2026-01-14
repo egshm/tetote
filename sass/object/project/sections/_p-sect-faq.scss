@@ -3,12 +3,6 @@
 /*----------------------------------------
 	p-sect-faq
 ----------------------------------------*/
-.p-sect-faq__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-}
-
 .p-sect-faq__btn {
   font-size: fwd.make-clamp(18, 20, 375, 768);
 }
@@ -33,14 +27,6 @@
   font-weight: 700;
   line-height: 1.2;
 }
-
-
-@media (min-width: 768px) {
-  .p-sect-faq__inner {
-    width: var(--rate_inner-tab);
-  }
-}
-
 
 @media (min-width: 992px) {
   .p-sect-faq__btn-list {

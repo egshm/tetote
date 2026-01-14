@@ -47,7 +47,8 @@
 .p-sect-benefits__card-title {
   --c_bg: #AFA86F;
   width: fit-content;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0.3em;
   background-color: var(--c_bg);
   font-size: var(--fz_24);
@@ -63,7 +64,8 @@
 .p-sect-benefits__img-wrap {
   position: relative;
   width: calc((251 / var(--miw_inner)) * 100%);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   z-index: -1;
 }
 
@@ -112,7 +114,8 @@
 
 @media (min-width: 1200px) {
   .p-sect-benefits__title {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .p-sect-benefits__text {

@@ -7,12 +7,6 @@
   --c_bg: #FAF7F1;
 }
 
-.p-sect-philosophy__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-}
-
 .p-sect-philosophy__title {
   font-size: fwd.make-clamp(24, 32, 375, 768);
   font-weight: 700;
@@ -25,8 +19,10 @@
 }
 
 .p-sect-philosophy__item {
-  margin: 0 auto;
-  padding: 30px 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: var(--c_bg);
   border-radius: 10px;
 }
@@ -37,7 +33,8 @@
 
 .p-sect-philosophy__item-content {
   width: var(--rate_inner-tab);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .p-sect-philosophy__item-title {
@@ -64,12 +61,6 @@
 .p-sect-philosophy__item-text {
   margin-top: 21px;
   line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  .p-sect-philosophy__inner {
-    width: var(--rate_inner-tab);
-  }
 }
 
 @media (min-width: 992px) {

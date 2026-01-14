@@ -5,14 +5,17 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-blog-detail__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
-  <div class="p-page-blog-detail__inner">
+  <!-- .l-inner-sub -->
+  <div class="p-page-blog-detail__inner l-inner-sub">
     <div class="p-page-blog-detail__content">
       <!-- .p-sect-hero-blog -->
       <section class="p-sect-hero-blog p-page-blog-detail__hero">
@@ -62,6 +65,7 @@
       <!-- .p-sect-post-blog -->
     </div>
   </div>
+  <!-- /.l-inner-sub -->
 
   <?php
   $prev_post = get_adjacent_post(false, '', true);

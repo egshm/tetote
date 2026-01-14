@@ -22,7 +22,8 @@
 .p-sect-recruit__btn {
   width: 100%;
   max-width: 470px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 1.7em;
   padding-bottom: 1.7em;
   border: none;
@@ -59,7 +60,8 @@
 
 @media (min-width: 1200px) {
   .p-sect-recruit__title {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .p-sect-recruit__text {

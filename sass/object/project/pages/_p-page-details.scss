@@ -4,11 +4,13 @@
 	Details
 ----------------------------------------*/
 .p-page-details__details {
-  padding: 64px 0 70px;
+  padding-top: 64px;
+  padding-bottom: 70px;
 }
 
 @media (min-width: 992px) {
   .p-page-details__details {
-    padding: 145px 0 139px;
+    padding-top: 145px;
+    padding-bottom: 139px;
   }
 }

@@ -12,17 +12,9 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: var(--fz_14);
   line-height: 1.2;
   text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .c-breadcrumb__inner {
-    width: var(--rate_inner-tab);
-  }
 }

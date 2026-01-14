@@ -8,10 +8,8 @@
 }
 
 .p-page-staff-detail__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-  padding: 50px 0 70px;
+  padding-top: 50px;
+  padding-bottom: 70px;
 }
 
 .p-page-staff-detail__layout {
@@ -55,10 +53,6 @@
 
 
 @media (min-width: 768px) {
-  .p-page-staff-detail__inner {
-    width: var(--rate_inner-tab);
-  }
-
   .p-page-staff-detail__layout {
     flex-direction: row;
     gap: calc((56 / var(--maw_inner)) * 100%);
@@ -80,7 +74,8 @@
 
 @media (min-width: 992px) {
   .p-page-staff-detail__inner {
-    padding: 101px 0 139px;
+    padding-top: 101px;
+    padding-bottom: 139px;
   }
 
   .p-page-staff-detail__hero {

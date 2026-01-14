@@ -57,7 +57,9 @@
 .p-fv__news-bar {
   width: calc((351 / var(--vw_sp)) * 100%);
   max-width: calc((1263 / var(--vw_pc)) * 100%);
-  margin: 31px auto 0;
+  margin-top: 31px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 

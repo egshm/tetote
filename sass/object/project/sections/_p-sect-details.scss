@@ -3,12 +3,6 @@
 /*----------------------------------------
 	p-sect-details
 ----------------------------------------*/
-.p-sect-details__inner {
-  width: var(--rate_inner);
-  max-width: calc(var(--maw_inner) * 1px);
-  margin: 0 auto;
-}
-
 .p-sect-details__title {
   font-size: fwd.make-clamp(24, 32, 375, 768);
   font-weight: 700;
@@ -43,14 +37,6 @@
   font-size: fwd.make-clamp(20, 32, 375, 768);
   font-weight: 700;
 }
-
-
-@media (min-width: 768px) {
-  .p-sect-details__inner {
-    width: var(--rate_inner-tab);
-  }
-}
-
 
 @media (min-width: 992px) {
   .p-sect-details__text {

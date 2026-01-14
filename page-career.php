@@ -19,16 +19,19 @@
   <!-- .c-breadcrumb -->
   <?php if (function_exists('bcn_display')) : ?>
     <nav class="c-breadcrumb p-page-career__breadcrumb" aria-label="パンくずナビゲーション" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <div class="c-breadcrumb__inner">
+      <!-- .l-inner-sub -->
+      <div class="c-breadcrumb__inner l-inner-sub">
         <?php bcn_display(); ?>
       </div>
+      <!-- /.l-inner-sub -->
     </nav>
   <?php endif; ?>
   <!-- /.c-breadcrumb -->
 
   <!-- .p-sect-career -->
   <section class="p-sect-career p-page-career__career">
-    <div class="p-sect-career__inner">
+    <!-- .l-inner-sub -->
+    <div class="p-sect-career__inner l-inner-sub">
       <h2 class="p-sect-career__title">キャリアパスに沿った研修制度を用意</h2>
       <p class="p-sect-career__text">
         弊社では、コンサルタントのキャリアパスを、大きく4つのステージに分けています。
@@ -99,6 +102,7 @@
         </li>
       </ul>
     </div>
+    <!-- /.l-inner-sub -->
   </section>
   <!-- /.p-sect-career -->
 </main>

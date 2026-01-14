@@ -31,13 +31,16 @@
 
 .l-footer__inner {
   width: var(--rate_inner);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
 }
 
 .l-footer__cta {
   position: relative;
-  margin: -118px auto 0;
+  margin-top: -118px;
+  margin-right: auto;
+  margin-left: auto;
   z-index: 1;
 }
 
@@ -69,7 +72,9 @@
 
 .l-footer__logo {
   width: 250px;
-  margin: 29px auto 0;
+  margin-top: 29px;
+  margin-right: auto;
+  margin-left: auto;
   color: var(--c_base);
 }
 
@@ -121,7 +126,9 @@
     column-gap: 109px;
     row-gap: 61px;
     width: calc((var(--w_cta) / var(--maw_inner)) * 100%);
-    margin: 62px auto 0;
+    margin-top: 62px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .l-footer__logo {
