@@ -39,4 +39,4 @@ Projectレイヤーが増えて煩雑化したので、更に以下の3つに分
 - VSCodeの拡張機能`markuplint`と使ってWAI-ARIAの構文チェックをしながら実装
 - セマンティックなHTML要素を使用
 - 装飾目的だけの`svg`タグや`img`タグには`aria-hidden="true"`を適用
-- テキスト量の多い図解を画像データで表示する場合、そのテキスト内容を`figcaption`タグで記述しておき、スクリーンリーダで読み上げはされるが`visually-hidden`で表示を隠すように実装（実装箇所：`page-career.php`）
+- テキスト量の多い図解を画像データで表示する場合、そのテキスト内容を`figcaption`タグで記述しておき、スクリーンリーダで読み上げはされるが`visually-hidden`で表示を隠すように実装（参照：`page-career.php`）
