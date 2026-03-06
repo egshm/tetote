@@ -35,10 +35,20 @@
       <figure class="p-sect-hero-staff__img-wrap">
         <?php if (has_post_thumbnail()) : ?>
           <!-- アイキャッチ画像 -->
-          <?php the_post_thumbnail( 'full', ['class' => 'p-sect-hero-staff__img']); ?>
+          <?php the_post_thumbnail(
+            'full',
+            [
+              'class' => 'p-sect-hero-staff__img',
+              'width' => '286',
+              'height' => '368',
+              'fetchpriority' => 'high',
+              'decoding' => 'async',
+              'loading' => 'eager'
+            ]
+          ); ?>
         <?php else : ?>
           <!-- NoImage画像 -->
-          <img class="p-sect-hero-staff__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png" )); ?>)" alt="NoImage画像" width="286" height="368">
+          <img class="p-sect-hero-staff__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.webp" )); ?>)" alt="NoImage画像" width="286" height="368">
         <?php endif ; ?>
       </figure>
     </div>
@@ -118,11 +128,24 @@
                   </div>
                 </div>
                 <figure class="c-card-staff__img-wrap">
-                  <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail( 'full', ['class' => 'c-card-staff__img']); ?>
-                  <?php else : ?>
-                    <img class="c-card-staff__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png" )); ?>)" alt="NoImage画像" width="246" height="311">
-                  <?php endif ; ?>
+                  <?php
+                  $thumb = get_field('cf-staff-thumb');
+                  $thumb_sp = get_field('cf-staff-thumb-sp');
+                  ?>
+                  <picture>
+                    <source
+                      srcset="<?php echo esc_url($thumb_sp['url']); ?>"
+                      media="(max-width: 767.9px)"
+                    >
+                    <img
+                      src="<?php echo esc_url($thumb['url']); ?>"
+                      alt="<?php echo esc_attr($thumb['alt']); ?>"
+                      class="c-card-staff__img"
+                      width="300"
+                      height="379"
+                      loading="lazy"
+                    >
+                  </picture>
                 </figure>
               </a>
             </li>

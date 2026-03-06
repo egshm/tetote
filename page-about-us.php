@@ -14,16 +14,34 @@
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri("images/fv-about.jpg")); ?>"
-        alt=""
-        class="p-fv-sub__img"
-        width="1440"
-        height="339"
-        fetchpriority="high"
-        decoding="async"
-        loading="eager"
-      >
+      <picture>
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-about_sp.webp")); ?>"
+          type="image/webp"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-about_sp.jpg")); ?>"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri('images/fv-about.webp')); ?>"
+          type="image/webp"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-about.jpg")); ?>"
+        >
+        <img
+          fetchpriority="high"
+          src="<?php echo esc_url(get_theme_file_uri("images/fv-about.jpg")); ?>"
+          alt=""
+          class="p-fv__img"
+          width="1440"
+          height="339"
+          decoding="async"
+          loading="eager"
+        >
+      </picture>
     </div>
   </div>
   <!-- /.p-fv-sub -->
@@ -133,10 +151,33 @@
           <p class="p-sect-ceo__text">
             私たちと共に、未来を創造していきましょう。
           </p>
-          <img src="<?php echo esc_url(get_theme_file_uri("images/ceo-name.svg")); ?>" alt="田中浩二郎" class="p-sect-ceo__name" width="185" height="35">
+          <img
+            src="<?php echo esc_url(get_theme_file_uri("images/ceo-name.svg")); ?>"
+            alt="田中浩二郎"
+            class="p-sect-ceo__name"
+            width="185"
+            height="35"
+            loading="lazy"
+          >
         </div>
         <figure class="p-sect-ceo__img-wrap">
-          <img src="<?php echo esc_url(get_theme_file_uri("images/ceo.jpg")); ?>" alt="代表 田中浩二郎の顔写真" class="p-sect-ceo__img" width="484" height="629">
+          <picture>
+            <source
+              srcset="<?php echo esc_url(get_theme_file_uri('images/ceo.webp')); ?>"
+              type="image/webp"
+            >
+            <source
+              srcset="<?php echo esc_url(get_theme_file_uri("images/ceo.jpg")); ?>"
+            >
+            <img
+              src="<?php echo esc_url(get_theme_file_uri("images/ceo.jpg")); ?>"
+              alt="代表 田中浩二郎の顔写真"
+              class="p-sect-ceo__img"
+              width="484"
+              height="629"
+              loading="lazy"
+            >
+          </picture>
         </figure>
       </div>
     </div>
@@ -162,7 +203,23 @@
             </p>
           </div>
           <figure class="p-sect-service__img-wrap">
-            <img src="<?php echo esc_url(get_theme_file_uri("images/consulting.jpg")); ?>" alt="オフィスで腕を組み、自信に満ちた表情で立つ女性ビジネスパーソン" class="p-sect-service__img" width="457" height="261">
+            <picture>
+              <source
+                srcset="<?php echo esc_url(get_theme_file_uri('images/consulting.webp')); ?>"
+                type="image/webp"
+              >
+              <source
+                srcset="<?php echo esc_url(get_theme_file_uri("images/consulting.jpg")); ?>"
+              >
+              <img
+                src="<?php echo esc_url(get_theme_file_uri("images/consulting.webp")); ?>"
+                alt="オフィスで腕を組み、自信に満ちた表情で立つ女性ビジネスパーソン"
+                class="p-sect-service__img"
+                width="457"
+                height="261"
+                loading="lazy"
+              >
+            </picture>
           </figure>
         </li>
         <li class="p-sect-service__media-item">
@@ -174,7 +231,23 @@
             </p>
           </div>
           <figure class="p-sect-service__img-wrap">
-            <img src="<?php echo esc_url(get_theme_file_uri("images/solution.jpg")); ?>" alt="オフィスでノートPCを使って業務に取り組む男性ビジネスパーソン" class="p-sect-service__img" width="457" height="261">
+            <picture>
+              <source
+                srcset="<?php echo esc_url(get_theme_file_uri('images/solution.webp')); ?>"
+                type="image/webp"
+              >
+              <source
+                srcset="<?php echo esc_url(get_theme_file_uri("images/solution.jpg")); ?>"
+              >
+              <img
+                src="<?php echo esc_url(get_theme_file_uri("images/solution.webp")); ?>"
+                alt="オフィスでノートPCを使って業務に取り組む男性ビジネスパーソン"
+                class="p-sect-service__img"
+                width="457"
+                height="261"
+                loading="lazy"
+              >
+            </picture>
           </figure>
         </li>
         <li class="p-sect-service__media-item">
@@ -187,7 +260,23 @@
             </p>
           </div>
           <figure class="p-sect-service__img-wrap">
-            <img src="<?php echo esc_url(get_theme_file_uri("images/development.jpg")); ?>" alt="デスクに座り、2台のモニターを使って開発業務に取り組む女性" class="p-sect-service__img" width="457" height="261">
+            <picture>
+              <source
+                srcset="<?php echo esc_url(get_theme_file_uri('images/development.webp')); ?>"
+                type="image/webp"
+              >
+              <source
+                srcset="<?php echo esc_url(get_theme_file_uri("images/development.jpg")); ?>"
+              >
+              <img
+                src="<?php echo esc_url(get_theme_file_uri("images/development.webp")); ?>"
+                alt="デスクに座り、2台のモニターを使って開発業務に取り組む女性"
+                class="p-sect-service__img"
+                width="457"
+                height="261"
+                loading="lazy"
+              >
+            </picture>
           </figure>
         </li>
       </ul>

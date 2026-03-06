@@ -16,6 +16,11 @@
   gap: 54px;
 }
 
+.p-sect-hero-staff__title {
+  position: relative;
+  z-index: 1;
+}
+
 .p-sect-hero-staff__title-main {
   width: fit-content;
   padding: 0.08em 0.3em;

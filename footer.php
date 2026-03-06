@@ -70,6 +70,12 @@
       <small class="l-footer__copyright">&copy; <?php echo wp_date("Y");?> TETOTE All Rights Reserved.</small>
     </div>
   </div>
+  <picture>
+    <source srcset="<?php echo esc_url(get_theme_file_uri('images/footer-bg.webp')); ?>" type="image/webp" media="(min-width: 768px)">
+    <source srcset="<?php echo esc_url(get_theme_file_uri("images/footer-bg.jpg")); ?>" media="(min-width: 768px)">
+    <source srcset="<?php echo esc_url(get_theme_file_uri('images/footer-bg_sp.webp')); ?>" type="image/webp">
+    <img loading="lazy" src="<?php echo esc_url(get_theme_file_uri("images/footer-bg_sp.jpg")); ?>" alt="" class="l-footer__bg" width="375" height="250">
+  </picture>
 </footer>
 <!-- /.l-footer -->
 <?php wp_footer(); ?>

@@ -48,10 +48,20 @@
           <figure class="p-sect-hero-blog__img-wrap">
             <?php if (has_post_thumbnail()) : ?>
               <!-- アイキャッチ画像 -->
-              <?php the_post_thumbnail('full', ['class' => 'p-sect-hero-blog__img']); ?>
+              <?php the_post_thumbnail(
+                'full',
+                [
+                  'class' => 'p-sect-hero-blog__img',
+                  'width' => '720',
+                  'height' => '411',
+                  'fetchpriority' => 'high',
+                  'decoding' => 'async',
+                  'loading' => 'eager'
+                ]
+              ); ?>
             <?php else : ?>
               <!-- NoImage画像 -->
-              <img class="p-sect-hero-blog__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png")); ?>" alt="NoImage画像" width="720" height="411">
+              <img class="p-sect-hero-blog__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.webp")); ?>" alt="NoImage画像" width="720" height="411">
             <?php endif ; ?>
           </figure>
         </div>

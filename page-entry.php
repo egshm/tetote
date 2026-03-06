@@ -26,7 +26,7 @@
       </p>
 
       <!-- .c-form -->
-      <?php echo do_shortcode('[contact-form-7 id="ff83cc1" title="新卒・中途採用エントリーフォーム"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="ea6298a" title="新卒・中途採用エントリーフォーム"]'); ?>
       <!-- /.c-form -->
     </section>
   </div>

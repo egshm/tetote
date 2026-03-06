@@ -14,16 +14,34 @@
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri("images/fv-career.jpg")); ?>"
-        alt=""
-        class="p-fv-sub__img"
-        width="1440"
-        height="339"
-        fetchpriority="high"
-        decoding="async"
-        loading="eager"
-      >
+      <picture>
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-career_sp.webp")); ?>"
+          type="image/webp"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-career_sp.jpg")); ?>"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri('images/fv-career.webp')); ?>"
+          type="image/webp"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-career.jpg")); ?>"
+        >
+        <img
+          src="<?php echo esc_url(get_theme_file_uri("images/fv-career.jpg")); ?>"
+          alt=""
+          class="p-fv-sub__img"
+          width="1440"
+          height="339"
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+        >
+      </picture>
     </div>
   </div>
   <!-- /.p-fv-sub -->
@@ -49,14 +67,24 @@
         弊社では、コンサルタントのキャリアパスを、大きく4つのステージに分けています。
       </p>
       <figure class="p-sect-career__img-wrap">
-        <img
-          src="<?php echo esc_url(get_theme_file_uri("images/career-path.png")); ?>"
-          alt="TETOTEでのキャリアパス（※コンサルタントの場合）"
-          class="p-sect-career__img"
-          width="980"
-          height="734"
-          aria-describedby="career-path-desc"
-        >
+        <picture>
+          <source
+            srcset="<?php echo esc_url(get_theme_file_uri('images/career-path.webp')); ?>"
+            type="image/webp"
+          >
+          <source
+            srcset="<?php echo esc_url(get_theme_file_uri("images/career-path.png")); ?>"
+          >
+          <img
+            src="<?php echo esc_url(get_theme_file_uri("images/career-path.png")); ?>"
+            alt="TETOTEでのキャリアパス（※コンサルタントの場合）"
+            class="p-sect-career__img"
+            width="980"
+            height="734"
+            aria-describedby="career-path-desc"
+            loading="lazy"
+          >
+        </picture>
         <figcaption id="career-path-desc" class="u-visually-hidden">
           <p>
             この図は、TETOTEにおけるコンサルタント職のキャリアパスを示しています。

@@ -20,23 +20,53 @@ function my_script_init()
   // デフォルトjQueryの読込み解除
   wp_deregister_script('jquery');
 
-  // Webフォント
-  wp_enqueue_style('NotoSansJP', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
-  wp_enqueue_style('Poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  wp_enqueue_style('Viga', 'https://fonts.googleapis.com/css2?family=Viga&display=swap');
+  // トップページ
+  if (is_front_page()) {
+    // Swiper
+    wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11.2.10');
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), "11.2.10", array('in_footer' => true, 'strategy' => 'defer'));
+  }
+  // 個別記事投稿ページ（社員紹介）
+  if (is_singular('staff')) {
+    wp_enqueue_script('tocbot', 'https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.32.2/tocbot.min.js', array(), "4.32.2", array('in_footer' => true, 'strategy' => 'defer'));
+  }
 
-  // CSS
-  wp_enqueue_style('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1');
-  wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), '1.0.0');
-
-  // JavaScript
-  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), "3.7.1", array('in_footer' => true, 'strategy' => 'defer'));
-  wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), "1.8.1", array('in_footer' => true, 'strategy' => 'defer'));
-  wp_enqueue_script('tocbot', 'https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.32.2/tocbot.min.js', array(), "4.32.2", array('in_footer' => true, 'strategy' => 'defer'));
-  wp_enqueue_script('inview', get_template_directory_uri() . '/js/jquery.inview.min.js', array('jquery'), "1.1.2", array('in_footer' => true, 'strategy' => 'defer'));
-  wp_enqueue_script('main-js', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', array('in_footer' => true, 'strategy' => 'defer'));
+  wp_enqueue_style('style', get_template_directory_uri() . '/css/style.min.css', array(), '1.0.0');
+  wp_enqueue_script('script', get_template_directory_uri() . '/js/script.min.js', array(), '1.0.0', array('in_footer' => true, 'strategy' => 'defer'));
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
+
+
+// Contact Form 7 のアセット読み込みを制限
+function limit_wpcf7_assets() {
+  if (is_page('entry')) return;
+  add_filter('wpcf7_load_js', '__return_false');
+  add_filter('wpcf7_load_css', '__return_false');
+}
+add_action('wp', 'limit_wpcf7_assets');
+
+
+// アセットの読込みを最適化
+function my_assets_load_optimize() {
+  $theme_uri = get_template_directory_uri();
+
+  $fonts = [
+    'NotoSansJP-Regular.woff2',
+    'NotoSansJP-Bold.woff2',
+    'poppins-v24-latin-regular.woff2',
+    'poppins-v24-latin-700.woff2',
+    'viga-v15-latin-regular.woff2'
+  ];
+
+  foreach ($fonts as $font) {
+    echo '<link rel="preload" href="' . $theme_uri . '/fonts/' . $font . '" as="font" type="font/woff2" crossorigin>' . "\n";
+  }
+  echo '<link rel="preload" as="style" href="' . $theme_uri . '/css/font.min.css">' . "\n";
+  echo '<link rel="stylesheet" href="' . $theme_uri . '/css/font.min.css" media="print" onload="this.media=\'all\'">' . "\n";
+  // フォールバック
+  echo '<noscript><link rel="stylesheet" href="' . $theme_uri . '/css/font.min.css"></noscript>' . "\n";
+}
+add_action('wp_head', 'my_assets_load_optimize', 5);
 
 
 // 通常投稿詳細ページのパンくずリストからカテゴリー階層を除外
@@ -54,3 +84,8 @@ function custom_breadcrumb_trim_category($trail) {
   return $trail;
 }
 add_filter('bcn_after_fill', 'custom_breadcrumb_trim_category');
+
+
+// Emoji機能を削除
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );

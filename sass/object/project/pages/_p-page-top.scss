@@ -9,30 +9,6 @@
 
 
 /*----------------------------------------
-	First View
-----------------------------------------*/
-.p-page-top__fv {
-  --h_fv: 667px; /* ファーストビュー高さ */
-  --maw_inner: calc(var(--vw_pc) * 1px); /* インナー最大幅 */
-  position: relative;
-  height: var(--h_fv);
-  padding-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-  .p-page-top__fv {
-    padding-bottom: 38px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .p-page-top__fv {
-    --h_fv: 823px; /* ファーストビュー高さ */
-  }
-}
-
-
-/*----------------------------------------
 	Mission
 ----------------------------------------*/
 .p-page-top__mission {

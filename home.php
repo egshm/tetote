@@ -14,16 +14,34 @@
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri("images/fv-blog.jpg")); ?>"
-        alt=""
-        class="p-fv-sub__img"
-        width="1440"
-        height="339"
-        fetchpriority="high"
-        decoding="async"
-        loading="eager"
-      >
+      <picture>
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-blog_sp.webp")); ?>"
+          type="image/webp"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-blog_sp.jpg")); ?>"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri('images/fv-blog.webp')); ?>"
+          type="image/webp"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-blog.jpg")); ?>"
+        >
+        <img
+          src="<?php echo esc_url(get_theme_file_uri("images/fv-blog.jpg")); ?>"
+          alt=""
+          class="p-fv-sub__img"
+          width="1440"
+          height="339"
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+        >
+      </picture>
     </div>
   </div>
   <!-- /.p-fv-sub -->
@@ -76,13 +94,24 @@
                 <time class="p-media__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
               </div>
               <figure class="p-media__img-wrap">
-                <?php if (has_post_thumbnail()) : ?>
-                  <!-- アイキャッチ画像 -->
-                  <?php the_post_thumbnail('full', ['class' => 'p-media__img']); ?>
-                <?php else : ?>
-                  <!-- NoImage画像 -->
-                  <img class="p-media__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png")); ?>" alt="NoImage画像" width="121" height="121">
-                <?php endif ; ?>
+                <?php
+                $thumb = get_field('cf-blog-thumb');
+                $thumb_sp = get_field('cf-blog-thumb-sp');
+                ?>
+                <picture>
+                  <source
+                    srcset="<?php echo esc_url($thumb_sp['url']); ?>"
+                    media="(max-width: 767.9px)"
+                  >
+                  <img
+                    src="<?php echo esc_url($thumb['url']); ?>"
+                    alt="<?php echo esc_attr($thumb['alt']); ?>"
+                    class="p-media__img"
+                    width="158"
+                    height="180"
+                    loading="lazy"
+                  >
+                </picture>
               </figure>
             </a>
             <!-- /.p-media -->

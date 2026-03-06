@@ -1,19 +1,19 @@
 /*----------------------------------------
 	Utility: inview
 ----------------------------------------*/
-.u-fade-in-up {
+.u-inview-up {
   opacity: 0;
-  transform: translate(0, 10%);
+  transform: translate(0, 8%);
 }
 
-.u-fade-in-up.is-show {
-  animation: fade-in-up forwards 0.8s 1 ease 0.2s normal;
+.u-inview-up.is-active {
+  animation: fade-in-up forwards 1.2s 1 ease 0.2s normal;
 }
 
 @keyframes fade-in-up {
  0% {
    opacity: 0;
-   transform: translate(0, 10%);
+   transform: translate(0, 8%);
  }
  100% {
    opacity: 1;

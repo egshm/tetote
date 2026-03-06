@@ -14,16 +14,34 @@
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri("images/fv-faq.jpg")); ?>"
-        alt=""
-        class="p-fv-sub__img"
-        width="1440"
-        height="339"
-        fetchpriority="high"
-        decoding="async"
-        loading="eager"
-      >
+      <picture>
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-faq_sp.webp")); ?>"
+          type="image/webp"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-faq_sp.jpg")); ?>"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri('images/fv-faq.webp')); ?>"
+          type="image/webp"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-faq.jpg")); ?>"
+        >
+        <img
+          src="<?php echo esc_url(get_theme_file_uri("images/fv-faq.jpg")); ?>"
+          alt=""
+          class="p-fv-sub__img"
+          width="1440"
+          height="339"
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+        >
+      </picture>
     </div>
   </div>
   <!-- /.p-fv-sub -->

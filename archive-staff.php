@@ -14,16 +14,34 @@
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>"
-        alt=""
-        class="p-fv-sub__img"
-        width="1440"
-        height="339"
-        fetchpriority="high"
-        decoding="async"
-        loading="eager"
-      >
+      <picture>
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-staff_sp.webp")); ?>"
+          type="image/webp"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-staff_sp.jpg")); ?>"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri('images/fv-staff.webp')); ?>"
+          type="image/webp"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>"
+        >
+        <img
+          src="<?php echo esc_url(get_theme_file_uri("images/fv-staff.jpg")); ?>"
+          alt=""
+          class="p-fv-sub__img"
+          width="1440"
+          height="339"
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+        >
+      </picture>
     </div>
   </div>
   <!-- /.p-fv-sub -->
@@ -78,11 +96,24 @@
                 </div>
               </div>
               <figure class="c-card-staff__img-wrap">
-                <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail( 'full', ['class' => 'c-card-staff__img']); ?>
-                <?php else : ?>
-                  <img class="c-card-staff__img" src="<?php echo esc_url(get_theme_file_uri("images/noimage.png" )); ?>)" alt="NoImage画像" width="246" height="311">
-                <?php endif ; ?>
+                <?php
+                $thumb = get_field('cf-staff-thumb');
+                $thumb_sp = get_field('cf-staff-thumb-sp');
+                ?>
+                <picture>
+                  <source
+                    srcset="<?php echo esc_url($thumb_sp['url']); ?>"
+                    media="(max-width: 767.9px)"
+                  >
+                  <img
+                    src="<?php echo esc_url($thumb['url']); ?>"
+                    alt="<?php echo esc_attr($thumb['alt']); ?>"
+                    class="c-card-staff__img"
+                    width="300"
+                    height="379"
+                    loading="lazy"
+                  >
+                </picture>
               </figure>
             </a>
           </li>

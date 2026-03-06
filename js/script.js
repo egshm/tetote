@@ -57,76 +57,51 @@ hamburger.addEventListener('click', function() {
 });
 
 
-// Slickスライダー
+// スライダー
 //--------------------------------------------
 
-const $fvSlider = $('#js-fvSlider');
-const $staffSlider = $('#js-staffSlider');
+const fvSliderEl = document.querySelector('#js-fvSlider');
+const staffSliderEl = document.querySelector('#js-staffSlider');
 
-//ファーストビュー
-if ($fvSlider.length) {
-  $fvSlider.slick({
-    fade: true,
-    autoplay: true,
+if (fvSliderEl) {
+  const fvSlider = new Swiper(fvSliderEl, {
+    effect: "fade",
+    loop: true,
     speed: 1500,
-    autoplaySpeed : 2000,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    arrows: false,
-    accessibility: false, //アクセシビリティ無効化
+    allowTouchMove: false,
+    autoplay: {
+      delay: 3000,
+    },
   });
 }
 
-//メンバー紹介
-if ($staffSlider.length) {
-  $staffSlider
-    .slick({
-      slidesToScroll: 1,
-      infinite: true, //スライドを循環させる
-      arrows: true,
-      prevArrow: $('#js-prevBtn'),
-      nextArrow: $('#js-nextBtn'),
-      variableWidth: true, //スライド幅をcssで制御
-    })
-    //スライド切り替え前のイベント
-    .on(
-      'beforeChange',
-      function(event, slick, currentIndex, nextIndex) {
-        //フォーカス中の要素を取得
-        const active = document.activeElement;
-        //フォーカス中の要素が無ければ処理終了
-        if (!active) {
-          return;
-        }
-  
-        //フォーカス中のスライドを取得
-        const slide = active.closest('.slick-slide');
-        //フォーカス中のスライドが無ければ処理終了
-        if (!slide) {
-          return;
-        }
-  
-        //スライド番号を取得
-        const idx = Number(slide.getAttribute('data-slick-index'));
-        //切り替え前の古いスライドであればフォーカス解除
-        if (idx !== nextIndex) {
-          active.blur();
-        }
+if (staffSliderEl) {
+  const staffSlider = new Swiper('#js-staffSlider', {
+    slidesPerView: 'auto',
+    loop: true,
+    navigation: {
+      nextEl: '#js-nextBtn',
+      prevEl: '#js-prevBtn',
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 23,
+      },
+      992: {
+        spaceBetween: 43,
       }
-    )
-    //スライド切り替え後のイベント
-    .on(
-      'afterChange',
-      function(event, slick, currentIndex) {
-        //切り替え後のスライドを取得
-        const newSlide = slick.$slides[currentIndex];
-        //切り替え後のスライドをフォーカス
-        if (newSlide) {
-          newSlide.focus({ preventScroll: true });
-        }
-      }
-    );
+    }
+  });
 }
+
+document.querySelectorAll('.js-staffSlideItem').forEach(item => {
+  const index = parseInt(item.getAttribute('data-swiper-slide-index'), 10);
+  if (!isNaN(index) && (index + 1) % 2 === 0) {
+    item.classList.add('is-odd');
+  } else {
+    item.classList.remove('is-odd');
+  }
+});
 
 
 // カスタム投稿詳細ページの目次（Tocbot）
@@ -244,46 +219,176 @@ if (accordions.length) {
 }
 
 
-// ふわっと表示
+// 要素をふわっと表示（Intersection Observer API）
 //--------------------------------------------
 
-$(".js-inview").on("inview", function (event, isInView) {
-  if (isInView) {
-    $(this).stop().addClass("is-show");
-  }
+const targets = document.querySelectorAll('.js-inview');
+const options = {
+  root: null, // 監視範囲をビューポートに設定
+  rootMargin: '0px',
+  threshold: 0
+};
+
+function doWhenIntersect(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-active');
+      observer.unobserve(entry.target); // 一度発火したら監視を停止
+    }
+  });
+}
+
+// オブザーバをインスタンス化
+const observer = new IntersectionObserver(doWhenIntersect, options);
+
+// 監視
+targets.forEach(target => {
+  observer.observe(target);
 });
+
+
+// 全img要素の読込み完了を監視
+//--------------------------------------------
+function onAllImagesLoaded(callback) {
+  const images = document.querySelectorAll("img");
+  let loadedCount = 0;
+  let isCalled = false;
+
+  // callback の重複実行を防ぐ
+  function done() {
+    if (!isCalled) {
+      isCalled = true;
+      callback();
+    }
+  }
+
+  // 画像が無い場合は即実行
+  if (images.length === 0) {
+    done();
+    return;
+  }
+
+  images.forEach(image => {
+    // すでに読込みが完了している場合
+    if (image.complete) {
+      loadedCount++;
+      if (loadedCount === images.length) done();
+      return;
+    }
+
+    // 読込みが完了した場合
+    image.addEventListener('load', function() {
+      loadedCount++;
+      if (loadedCount === images.length) done();
+    });
+
+    // 読込みエラーの場合
+    image.addEventListener('error', function() {
+      loadedCount++;
+      if (loadedCount === images.length) done();
+    });
+  });
+}
 
 
 // スムーススクロール
 //--------------------------------------------
 
-// スクロール先のハッシュ値を取得
-const urlHash = location.hash;
-// スクロール速度（ms）
-const SCROLL_SPEED = 800;
 // スクロールオフセット調整値（px）
 const SCROLL_OFFSET_ADJUST = 20;
 
-// ページ内スクロール
-$('a[href^="#"]').on('click', function() {
-  const href = $(this).attr('href');
-  const target = $(href === '#' || href === '' ? 'html' : href);
-  const offset = $('#js-header').outerHeight() + SCROLL_OFFSET_ADJUST;
-  const position = target.offset().top - offset;
-  $('html, body').animate({scrollTop: position}, SCROLL_SPEED, 'swing');
-  return false;
+// ページ遷移後のスクロール待機時間（ms）
+const SCROLL_DELAY_TIME = 300;
+
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const href = anchor.getAttribute('href');
+
+    // ページ内スクロール
+    if (href.startsWith('#')) {
+      const target = document.querySelector(
+        href === '#' || href === '' ? 'html' : href
+      );
+      const offset = header.offsetHeight + SCROLL_OFFSET_ADJUST;
+      const position = target.getBoundingClientRect().top + window.pageYOffset;
+
+      // スムーススクロール
+      window.scrollTo({
+        top: position - offset,
+        behavior: 'smooth'
+      });
+
+      // URLにハッシュを追加
+      history.pushState(null, '', href);
+    }
+    // ページ外へ遷移
+    else {
+      // 移動先ページ
+      const destPage = anchor.href.split('#')[0];
+      // 移動先ハッシュ
+      const destHash = anchor.href.split('#')[1];
+
+      // ハッシュを一時保存
+      sessionStorage.setItem('scrollTarget', destHash);
+
+      // 移動先ページに遷移
+      window.location.href = destPage;
+    }
+  });
 });
 
-// 他ページへ移動するときのスクロール
-if(urlHash) {
-  const SCROLL_DELAY_TIME = 100; // ページ遷移後のスクロール待機時間（ms）
-  history.replaceState(null, '', window.location.pathname);
-  $('html, body').stop().scrollTop(0);
-  // ページ遷移後に一定時間（SCROLL_DELAY_TIME）待ってからスクロール
-  setTimeout(function(){
-    const target = $(urlHash);
-    const offset = $('#js-header').outerHeight() + SCROLL_OFFSET_ADJUST;
-    const position = target.offset().top - offset;
-    $('html, body').stop().animate({scrollTop:position}, SCROLL_SPEED);
-  }, SCROLL_DELAY_TIME);
-}
+// ページ外スムーススクロール
+window.addEventListener('load', function() {
+
+  // 遅延読込み画像を強制的に読込むように設定
+  document.querySelectorAll('img[loading="lazy"]').forEach(lazyImage => {
+    lazyImage.loading = "eager";
+  });
+
+  // 画像の読み込みがすべて完了したら処理を継続
+  onAllImagesLoaded(function() {
+
+    // スクロール先のハッシュ値を取得
+    const urlHash = sessionStorage.getItem('scrollTarget');
+
+    if (urlHash) {
+      // ページの先頭に移動
+      window.scrollTo(0, 0);
+      // 保存情報を破棄
+      sessionStorage.removeItem('scrollTarget');
+      // 移動先を取得
+      const target = document.querySelector('#' + urlHash);
+
+      if (target) {
+        const offset = header.offsetHeight + SCROLL_OFFSET_ADJUST;
+        const position = target.getBoundingClientRect().top + window.pageYOffset;
+
+        setTimeout(function(){
+          // 移動先へスムーススクロール
+          window.scrollTo({
+            top: position - offset,
+            behavior: 'smooth'
+          });
+          // ハッシュを再設定
+          history.replaceState(null, '', window.location.pathname + '#' + urlHash);
+        }, SCROLL_DELAY_TIME);
+      }
+    }
+  });
+});
+
+
+// エントリーフォーム（Contact Form 7）
+//--------------------------------------------
+
+// 送信完了時
+document.addEventListener('wpcf7mailsent', function(event) {
+  // 送信完了メッセージを非表示に設定
+  document.querySelectorAll('.wpcf7-response-output').forEach(function(output) {
+    output.style.display = 'none';
+  });
+  // 送信完了画面に遷移
+  location = 'https://wp406314.wpx.jp/tetote/thanks/';
+}, false);

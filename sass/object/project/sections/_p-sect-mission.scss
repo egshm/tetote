@@ -41,16 +41,11 @@
 }
 
 /* 世界地図の背景 */
-.p-sect-mission__text-wrap::before {
-  content: '';
+.p-sect-mission__bg {
   position: absolute;
   top: 0;
   left: 50%;
   width: calc((320 / var(--miw_inner)) * 100%);
-  aspect-ratio: 320 / 173;
-  background-image: url('../images/world-map.png');
-  background-size: cover;
-  background-repeat: no-repeat;
   transform: translateX(-50%);
   z-index: -1;
 }
@@ -107,7 +102,7 @@
     line-height: 1.8;
   }
 
-  .p-sect-mission__text-wrap::before {
+  .p-sect-mission__bg {
     width: 100%;
   }
 }

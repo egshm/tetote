@@ -14,16 +14,34 @@
       </div>
     </div>
     <div class="p-fv-sub__img-wrap" aria-hidden="true">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri("images/fv-benefits.jpg")); ?>"
-        alt=""
-        class="p-fv-sub__img"
-        width="1440"
-        height="339"
-        fetchpriority="high"
-        decoding="async"
-        loading="eager"
-      >
+      <picture>
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-benefits_sp.webp")); ?>"
+          type="image/webp"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-benefits_sp.jpg")); ?>"
+          media="(max-width: 767.9px)"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri('images/fv-benefits.webp')); ?>"
+          type="image/webp"
+        >
+        <source
+          srcset="<?php echo esc_url(get_theme_file_uri("images/fv-benefits.jpg")); ?>"
+        >
+        <img
+          src="<?php echo esc_url(get_theme_file_uri("images/fv-benefits.jpg")); ?>"
+          alt=""
+          class="p-fv-sub__img"
+          width="1440"
+          height="339"
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+        >
+      </picture>
     </div>
   </div>
   <!-- /.p-fv-sub -->
@@ -126,7 +144,23 @@
         </li>
       </ul>
       <figure class="p-sect-voice__img-wrap">
-        <img src="<?php echo esc_url(get_theme_file_uri("images/voice.jpg")); ?>" alt="左：堀内 優（2013年入社） 右：神凪 理沙（2015年入社）" class="p-sect-voice__img" width="980" height="560">
+        <picture>
+          <source
+            srcset="<?php echo esc_url(get_theme_file_uri('images/voice.webp')); ?>"
+            type="image/webp"
+          >
+          <source
+            srcset="<?php echo esc_url(get_theme_file_uri("images/voice.jpg")); ?>"
+          >
+          <img
+            src="<?php echo esc_url(get_theme_file_uri("images/voice.jpg")); ?>"
+            alt="左：堀内 優（2013年入社） 右：神凪 理沙（2015年入社）"
+            class="p-sect-voice__img"
+            width="980"
+            height="560"
+            loading="lazy"
+          >
+        </picture>
       </figure>
     </div>
     <!-- /.l-inner-sub -->

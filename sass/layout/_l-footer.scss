@@ -15,18 +15,13 @@
   background-color: var(--c_bg);
 }
 
-/* 背景画像 */
-.l-footer::before {
-  content: '';
+.l-footer__bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: calc(var(--h_bg) * 1px);
-  background-image: url("../images/footer-bg_sp.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 .l-footer__inner {
@@ -102,10 +97,6 @@
 @media (min-width: 992px) {
   .l-footer {
     background-color: var(--c_white);
-  }
-
-  .l-footer::before {
-    background-image: url("../images/footer-bg.jpg");
   }
 
   .l-footer__inner {
