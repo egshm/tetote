@@ -60,10 +60,12 @@
   }
 
   .p-sect-ceo__text-main {
+    position: relative;
     margin-top: 18px;
     margin-left: -63px; /* テキストを画像に食い込ませる */
     text-align: left;
     white-space: nowrap;
+    z-index: 1;
   }
 
   .p-sect-ceo__text-main + .p-sect-ceo__text {
