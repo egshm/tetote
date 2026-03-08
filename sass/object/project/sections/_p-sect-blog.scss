@@ -33,7 +33,7 @@
 
 .p-sect-blog__btn {
   // アンダーラインアニメーション
-  @include fwd.underline-anim(".p-sect-blog__btn-text", "~");
+  @include fwd.underline-anim(".p-sect-blog__btn-text", 1px, 0.3s, "~");
 }
 
 .p-sect-blog__btn-text {

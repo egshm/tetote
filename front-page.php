@@ -122,11 +122,20 @@
         </p>
         <picture>
           <source
-            srcset="<?php echo esc_url(get_theme_file_uri('images/world-map_sp.jpg')); ?>"
+            srcset="<?php echo esc_url(get_theme_file_uri("images/world-map_sp.webp")); ?>"
+            type="image/webp"
             media="(max-width: 767.9px)"
           >
           <source
-            srcset="<?php echo esc_url(get_theme_file_uri('images/world-map.jpg')); ?>"
+            srcset="<?php echo esc_url(get_theme_file_uri("images/world-map_sp.jpg")); ?>"
+            media="(max-width: 767.9px)"
+          >
+          <source
+            srcset="<?php echo esc_url(get_theme_file_uri('images/world-map.webp')); ?>"
+            type="image/webp"
+          >
+          <source
+            srcset="<?php echo esc_url(get_theme_file_uri("images/world-map.jpg")); ?>"
           >
           <img
             loading="lazy"
@@ -261,7 +270,7 @@
           <div class="swiper-wrapper">
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
               <div class="c-card-staff p-sect-staff__item swiper-slide js-staffSlideItem">
-                <a href="<?php the_permalink(); ?>" class="c-card-staff__link">
+                <a href="<?php the_permalink(); ?>" class="c-card-staff__link js-staffSlideLink">
                   <div class="c-card-staff__body">
                     <?php
                     // 社員情報のカスタムフィールドを取得

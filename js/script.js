@@ -61,7 +61,6 @@ hamburger.addEventListener('click', function() {
 //--------------------------------------------
 
 const fvSliderEl = document.querySelector('#js-fvSlider');
-const staffSliderEl = document.querySelector('#js-staffSlider');
 
 if (fvSliderEl) {
   const fvSlider = new Swiper(fvSliderEl, {
@@ -75,6 +74,9 @@ if (fvSliderEl) {
   });
 }
 
+const staffSliderEl = document.querySelector('#js-staffSlider');
+const staffSlides = document.querySelectorAll('.js-staffSlideItem');
+
 if (staffSliderEl) {
   const staffSlider = new Swiper('#js-staffSlider', {
     slidesPerView: 'auto',
@@ -82,6 +84,9 @@ if (staffSliderEl) {
     navigation: {
       nextEl: '#js-nextBtn',
       prevEl: '#js-prevBtn',
+    },
+    keyboard: {
+      enabled: true
     },
     breakpoints: {
       0: {
@@ -92,16 +97,35 @@ if (staffSliderEl) {
       }
     }
   });
-}
 
-document.querySelectorAll('.js-staffSlideItem').forEach(item => {
-  const index = parseInt(item.getAttribute('data-swiper-slide-index'), 10);
-  if (!isNaN(index) && (index + 1) % 2 === 0) {
-    item.classList.add('is-odd');
-  } else {
-    item.classList.remove('is-odd');
-  }
-});
+  // スライド切り替え時の処理
+  staffSlider.on('slideChangeTransitionEnd', function() {
+    staffSlides.forEach(slide => {
+      const link = slide.querySelector('.js-staffSlideLink');
+
+      // アクティブなスライドにフォーカスを当てる
+      if (slide.classList.contains('swiper-slide-active')) {
+        link.setAttribute('tabindex', '0');
+        link.classList.add('is-focus');
+        link.focus();
+      // 非アクティブなスライドのフォーカスを解除
+      } else {
+        link.setAttribute('tabindex', '-1');
+        link.classList.remove('is-focus');
+        link.blur();
+      }
+    });
+  });
+
+  staffSlides.forEach(slide => {
+    const index = parseInt(slide.getAttribute('data-swiper-slide-index'), 10);
+    if (!isNaN(index) && (index + 1) % 2 === 0) {
+      slide.classList.add('is-odd');
+    } else {
+      slide.classList.remove('is-odd');
+    }
+  });
+}
 
 
 // カスタム投稿詳細ページの目次（Tocbot）
