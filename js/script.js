@@ -246,6 +246,8 @@ if (accordions.length) {
 // 要素をふわっと表示（Intersection Observer API）
 //--------------------------------------------
 
+document.documentElement.classList.add('js-enabled');
+
 const targets = document.querySelectorAll('.js-inview');
 const options = {
   root: null, // 監視範囲をビューポートに設定

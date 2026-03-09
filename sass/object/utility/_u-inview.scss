@@ -1,12 +1,12 @@
 /*----------------------------------------
 	Utility: inview
 ----------------------------------------*/
-.u-inview-up {
+.js-enabled .u-inview-up {
   opacity: 0;
   transform: translate(0, 10%);
 }
 
-.u-inview-up.is-active {
+.js-enabled .u-inview-up.is-active {
   animation: fade-in-up forwards 1.2s 1 ease 0.2s normal;
 }
 

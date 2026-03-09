@@ -51,8 +51,6 @@ function my_assets_load_optimize() {
   $theme_uri = get_template_directory_uri();
 
   $fonts = [
-    'NotoSansJP-Regular.woff2',
-    'NotoSansJP-Bold.woff2',
     'poppins-v24-latin-regular.woff2',
     'poppins-v24-latin-700.woff2',
     'viga-v15-latin-regular.woff2'

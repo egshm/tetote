@@ -20,9 +20,25 @@
   --c_white: #FFFFFF;
 
   /* フォントファミリー */
-  --ff_sans: "Noto Sans JP", sans-serif;
-  --ff_viga: "Viga", sans-serif;
-  --ff_popp: "Poppins", sans-serif;
+  --ff_default:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  --ff_viga:
+    "Viga",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  --ff_popp:
+    "Poppins",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
 
   /* フォントサイズ */
   --fz_10: calc((10 / 16) * 1rem);

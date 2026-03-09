@@ -34,8 +34,13 @@
 }
 
 @media (min-width: 1200px) {
+  .c-heading-lv2__main {
+    font-size: fwd.make-clamp(32, 52, 1200, 1440);
+  }
+
   .c-heading-lv2__sub {
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: fwd.make-clamp(80, 136, 1200, 1440);
   }
 }
