@@ -46,6 +46,17 @@ function limit_wpcf7_assets() {
 add_action('wp', 'limit_wpcf7_assets');
 
 
+// headタグ内で優先的に実行したいスクリプト
+function my_high_priority_script() {
+  echo <<<HIGH_PRIORITY_SCRIPT
+    <script>
+      document.documentElement.classList.add("js-enabled");
+    </script>
+    HIGH_PRIORITY_SCRIPT;
+}
+add_action('wp_head', 'my_high_priority_script', 1);
+
+
 // アセットの読込みを最適化
 function my_assets_load_optimize() {
   $theme_uri = get_template_directory_uri();
