@@ -1,0 +1,16 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	Career
+----------------------------------------*/
+.p-page-career__career {
+  padding-top: 64px;
+  padding-bottom: 88px;
+}
+
+@media (min-width: 992px) {
+  .p-page-career__career {
+    padding-top: 145px;
+    padding-bottom: 176px;
+  }
+}

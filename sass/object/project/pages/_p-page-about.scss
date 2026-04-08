@@ -1,0 +1,44 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	First View
+----------------------------------------*/
+.p-page-about__fv {
+  --pos_img: bottom; // img要素のobject-position
+}
+
+
+/*----------------------------------------
+	Philosophy
+----------------------------------------*/
+.p-page-about__philosophy {
+  padding-top: 66px;
+  padding-bottom: 63px;
+}
+
+
+/*----------------------------------------
+	CEO
+----------------------------------------*/
+.p-page-about__ceo {
+  padding-top: 63px;
+  padding-bottom: 75px;
+}
+
+
+/*----------------------------------------
+	Service
+----------------------------------------*/
+.p-page-about__service {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+
+/*----------------------------------------
+	Company
+----------------------------------------*/
+.p-page-about__company {
+  padding-top: 75px;
+  padding-bottom: 139px;
+}

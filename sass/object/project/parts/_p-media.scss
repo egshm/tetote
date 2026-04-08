@@ -1,0 +1,81 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-media
+----------------------------------------*/
+.p-media {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  max-height: 180px;
+  background-color: var(--c_white);
+  border-radius: 10px;
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".p-media__title");
+}
+
+.p-media--floral-white {
+  --c_bg: #FAF7F1; // Floral White
+  background-color: var(--c_bg);
+}
+
+.p-media__img-wrap {
+  flex-shrink: 0;
+  width: calc((121 / 341) * 100%);
+  border-radius: 10px 0 0 10px;
+  aspect-ratio: 121 / 121;
+  overflow: hidden;
+}
+
+.p-media__img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.p-media__body {
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin-left: calc((18 / 341) * 100%);
+  padding: 9px 7px 5px 0;
+}
+
+.p-media__title-wrap {
+  margin-top: fwd.make-clamp(9, 23, 375, 768, "px");
+}
+
+.p-media__title {
+  font-size: fwd.make-clamp(14, 18, 375, 768);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.p-media__categories {
+  font-size: fwd.make-clamp(12, 14, 375, 768);
+}
+
+.p-media__date {
+  margin-top: 10px;
+  font-size: var(--fz_12);
+}
+
+@media (min-width: 768px) {
+  .p-media__img-wrap {
+    width: calc((156 / 452) * 100%);
+    aspect-ratio: 156 / 180;
+  }
+
+  .p-media__body {
+    margin-left: calc((23 / 452) * 100%);
+    padding: 20px 20px 20px 0;
+  }
+
+  .p-media__categories {
+    font-size: fwd.make-clamp(12, 14, 768, 1440);
+  }
+
+  .p-media__title {
+    font-size: fwd.make-clamp(14, 18, 768, 1440);
+  }
+}

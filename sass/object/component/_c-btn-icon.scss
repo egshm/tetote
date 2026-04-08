@@ -1,0 +1,35 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-btn-icon
+----------------------------------------*/
+.c-btn-icon {
+  display: grid;
+  place-content: center;
+  width: 58px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+
+// フォーカス時
+.c-btn-icon:focus-visible {
+  background-color: var(--c_btn);
+  border: 2px solid var(--c_focus);
+  color: var(--c_white);
+  outline: none;
+  transform: scale(calc(70 / 58));
+}
+
+// ホバー時
+@media (any-hover: hover) {
+  .c-btn-icon:hover {
+    background-color: var(--c_btn);
+    color: var(--c_white);
+    transform: scale(calc(70 / 58));
+  }
+}

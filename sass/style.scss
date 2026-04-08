@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+//-------------------------------------------
+// Foundation
+//-------------------------------------------
+@use "foundation";
+
+//-------------------------------------------
+// Object
+//-------------------------------------------
+@use "object/utility";
+@use "object/component";
+@use "object/project/parts";
+@use "object/project/sections";
+@use "object/project/pages";
+
+//-------------------------------------------
+// Layout
+//-------------------------------------------
+@use "layout";

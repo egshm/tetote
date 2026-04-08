@@ -1,0 +1,24 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-content
+----------------------------------------*/
+.l-content {
+  width: calc((341 / 375) * 100%);
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  // 下層ページ用
+  .l-content--sub {
+    width: calc((820 / 980) * 100%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-content {
+    width: calc((980 / 1440) * 100%);
+  }
+}

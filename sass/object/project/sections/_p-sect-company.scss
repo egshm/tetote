@@ -1,0 +1,21 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-company
+----------------------------------------*/
+.p-sect-company__title {
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-sect-company__table {
+  margin-top: 54px;
+}
+
+
+@media (min-width: 992px) {
+  .p-sect-company__table {
+    margin-top: 113px;
+  }
+}

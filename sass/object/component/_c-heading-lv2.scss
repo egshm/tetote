@@ -1,0 +1,46 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-heading-lv2
+----------------------------------------*/
+.c-heading-lv2 {
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+}
+
+.c-heading-lv2__main {
+  font-size: var(--fz_32);
+  font-weight: 700;
+}
+
+.c-heading-lv2__sub {
+  --c_text: rgba(151, 151, 151, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: var(--c_text);
+  font-family: var(--ff_popp);
+  font-size: var(--fz_80);
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.c-heading-lv2__underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 1200px) {
+  .c-heading-lv2__main {
+    font-size: fwd.make-clamp(32, 52, 1200, 1440);
+  }
+
+  .c-heading-lv2__sub {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: fwd.make-clamp(80, 136, 1200, 1440);
+  }
+}

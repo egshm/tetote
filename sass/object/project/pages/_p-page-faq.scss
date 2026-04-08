@@ -1,0 +1,24 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	First View
+----------------------------------------*/
+.p-page-faq__fv {
+  --pos_img: bottom; // img要素のobject-position
+}
+
+
+/*----------------------------------------
+	FAQ
+----------------------------------------*/
+.p-page-faq__faq {
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+@media (min-width: 992px) {
+  .p-page-faq__faq {
+    padding-top: 145px;
+    padding-bottom: 139px;
+  }
+}

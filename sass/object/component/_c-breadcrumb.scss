@@ -1,0 +1,20 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-breadcrumb
+----------------------------------------*/
+.c-breadcrumb {
+  --c_bg: #F0F0F0;
+  background-color: var(--c_bg);
+}
+
+.c-breadcrumb__inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: var(--fz_14);
+  line-height: 1.2;
+  text-transform: uppercase;
+}

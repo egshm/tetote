@@ -1,0 +1,137 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-fv
+----------------------------------------*/
+.p-fv {
+  position: relative;
+  height: 667px;
+  padding-bottom: 10px;
+}
+
+.p-fv__inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.p-fv__slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.p-fv__slide-wrapper,
+.p-fv__slide {
+  height: 100%;
+}
+
+.p-fv__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-fv__content {
+  width: 100%;
+}
+
+.p-fv__title {
+  color: var(--c_white);
+}
+
+.p-fv__title-main {
+  padding-left: 12px;
+  font-family: var(--ff_viga);
+  font-size: fwd.make-clamp(48, 96, 375, 1440);
+  line-height: 1.2;
+  text-shadow: 0 4px 4px var(--c_shadow);
+  text-transform: uppercase;
+}
+
+.p-fv__title-sub {
+  position: relative;
+  width: fit-content;
+  margin-top: 18px;
+  padding: calc((9 / 12) * 1em) 12px;
+  background-color: var(--c_base);
+  font-size: fwd.make-clamp(12, 24, 375, 1440);
+  font-weight: 700;
+}
+
+// 三角形をタイトルの右端につける
+.p-fv__title-sub::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 99%;
+  width: 20px;
+  height: 100%;
+  background-color: var(--c_base);
+  clip-path: polygon(0 0, 100% 0, 30% 100%, 0 100%);
+}
+
+.p-fv__news-bar {
+  width: calc((351 / var(--vw_sp)) * 100%);
+  max-width: calc((1263 / var(--vw_pc)) * 100%);
+  margin-top: 31px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@media (min-width: 768px) {
+  .p-fv {
+    padding-bottom: 38px;
+  }
+
+  .p-fv__title-sub {
+    margin-top: 86px;
+    padding-top: calc((17 / 24) * 1em);
+    padding-bottom: calc((17 / 24) * 1em);
+  }
+
+  .p-fv__title-sub::after {
+    width: 36px;
+  }
+
+  .p-fv__news-bar {
+    margin-top: 63px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .p-fv {
+    height: 823px;
+  }
+
+  .p-fv__title-main {
+    padding-left: 66px;
+  }
+
+  .p-fv__title-sub {
+    padding-left: 66px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  // タイトルの背景をビューポートの左端まで伸ばす
+  .p-fv__title-sub::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--c_base);
+    transform: translateY(-50%);
+  }
+}

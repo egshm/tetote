@@ -1,0 +1,18 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-logo
+----------------------------------------*/
+.c-logo {
+  color: var(--c_white); // SVGパスの色
+  transition: color 0.3s;
+}
+
+.c-logo__link {
+  display: block;
+  @include fwd.hover-opacity();
+}
+
+.c-logo__img {
+  aspect-ratio: 250 / 61;
+}

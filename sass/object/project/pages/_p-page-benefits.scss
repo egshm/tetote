@@ -1,0 +1,30 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	System
+----------------------------------------*/
+.p-page-benefits__system {
+  padding-top: 73px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 992px) {
+  .p-page-benefits__system {
+    padding-top: 145px;
+  }
+}
+
+
+/*----------------------------------------
+	Voice
+----------------------------------------*/
+.p-page-benefits__voice {
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+@media (min-width: 992px) {
+  .p-page-benefits__voice {
+    padding-bottom: 139px;
+  }
+}

@@ -1,0 +1,84 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-staff
+----------------------------------------*/
+.p-sect-staff__text {
+  margin-top: 43px;
+  line-height: 1.5;
+}
+
+.p-sect-staff__list {
+  margin-top: 50px;
+  margin-right: calc(50% - 50vw); // 右側をビューポートいっぱいに広げる
+}
+
+.p-sect-staff__item {
+  width: auto; // swiperのcss打消し
+  padding-bottom: 10px; // テキスト下部の見切れを防ぐための余白
+}
+
+.p-sect-staff__item.is-odd {
+  margin-top: 25px;
+}
+
+// VIEW MOREボタンとスライダー切り替えボタンのラッパー
+.p-sect-staff__btn-wrap {
+  position: relative;
+  margin-top: 54px;
+  text-align: center;
+}
+
+// スライダー切り替えボタン（SP時は非表示）
+.p-sect-staff__arrow-btns {
+  display: none;
+}
+
+.p-sect-staff__arrow-btn::after {
+  display: none; // swiperのcss打消し
+}
+
+@media (min-width: 768px) {
+  // スライダー切り替えボタン（PC時は表示）
+  .p-sect-staff__arrow-btns {
+    display: block;
+  }
+
+  .p-sect-staff__arrow-btn {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    width: 42px;
+    height: 42px;
+    margin-top: -25px;
+    color: var(--c_btn);
+  }
+
+  .p-sect-staff__arrow-btn:last-child {
+    right: 10px;
+  }
+
+  .p-sect-staff__arrow-btn:first-child {
+    right: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .p-sect-staff__item.is-odd {
+    margin-top: 36px;
+  }
+
+  .p-sect-staff__btn-wrap {
+    margin-top: 70px;
+  }
+
+  .p-sect-staff__arrow-btn {
+    width: 58px;
+    height: 58px;
+    margin-top: -30px;
+  }
+
+  .p-sect-staff__arrow-btn:first-child {
+    right: 92px;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-post-blog
+----------------------------------------*/
+.p-sect-post-blog {
+
+  * + h2 {
+    margin-top: 50px;
+  }
+
+  * + p {
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: var(--fz_24);
+    font-weight: 700;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    line-height: 1.8;
+  }
+
+  li::before {
+    content: '・';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

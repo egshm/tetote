@@ -1,0 +1,28 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-staff
+----------------------------------------*/
+.p-page-staff__inner {
+  padding-top: 65px;
+  padding-bottom: 70px;
+}
+
+.p-page-staff__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 48px;
+}
+
+.p-page-staff__item {
+  padding-bottom: 10px; // テキスト下部の見切れを防ぐための余白
+}
+
+@media (min-width: 992px) {
+  .p-page-staff__inner {
+    padding-top: 130px;
+    padding-bottom: 139px;
+  }
+}

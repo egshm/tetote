@@ -1,0 +1,82 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-blog
+----------------------------------------*/
+.p-sect-blog {
+  --c_bg: #FAF7F1;
+  background-color: var(--c_bg);
+}
+
+.p-sect-blog__text {
+  margin-top: 43px;
+  line-height: 1.5;
+}
+
+.p-sect-blog__list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 43px;
+}
+
+.p-sect-blog__media {
+  min-height: 121px;
+}
+
+.p-sect-blog__btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 52px;
+}
+
+.p-sect-blog__btn {
+  // アンダーラインアニメーション
+  @include fwd.underline-anim(".p-sect-blog__btn-text", 1px, 0.3s, "~");
+}
+
+.p-sect-blog__btn-text {
+  font-family: var(--ff_viga);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .p-sect-blog__inner {
+    position: relative;
+  }
+
+  .p-sect-blog__list {
+    display: grid;
+    align-items: stretch;
+    column-gap: 23px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .p-sect-blog__btn-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .p-sect-blog__text {
+    margin-top: 73px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .p-sect-blog__list {
+    column-gap: 52px;
+    row-gap: 23px;
+  }
+
+  .p-sect-blog__media {
+    min-height: 180px;
+  }
+}

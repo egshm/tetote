@@ -1,0 +1,25 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-sect-hero-blog
+----------------------------------------*/
+.p-sect-hero-blog__header {
+  display: flex;
+  align-items: center;
+}
+
+.p-sect-hero-blog__date {
+  margin-left: 1.4em;
+  font-size: var(--fz_14);
+}
+
+.p-sect-hero-blog__title {
+  margin-top: 25px;
+  font-size: fwd.make-clamp(24, 32, 375, 768);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.p-sect-hero-blog__img-wrap {
+  margin-top: 41px;
+}

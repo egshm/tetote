@@ -1,0 +1,81 @@
+/*----------------------------------------
+	変数名はEmmet記法に極力準拠しています。
+   - c  : color
+   - ff : font-family
+   - fz : font-size
+   - maw: max-width
+   - miw: min-width   など
+----------------------------------------*/
+
+:root {
+  /* カラー */
+  --c_accent: #988C2C;
+  --c_base: #222222;
+  --c_bg: #222222;
+  --c_black: #000000;
+  --c_border: #AFA86F;
+  --c_btn: #222222;
+  --c_focus: #3498db;
+  --c_shadow: rgba(0, 0, 0, 0.25);
+  --c_white: #FFFFFF;
+
+  /* フォントファミリー */
+  --ff_default:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  --ff_viga:
+    "Viga",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  --ff_popp:
+    "Poppins",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+
+  /* フォントサイズ */
+  --fz_10: calc((10 / 16) * 1rem);
+  --fz_11: calc((11 / 16) * 1rem);
+  --fz_12: calc((12 / 16) * 1rem);
+  --fz_14: calc((14 / 16) * 1rem);
+  --fz_16: calc((16 / 16) * 1rem);
+  --fz_18: calc((18 / 16) * 1rem);
+  --fz_20: calc((20 / 16) * 1rem);
+  --fz_24: calc((24 / 16) * 1rem);
+  --fz_28: calc((28 / 16) * 1rem);
+  --fz_32: calc((32 / 16) * 1rem);
+  --fz_36: calc((36 / 16) * 1rem);
+  --fz_40: calc((40 / 16) * 1rem);
+  --fz_48: calc((48 / 16) * 1rem);
+  --fz_56: calc((56 / 16) * 1rem);
+  --fz_64: calc((64 / 16) * 1rem);
+  --fz_72: calc((72 / 16) * 1rem);
+  --fz_80: calc((80 / 16) * 1rem);
+  --fz_96: calc((96 / 16) * 1rem);
+
+  /* ビューポート基準値（px）*/
+  --vw_sp: 375;
+  --vw_pc: 1440;
+
+  /* インナー幅（px）*/
+  --miw_inner: 341; /* 最小 */
+  --maw_inner: 980; /* 最大 */
+  --w_inner: 341;
+
+  /* インナー幅比率 */
+  --rate_inner: calc((341 / 375) * 100%);
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --w_inner: 980;
+    --rate_inner: calc((980 / 1440) * 100%);
+  }
+}

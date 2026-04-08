@@ -1,0 +1,47 @@
+@use "../../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-blog
+----------------------------------------*/
+.p-page-blog__inner {
+  padding-top: 65px;
+  padding-bottom: 70px;
+}
+
+.p-page-blog__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+
+.p-page-blog__item {
+  width: 100%;
+}
+
+.p-page-blog-detail__post {
+  margin-top: 45px;
+}
+
+@media (min-width: 768px) {
+  .p-page-blog__list {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .p-page-blog__inner {
+    padding-top: 130px;
+    padding-bottom: 139px;
+  }
+
+  .p-page-blog__list {
+    column-gap: calc(52 / var(--maw_inner) * 100%);
+  }
+
+  .p-page-blog__media {
+    min-height: 180px;
+  }
+}

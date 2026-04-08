@@ -1,0 +1,99 @@
+///
+/// @mixin hover-opacity
+/// 
+/// ホバー可能な要素に、透過のホバーエフェクトを適用します。
+/// 
+/// @param {Number} $opacity - 不透明度（0~1）
+/// @param {Time} $transition-time - トランジション時間
+/// 
+@mixin hover-opacity($opacity: 0.7, $transition-time: 0.3s) {
+
+  transition: opacity $transition-time;
+
+  // ホバー時
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+}
+
+
+///
+/// @mixin entry-btn
+/// 
+/// エントリーボタン用のスタイルです。
+/// ホバー・フォーカス時は引数で指定された色に背景色を変えます。
+/// 
+/// @param {Color} $hover-bgc - ホバー・フォーカス時の背景色
+///
+@mixin entry-btn($hover-bgc: var(--c_accent)) {
+  --c_bg: #AFA86F;
+  background-color: var(--c_bg);
+  font-family: var(--ff_viga); //ボタンテキストは半角文字"ENTRY"が想定されるので、Vigaを指定
+  font-weight: 400; //Vigaフォントなので必ずRegular（400）
+  text-transform: uppercase; //大文字表記
+
+  // フォーカス時
+  &:focus-visible {
+    background-color: $hover-bgc;
+  }
+
+  // ホバー時
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $hover-bgc;
+    }
+  }
+}
+
+
+///
+/// @mixin underline-anim
+/// 
+/// 呼び出し元がホバーまたはフォーカス状態のときに、
+/// ターゲット要素にアンダーラインアニメーションを適用します。
+/// 
+/// Note:
+/// - アンダーラインの色は呼び出し元の color を継承します。
+/// 
+/// @param {String} $target
+///   - ターゲット要素
+/// 
+/// @param {Length} $line-width
+///   - アンダーラインの太さ
+/// 
+/// @param {Time} $transition-time
+///   - トランジション時間
+///
+/// @param {String} $combinator
+///   - 呼び出し元とターゲットの間の結合子（" ", ">", "+", "~"）
+///
+@mixin underline-anim(
+  $target,
+  $line-width: 1px,
+  $transition-time: 0.3s,
+  $combinator: " "
+) {
+
+  &#{$combinator}#{$target} {
+    display: inline;
+    background-image: linear-gradient(90deg, currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 $line-width;
+    transition: background-size $transition-time;
+  }
+
+  // フォーカス時
+  &:focus-visible#{$combinator}#{$target} {
+    background-size: 100% $line-width;
+  }
+
+  // ホバー時
+  @media (any-hover: hover) {
+    &:hover#{$combinator}#{$target} {
+      background-size: 100% $line-width;
+    }
+  }
+}
