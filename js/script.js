@@ -424,5 +424,5 @@ document.addEventListener('wpcf7mailsent', function(event) {
     output.style.display = 'none';
   });
   // 送信完了画面に遷移
-  location = '/entry-thanks/';
+  location = '/tetote/entry-thanks/';
 }, false);
