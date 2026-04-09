@@ -18,11 +18,11 @@
         <source
           srcset="<?php echo esc_url(get_theme_file_uri("images/fv-staff_sp.webp")); ?>"
           type="image/webp"
-          media="(max-width: 767.9px)"
+          media="(max-width: 767.98px)"
         >
         <source
           srcset="<?php echo esc_url(get_theme_file_uri("images/fv-staff_sp.jpg")); ?>"
-          media="(max-width: 767.9px)"
+          media="(max-width: 767.98px)"
         >
         <source
           srcset="<?php echo esc_url(get_theme_file_uri('images/fv-staff.webp')); ?>"
@@ -103,7 +103,7 @@
                 <picture>
                   <source
                     srcset="<?php echo esc_url($thumb_sp['url']); ?>"
-                    media="(max-width: 767.9px)"
+                    media="(max-width: 767.98px)"
                   >
                   <img
                     src="<?php echo esc_url($thumb['url']); ?>"

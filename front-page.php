@@ -11,11 +11,11 @@
             <source
               srcset="<?php echo esc_url(get_theme_file_uri("images/fv-top_sp.webp")); ?>"
               type="image/webp"
-              media="(max-width: 767.9px)"
+              media="(max-width: 767.98px)"
             >
             <source
               srcset="<?php echo esc_url(get_theme_file_uri("images/fv-top_sp.jpg")); ?>"
-              media="(max-width: 767.9px)"
+              media="(max-width: 767.98px)"
             >
             <source
               srcset="<?php echo esc_url(get_theme_file_uri('images/fv-top.webp')); ?>"
@@ -41,11 +41,11 @@
             <source
               srcset="<?php echo esc_url(get_theme_file_uri("images/fv-top-02_sp.webp")); ?>"
               type="image/webp"
-              media="(max-width: 767.9px)"
+              media="(max-width: 767.98px)"
             >
             <source
               srcset="<?php echo esc_url(get_theme_file_uri("images/fv-top-02_sp.jpg")); ?>"
-              media="(max-width: 767.9px)"
+              media="(max-width: 767.98px)"
             >
             <source
               srcset="<?php echo esc_url(get_theme_file_uri('images/fv-top-02.webp')); ?>"
@@ -124,11 +124,11 @@
           <source
             srcset="<?php echo esc_url(get_theme_file_uri("images/world-map_sp.webp")); ?>"
             type="image/webp"
-            media="(max-width: 767.9px)"
+            media="(max-width: 767.98px)"
           >
           <source
             srcset="<?php echo esc_url(get_theme_file_uri("images/world-map_sp.jpg")); ?>"
-            media="(max-width: 767.9px)"
+            media="(max-width: 767.98px)"
           >
           <source
             srcset="<?php echo esc_url(get_theme_file_uri('images/world-map.webp')); ?>"
@@ -185,11 +185,11 @@
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/' . $img['sp'] . '.webp')); ?>"
                   type="image/webp"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/' . $img['sp'] . '.jpg')); ?>"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/' . $img['pc'] . '.webp')); ?>"
@@ -216,11 +216,11 @@
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/' . $img['sp'] . '.webp')); ?>"
                   type="image/webp"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/' . $img['sp'] . '.jpg')); ?>"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/' . $img['pc'] . '.webp')); ?>"
@@ -303,7 +303,7 @@
                     <picture>
                       <source
                         srcset="<?php echo esc_url($thumb_sp['url']); ?>"
-                        media="(max-width: 767.9px)"
+                        media="(max-width: 767.98px)"
                       >
                       <img
                         src="<?php echo esc_url($thumb['url']); ?>"
@@ -382,11 +382,11 @@
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/benefits_sp.webp')); ?>"
                   type="image/webp"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/benefits_sp.jpg')); ?>"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/benefits.webp')); ?>"
@@ -427,11 +427,11 @@
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/benefits-02_sp.webp')); ?>"
                   type="image/webp"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/benefits-02_sp.jpg')); ?>"
-                  media="(max-width: 767.9px)"
+                  media="(max-width: 767.98px)"
                 >
                 <source
                   srcset="<?php echo esc_url(get_theme_file_uri('images/benefits-02.webp')); ?>"
@@ -527,7 +527,7 @@
                   <picture>
                     <source
                       srcset="<?php echo esc_url($thumb_sp['url']); ?>"
-                      media="(max-width: 767.9px)"
+                      media="(max-width: 767.98px)"
                     >
                     <img
                       src="<?php echo esc_url($thumb['url']); ?>"

@@ -18,11 +18,11 @@
         <source
           srcset="<?php echo esc_url(get_theme_file_uri("images/fv-details_sp.webp")); ?>"
           type="image/webp"
-          media="(max-width: 767.9px)"
+          media="(max-width: 767.98px)"
         >
         <source
           srcset="<?php echo esc_url(get_theme_file_uri("images/fv-details_sp.jpg")); ?>"
-          media="(max-width: 767.9px)"
+          media="(max-width: 767.98px)"
         >
         <source
           srcset="<?php echo esc_url(get_theme_file_uri('images/fv-details.webp')); ?>"

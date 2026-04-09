@@ -135,7 +135,7 @@
                   <picture>
                     <source
                       srcset="<?php echo esc_url($thumb_sp['url']); ?>"
-                      media="(max-width: 767.9px)"
+                      media="(max-width: 767.98px)"
                     >
                     <img
                       src="<?php echo esc_url($thumb['url']); ?>"
