@@ -131,6 +131,9 @@ if (staffSliderEl) {
 // カスタム投稿詳細ページの目次（Tocbot）
 //--------------------------------------------
 
+// スクロールオフセット調整値（px）
+const TOC_SCROLL_OFFSET_ADJUST = 20;
+
 if (typeof tocbot !== 'undefined') {
   tocbot.init({
     tocSelector: '#js-toc',
@@ -139,7 +142,8 @@ if (typeof tocbot !== 'undefined') {
     linkClass: 'c-toc__link',
     listItemClass: 'c-toc__item',
     activeListItemClass: 'is-active',
-    headingsOffset: header.offsetHeight,
+    headingsOffset: header.offsetHeight + TOC_SCROLL_OFFSET_ADJUST,
+    scrollSmooth: false,
   });
 }
 
