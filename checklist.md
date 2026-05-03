@@ -459,10 +459,10 @@
 ||- Windows / Chrome|OK|2026/5/1||
 ||- Windows / Firefox|OK|2026/5/1||
 ||- Windows / Microsoft Edge|OK|2026/5/1||
-||- Windows / Safari（Playwrightで確認）|NG|2026/5/1|fieldsetタグを使った2カラムレイアウトの表示がおかしい。|
-||- iOS / Chrome|NG|2026/5/1|fieldsetタグを使った2カラムレイアウトの表示がおかしい。|
-||- iOS / Firefox|NG|2026/5/1|fieldsetタグを使った2カラムレイアウトの表示がおかしい。|
-||- iOS / Safari|NG|2026/5/1|fieldsetタグを使った2カラムレイアウトの表示がおかしい。|
+||- Windows / Safari（Playwrightで確認）|OK|2026/5/3||
+||- iOS / Chrome|OK|2026/5/3||
+||- iOS / Firefox|OK|2026/5/3||
+||- iOS / Safari|OK|2026/5/3||
 ||- Android / Chrome|N/A|N/A|Android端末を入手でき次第、確認予定|
 
 ## Entry Thanksページ

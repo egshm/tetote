@@ -884,11 +884,10 @@ span {
     display: flex;
     gap: 25px;
   }
-  .c-form__item--fieldset {
-    display: flow-root;
+  .c-form__item--fieldset .c-form__inner {
+    display: contents;
   }
   .c-form__item--fieldset .c-form__title {
-    float: left;
     width: 18.6991869919%;
   }
   .c-form__item {

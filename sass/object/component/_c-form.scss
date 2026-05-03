@@ -246,17 +246,18 @@
 
   // fieldset要素の2カラムレイアウト
   .c-form__item--fieldset {
-    display: flow-root; // 回り込み解除
   
+    .c-form__inner {
+      display: contents;
+    }
+
     .c-form__title {
-      float: left; // Flexbox・Gridレイアウトが効かないため、floatで対応
       width: calc((138 / 738) * 100%);
     }
   }
 
-  // fieldset要素以外の2カラムレイアウト
   .c-form__item {
-    display: flex; // Flexboxによる2カラム化
+    display: flex;
     flex-direction: row;
 
     // .c-form__item直下にp要素が出力されるので、Flexアイテムはp要素となる。
