@@ -60,7 +60,7 @@
               <li class="p-menu__item js-menuItem"><a href="<?php echo esc_url(home_url("/staff")) ?>" class="p-menu__link">Staff<span class="p-menu__text-sub">社員について</span></a></li>
               <li class="p-menu__item js-menuItem"><a href="<?php echo esc_url(home_url("/blog")) ?>" class="p-menu__link">Blog<span class="p-menu__text-sub">採用ブログ</span></a></li>
               <li class="p-menu__item js-menuItem"><a href="<?php echo esc_url(home_url("/benefits")) ?>" class="p-menu__link">Benefits<span class="p-menu__text-sub">福利厚生について</span></a></li>
-              <li class="p-menu__item js-menuItem"><a href="<?php echo esc_url(home_url("/career")) ?>" class="p-menu__link">Carrer<span class="p-menu__text-sub">研修制度とキャリアパス</span></a></li>
+              <li class="p-menu__item js-menuItem"><a href="<?php echo esc_url(home_url("/career")) ?>" class="p-menu__link">Career<span class="p-menu__text-sub">研修制度とキャリアパス</span></a></li>
               <li class="p-menu__item js-menuItem"><a href="<?php echo esc_url(home_url("/faq")) ?>" class="p-menu__link">Faq<span class="p-menu__text-sub">よくある質問</span></a></li>
             </ul>
           </nav>
