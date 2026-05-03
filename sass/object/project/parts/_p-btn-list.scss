@@ -12,3 +12,7 @@
   column-gap: var(--gap_col);
   row-gap: var(--gap_row);
 }
+
+.p-btn-list__btn {
+  width: fwd.make-clamp(250, 294, 375, 768, "px");
+}

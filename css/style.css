@@ -1196,7 +1196,7 @@ span {
   background-color: var(--c_bg);
   border: 1px solid currentColor;
   border-radius: 2em;
-  font-size: var(--fz_20);
+  font-size: clamp(1rem, 0.7614503817rem + 1.0178117048vw, 1.25rem);
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -1364,6 +1364,10 @@ span {
   justify-content: center;
   column-gap: var(--gap_col);
   row-gap: var(--gap_row);
+}
+
+.p-btn-list__btn {
+  width: clamp(250px, 208.0152671756px + 11.1959287532vw, 294px);
 }
 
 /*----------------------------------------
