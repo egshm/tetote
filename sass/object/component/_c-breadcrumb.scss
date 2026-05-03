@@ -18,3 +18,7 @@
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.c-breadcrumb a {
+  @include fwd.hover-opacity();
+}
