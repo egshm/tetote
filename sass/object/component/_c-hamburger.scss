@@ -14,11 +14,6 @@
   @include fwd.hover-opacity();
 }
 
-.c-hamburger:focus-visible {
-  border: 2px solid var(--c_focus);
-  outline: none;
-}
-
 .c-hamburger[aria-expanded="true"] .c-hamburger__line {
   background-color: transparent;
 }

@@ -20,8 +20,7 @@
 
 // フォーカス時
 .c-btn-rect:focus-visible {
-  background-color: var(--c_base);
-  color: var(--c_white);
+  outline-offset: -1px;
 }
 
 .c-btn-rect__text {

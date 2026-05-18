@@ -14,6 +14,11 @@
   @include fwd.underline-anim(".p-media__title");
 }
 
+.p-media:focus-visible {
+  border-radius: 10px;
+  outline-offset: -1px;
+}
+
 .p-media--floral-white {
   --c_bg: #FAF7F1; // Floral White
   background-color: var(--c_bg);

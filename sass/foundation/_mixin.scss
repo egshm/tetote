@@ -23,9 +23,9 @@
 /// @mixin entry-btn
 /// 
 /// エントリーボタン用のスタイルです。
-/// ホバー・フォーカス時は引数で指定された色に背景色を変えます。
+/// ホバー時は引数で指定された色に背景色を変えます。
 /// 
-/// @param {Color} $hover-bgc - ホバー・フォーカス時の背景色
+/// @param {Color} $hover-bgc - ホバー時の背景色
 ///
 @mixin entry-btn($hover-bgc: var(--c_accent)) {
   --c_bg: #AFA86F;
@@ -33,11 +33,6 @@
   font-family: var(--ff_viga); //ボタンテキストは半角文字"ENTRY"が想定されるので、Vigaを指定
   font-weight: 400; //Vigaフォントなので必ずRegular（400）
   text-transform: uppercase; //大文字表記
-
-  // フォーカス時
-  &:focus-visible {
-    background-color: $hover-bgc;
-  }
 
   // ホバー時
   @media (any-hover: hover) {
@@ -51,7 +46,7 @@
 ///
 /// @mixin underline-anim
 /// 
-/// 呼び出し元がホバーまたはフォーカス状態のときに、
+/// 呼び出し元がホバー状態のときに、
 /// ターゲット要素にアンダーラインアニメーションを適用します。
 /// 
 /// Note:
@@ -83,11 +78,6 @@
     background-repeat: no-repeat;
     background-size: 0 $line-width;
     transition: background-size $transition-time;
-  }
-
-  // フォーカス時
-  &:focus-visible#{$combinator}#{$target} {
-    background-size: 100% $line-width;
   }
 
   // ホバー時

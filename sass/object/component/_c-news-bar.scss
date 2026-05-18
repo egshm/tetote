@@ -12,10 +12,7 @@
 // フォーカス時
 .c-news-bar:focus-visible {
   border-radius: 50px; // フォーカスリングを丸める
-
-  .c-news-bar__icon {
-    transform: translateX(5px); // 右シェブロンを少し右に動かす
-  }
+  outline-offset: -1px;
 }
 
 // NEWSラベル

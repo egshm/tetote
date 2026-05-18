@@ -63,14 +63,6 @@
   @include fwd.underline-anim(".p-post-navi__title");
 }
 
-// フォーカス時
-.p-post-navi__link:focus-visible .p-post-navi__btn {
-  background-color: var(--c_btn);
-  border-color: var(--c_btn);
-  color: var(--c_white);
-  transform: scale(calc(32 / 24));
-}
-
 .p-post-navi__body {
   display: grid;
   grid-template-rows: 1fr auto;

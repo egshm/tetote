@@ -25,8 +25,8 @@
 
 // フォーカス時
 .c-btn-rounded:focus-visible {
-  background-color: var(--c_base);
-  color: var(--c_white);
+  border-radius: 2em;
+  outline-offset: -1px;
 }
 
 .c-btn-rounded__icon {

@@ -31,15 +31,6 @@
   transition: transform 0.3s;
 }
 
-// フォーカス時
-.p-sect-benefits__card:focus-visible {
-  transform: scale(1.05);
-
-  .p-sect-benefits__btn {
-    transform: translateX(20px);
-  }
-}
-
 .p-sect-benefits__body {
   margin-top: -23px;
 }

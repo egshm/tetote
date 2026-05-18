@@ -103,16 +103,12 @@ if (staffSliderEl) {
     staffSlides.forEach(slide => {
       const link = slide.querySelector('.js-staffSlideLink');
 
-      // アクティブなスライドにフォーカスを当てる
+      // アクティブなスライド
       if (slide.classList.contains('swiper-slide-active')) {
         link.setAttribute('tabindex', '0');
-        link.classList.add('is-focus');
-        link.focus();
-      // 非アクティブなスライドのフォーカスを解除
+      // 非アクティブなスライド
       } else {
         link.setAttribute('tabindex', '-1');
-        link.classList.remove('is-focus');
-        link.blur();
       }
     });
   });

@@ -32,9 +32,8 @@
     transition: transform 0.3s;
   }
 
-  .page-numbers:focus-visible { // フォーカス時
-    border: 2px solid var(--c_focus);
-    transform: scale(1.1);
+  .page-numbers:focus-visible {
+    outline-offset: -1px;
   }
 
   .page-numbers.current {

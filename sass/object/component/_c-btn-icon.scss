@@ -18,11 +18,8 @@
 
 // フォーカス時
 .c-btn-icon:focus-visible {
-  background-color: var(--c_btn);
-  border: 2px solid var(--c_focus);
-  color: var(--c_white);
-  outline: none;
-  transform: scale(calc(70 / 58));
+  border-radius: 50%;
+  outline-offset: -1px;
 }
 
 // ホバー時

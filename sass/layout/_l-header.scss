@@ -58,6 +58,10 @@
   z-index: 999;
 }
 
+.l-header__btn:focus-visible {
+  outline-offset: -1px;
+}
+
 .l-header__btn--default {
   @include fwd.hover-opacity();
 }
