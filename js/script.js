@@ -128,7 +128,7 @@ if (staffSliderEl) {
 //--------------------------------------------
 
 // スクロールオフセット調整値（px）
-const TOC_SCROLL_OFFSET_ADJUST = 20;
+const TOC_SCROLL_OFFSET_ADJUST = 30;
 
 if (typeof tocbot !== 'undefined') {
   tocbot.init({
