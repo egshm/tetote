@@ -1276,13 +1276,16 @@ span {
   --c_title: #666666;
   --c_text: #999999;
   --c_active: #222222;
+  --w_marker: 4px;
+  --h_marker: 4px;
+  --h_line: 1.5;
 }
 
 .c-toc__title {
   color: var(--c_title);
   font-size: clamp(0.875rem, 0.6364503817rem + 1.0178117048vw, 1.125rem);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: var(--h_line);
 }
 
 .c-toc__body {
@@ -1297,10 +1300,15 @@ span {
 }
 
 .c-toc__item::before {
-  content: "・";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
+  width: var(--w_marker);
+  height: var(--h_marker);
+  background-color: currentColor;
+  border-radius: 50%;
+  transform: translateY(calc(var(--h_line) * 1em / 2 - var(--h_marker) / 2));
 }
 
 .c-toc__item.is-active {
@@ -1314,7 +1322,7 @@ span {
 .c-toc__link {
   font-size: clamp(0.875rem, 0.6364503817rem + 1.0178117048vw, 1.125rem);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: var(--h_line);
 }
 
 @media (min-width: 768px) {
